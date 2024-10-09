@@ -1,0 +1,15 @@
+---
+title: "launching a website!"
+---
+
+This is me.
+
+<img src="images/selfie-window.jpeg" style="width:50%">
+
+I climb rocks.
+
+<img src="images/boulder.jpeg" style="width:50%">
+
+And sometimes yoga.
+
+<img src="images/yoga.jpg" style="width:50%">
