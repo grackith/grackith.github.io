@@ -1,0 +1,37 @@
+name: "Grace Douglas Portfolio"
+navbar:
+  title: "Grace Douglas"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Research"
+      menu:
+        - text: "Projects"
+          href: research/projects.html
+        - text: "Human Factors Labs"
+          href: research/labs.html
+    - text: "Data & Visualization"
+      menu:
+        - text: "Analysis"
+          href: data/analysis.html
+        - text: "Tools"
+          href: data/tools.html
+    - text: "Hardware"
+      href: hardware.html
+    - text: "Publications & Presentations"
+      href: publications.html
+    - text: ".FUN"
+      href: fun.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:grace.douglas@nyu.edu
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/grace-douglas-a92a44132/
+    - icon: fa-github fa-lg
+      href: http://github.com/grackith/
+output:
+  html_document:
+    theme: darkly
+    css: styles.css
+    includes:
+      in_header: header.html
