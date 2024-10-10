@@ -1,27 +1,45 @@
 name: "Grace Douglas Portfolio"
 navbar:
   title: "Grace Douglas"
+  href: index.html
   left:
-    - text: "Home"
-      href: index.html
-    - text: "Research"
+    - text: ".tiMEline"
+      href: timeline.html
+    - text: ".research"
       menu:
-        - text: "Projects"
-          href: research/projects.html
-        - text: "Human Factors Labs"
-          href: research/labs.html
-    - text: "Data & Visualization"
-      menu:
-        - text: "Analysis"
-          href: data/analysis.html
-        - text: "Tools"
-          href: data/tools.html
-    - text: "Hardware"
+        - text: ".projects"
+          href: projects.html
+        - text: ".methods"
+          href: methods.html
+        - text: ".data-library"
+          menu:
+            # - text: ".video"
+            #   href: video.html
+            # - text: ".natural-language"
+            #   href: natural-language.html
+            # - text: ".motion-capture"
+            #   href: motion-capture.html
+            # - text: ".survey"
+            #   href: survey.html
+    - text: ".hardware"
       href: hardware.html
-    - text: "Publications & Presentations"
+    - text: ".presentations-publications"
       href: publications.html
     - text: ".FUN"
-      href: fun.html
+      href: FUN.html
+      # menu:
+      # - text: ".social-avs"
+      #   href: twitter.html
+      # - text: ".virtualizing-my-friends"
+      #   href: blender.html
+      # - text: ".go-go-garmin"
+      #   href: garmin.html
+      # - text: ".3d-printing"
+      #   href: printing3D.html
+      # - text: ".bad-ggs"
+      #   href: bad-ggplot.html
+    - text: ".resume"
+      href: resume.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:grace.douglas@nyu.edu
@@ -31,7 +49,5 @@ navbar:
       href: http://github.com/grackith/
 output:
   html_document:
-    theme: darkly
+    theme: readable
     css: styles.css
-    includes:
-      in_header: header.html

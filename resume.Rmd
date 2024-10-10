@@ -1,0 +1,5 @@
+---
+title: "Resume. Please reach out with any inquiries!"
+---
+
+<iframe src="/Users/gracedouglas/Documents/arXiv/0 resume/resume-oct-2024.pdf" width="100%" height="500px"></iframe>

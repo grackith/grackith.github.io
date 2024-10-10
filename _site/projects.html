@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Research Projects</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Grace Douglas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="timeline.html">.tiMEline</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    .research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="projects.html">.projects</a>
+    </li>
+    <li>
+      <a href="methods.html">.methods</a>
+    </li>
+    <li class="dropdown-header">.data-library</li>
+  </ul>
+</li>
+<li>
+  <a href="hardware.html">.hardware</a>
+</li>
+<li>
+  <a href="publications.html">.presentations-publications</a>
+</li>
+<li>
+  <a href="FUN.html">.FUN</a>
+</li>
+<li>
+  <a href="resume.html">.resume</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:grace.douglas@nyu.edu">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/grackith/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Research Projects</h1>
+
+</div>
+
+
+<div id="current-projects" class="section level3">
+<h3>Current Projects</h3>
+<div id="pedestrian-exposure-for-crash-prediction"
+class="section level4">
+<h4>Pedestrian Exposure for Crash Prediction</h4>
+<p><strong>Funded by: National Highway Traffic Safety Administration
+(NHTSA)</strong></p>
+<p><strong>Abstract</strong>: Urban areas in the US are estimated to
+have faced a 60% increase in pedestrian fatalities over the past decade
+(GHSA, 2023). However, because these events are inherently rare, it is
+difficult to develop preventative measures to mitigate collision risk.
+An important pit stop on the road to safer streets is therefore
+developing robust geospatial estimates of current pedestrian activity
+levels. Robust estimates of pedestrian activity serve as a proxy measure
+for crash likelihood, as locations containing high pedestrian activity
+levels are naturally prone to higher pedestrian-vehicle crash rates.
+This project aims to predict pedestrian-vehicle collision risk based on
+pedestrian exposure and environmental factors at intersections.</p>
+<div class="row">
+<div class="col-md-6 img-container">
+<p><img src="images/ped-exp-estimates.png"
+class="img-fluid rounded" /></p>
+</div>
+<div class="col-md-6 img-container">
+<p><img src="images/ped_crash_land_use_map.png"
+class="img-fluid rounded" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="past-projects" class="section level3">
+<h3>Past Projects</h3>
+<div
+id="sim2real-virtualized-mixed-traffic-driving-environments-with-human-regulated-rl-agents"
+class="section level4">
+<h4>Sim2Real: Virtualized mixed-traffic driving environments with human
+regulated RL agents</h4>
+</div>
+<div id="the-mode-choice-should-be-my-choice" class="section level4">
+<h4>The Mode Choice Should be my Choice!</h4>
+<p><strong>Abstract</strong>: In response to rising VRU deaths in dense
+urban settings, and increased support for complete street designs, this
+project examines the relationship between mode choice and the
+surrounding built environment. This projects uses New York City as a :
+mode choice data and trip purpose are from the Regional Establishment
+Survey (RES), and GIS-linked built environment features (i.e,
+high-visibility crosswalks, average roadway width, slow-speed zone) are
+provided by the . A mixed logit model is developed to compare individual
+heterogeneity in , , and mode choices with local built environment
+support for observed choices. Sociodemographics such as age, income, and
+mobility status are also considered. An alternative-specific travel time
+variable is considered, and a more thorough discussion of mode choice
+elasticity to changes in the local microenvironment is provided.</p>
+<div class="row">
+<div class="col-md-8 img-container">
+<p><img src="images/sips-nyc-for-report.png" class="img-fluid rounded"
+style="width:70.0%" /></p>
+</div>
+<div class="col-md-8 img-container">
+<p><img src="images/socio-fin-final.png" class="img-fluid rounded"
+style="width:30.0%" /></p>
+</div>
+</div>
+</div>
+<div id="the-next-mobile-office-how-will-we-work-in-self-driving-cars"
+class="section level4">
+<h4>The Next Mobile Office: How will we Work in Self-Driving Cars?</h4>
+<p><strong>Funded by: National Science Foundation (NSF)</strong></p>
+<ul>
+<li>Investigating the impact of virtual meeting engagement on takeover
+performance in conditionally automated vehicles using a NADs miniSim
+vehicle simulator.</li>
+<li>Participants are randomly assigned Emergency or Planned treatments
+while actively engaged in a virtual meeting.</li>
+</ul>
+</div>
+<div id="cross-cultural-mapping-of-older-drivers"
+class="section level4">
+<h4>Cross-Cultural Mapping of Older Drivers</h4>
+<p><strong>Funded by: National Science Foundation (NSF)</strong></p>
+<p><strong>Abstract</strong>: This research develops comprehensive
+profiles of older drivers to enhance support systems and reduce the
+likelihood of accidents. Building a database of naturalistic driving
+behavior is challenging and costly, making it beneficial to map profiles
+across databases consisting of different subpopulations. This study
+utilizes the Strategic Highway Research Program (SHRP2), a naturalistic
+driving database, and the Survey of Health, Aging, and Retirement in
+Europe (SHARE) database to identify personal characteristics that could
+be mapped between the two databases. The four types of variables mapped
+included medical conditions, risk-taking behavior, lifestyle, and
+(physiological, cognitive) function. A combination of Principle
+Component Analysis, Multiple Correspondence Analysis, and Factor
+Analysis for Mixed Data reduced the SHRP2 NDS and SHARE combined data to
+features representing the physical condition, health, lifestyle, and
+(physiological, cognitive) function of 60 50+ aged personal profiles.
+Using a Hierarchical Agglomerative Clustering approach with the mapped
+profiles revealed a three cluster solution with a between cluster
+variation. Significant differences in driving behavior were identified
+between the three clusters, with Cluster 3 showing higher risk-taking
+tendencies and near miss frequencies. The research highlights the
+feasibility of mapping personal profiles across databases to produce
+multidimensional driving profiles. These insights can benefit road
+users, older individuals and their families, policy makers, researchers,
+and health and social care professionals. By utilizing the identified
+driver profiles, industry designers can tailor Advanced Driver
+Assistance Systems (ADAS)/Autonomous Driving Systems (ADS) to individual
+needs. Health care professionals can use the data to supplement
+fitness-to-drive assessments, and older individuals and their families
+can make informed decisions about driving support.</p>
+<p><img src="images/share-shrp2-mapping.png" class="img-fluid rounded"
+style="width:100.0%" /></p>
+<p><img src="images/CLUSTER-SHARE.png" class="img-fluid rounded"
+style="width:100.0%" /></p>
+<ul>
+<li>Cluster 1: higher rates of other road user involved incidents</li>
+<li>Cluster 2: highest rates of turning incidents</li>
+<li>Cluster 3: highest rates of ’near-crashes’</li>
+</ul>
+</div>
+<div id="multimodal-environments-multitasking-driving-behaviors"
+class="section level4">
+<h4>Multimodal Environments &amp; Multitasking Driving Behaviors</h4>
+<p><strong>Funded by: Federal Highway Administration (FHWA)</strong></p>
+<p><strong>Abstract</strong>: With more than 42,000 roadway fatalities
+in 2022, transportation safety researchers are interested in gathering a
+deeper understanding of how drivers behave, interact, and make decisions
+while navigating the roadway environment. Within the past decade,
+researchers have discovered that approximately 50 percent of a driver’s
+time is spent engaging in non-driving-related tasks (Dingus et al.,
+2016; Young et al., 2019). This project, Investigating How Multimodal
+Environments Affect Multitasking Driving Behaviors, approached this
+issue of distraction with data from the SHRP2 NDS, which is the largest
+naturalistic driving study to date. More specifically, the research team
+targeted 19 urban locations that contained pedestrian and cyclist
+facilities (crosswalks, bike treatments) to investigate a driver’s
+secondary task engagement amid other road users. Three primary groups of
+variables were considered in the analysis: video data to label and
+identify secondary task behavior and the urban environment, kinematics
+that describe the state (acceleration, speed, etc.) of the vehicle
+throughout each video file, and demographic data that were connected
+anonymously back to the participants in the video data. Initially, two
+mixed-effect binary logistic regression models were fitted to crosswalk
+and bike treatment data, respectively; these models were useful to
+confirm significant findings from the pilot study. In addition to these
+significant relationships, two Bayesian networks were implemented
+(crosswalks, bike treatments), which provided a graphical representation
+of the conditional dependencies between the variables considered in the
+analysis. Bayesian networks are useful in modeling complex systems with
+uncertain relationships and have been widely used in many fields,
+including transportation safety. The results of this study have
+important implications for transportation safety that could, for
+example, improve vulnerable road user facility design or inform future
+advanced driver assist system (ADAS) development.</p>
+<p><img src="images/diagram.png" class="img-fluid rounded"
+style="float: center; margin: 0 50% 0 50%;;width:50.0%"
+height="150" /></p>
+<div class="row">
+<div class="col-md-6 img-container">
+<p><img src="images/ndrt-dur.png" class="img-fluid rounded" /></p>
+</div>
+<div class="col-md-6 img-container">
+<p><img src="images/ndrt-dur-prop.png" class="img-fluid rounded" /></p>
+</div>
+</div>
+</div>
+<div id="measuring-pedestrian-exposure-using-electronic-devices"
+class="section level4">
+<h4>Measuring Pedestrian Exposure Using Electronic Devices</h4>
+<p><strong>Funded by: National Highway Traffic Safety Administration
+(NHTSA)</strong></p>
+<ul>
+<li>Examined pedestrian exposure and risk to collision in Seattle, WA by
+analyzing spatial-temporal data of pedestrian walking behavior.</li>
+<li>Implemented zero-inflated count models to predict pedestrian risk
+dependent on environmental predictors.</li>
+</ul>
+<div class="container">
+  <div class="row" style="height: 300px;"> <!-- Adjust this height as needed -->
+    <div class="col-md-6 d-flex flex-column h-100">
+      <div class="flex-grow-1 mb-3 overflow-hidden">
+        <img src="images/trip-based_example.png" class="img-fluid rounded w-100 h-100 object-fit-cover" alt="Trip-based example">
+      </div>
+      <div class="flex-grow-1 overflow-hidden">
+        <img src="images/ped-exp-env-buffers.png" class="img-fluid rounded w-100 h-100 object-fit-cover" alt="Pedestrian experience environment buffers">
+      </div>
+    </div>
+    <div class="col-md-6 h-100">
+      <div class="h-100 overflow-hidden">
+        <img src="images/walking-actvity.png" class="img-fluid rounded w-100 h-100 object-fit-cover" alt="Walking activity">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

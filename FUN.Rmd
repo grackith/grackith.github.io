@@ -1,0 +1,44 @@
+---
+title: ".FUN"
+---
+
+## AFK
+
+### Soccer
+
+```{=html}
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-7">
+      <ul>
+        <li>4-year Varsity Letter winner at University of Wisconsin – Madison</li>
+        <li>Athletic Scholarship Recipient</li>
+        <li>Won Big Ten Conference Title (2019)</li>
+        <li>Contributed to team appearances in NCAA Sweet 16 (2018, 2019)</li>
+        <li>One of two Wisconsin student athletes chosen for the Big Ten COVID-19 'Return to Play' Taskforce</li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <img src="images/trophy.jpeg" class="img-fluid rounded" alt="Trophy">
+    </div>
+  </div>
+</div>
+```
+
+## Hobbies
+
+::: row
+::: {.col-md-4 .img-container}
+![On the search for the best oat cappucino..](images/selfie-coffee.png){.img-fluid .rounded}
+:::
+
+::: {.col-md-4 .img-container}
+![Getting out of the city!](images/hike-em.jpeg){.img-fluid .rounded}
+:::
+
+::: {.col-md-4 .img-container}
+![Dipping back into the fiddle](images/violin.jpeg){.img-fluid .rounded}
+:::
+:::
+
+
