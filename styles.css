@@ -5,11 +5,11 @@
 :root {
   /* Layout */
   --site-max-width: 1200px;     /* Overall site container width */
-  --content-width: 900px;      /* Main content area width */
+  --content-width: 1200px;      /* Main content area width */
   --padding-x: 40px;           /* Consistent horizontal padding */
   --nav-height: 80px;
-  --content-max-width: 800px;   /* For article content */
-  --container-width: 1000px;    /* Reduced from 1600px for content */
+  --content-max-width: 1200px;   /* For article content */
+  --container-width: 1200px;    /* Reduced from 1600px for content */
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
@@ -174,7 +174,7 @@ html, body {
   color: var(--secondary-color);
   text-decoration: none;
   transition: var(--transition);
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
 }
@@ -332,7 +332,7 @@ p {
   border-left: 5px solid var(--accent-color);
   padding: 30px;
   margin: 40px 0 60px;  /* Increased bottom margin */
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.4;
   width: 100%;
   max-width: var(--container-width);
@@ -350,7 +350,7 @@ p {
 }
 
 .intro-box-content {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .intro-box-title .emoji {
@@ -362,7 +362,7 @@ p {
   color: var(--secondary-color);
   margin: 25px 0 40px;
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 /* Timeline Section */
@@ -753,7 +753,7 @@ p {
   }
   .two-column-layout {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
   .project-content,
   .project-gallery,
