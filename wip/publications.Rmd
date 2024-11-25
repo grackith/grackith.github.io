@@ -1,0 +1,22 @@
+---
+title: "Publications & Presentations"
+---
+
+### Journal Articles
+
+1. **Domeyer, J., Dinparastdjadid, A., Lee, J. D., Douglas, G., Alsaid, A., & Price, M.** (2019). Proxemics and Kinesics in Automated Vehicle--Pedestrian Communication: Representing Ethnographic Observations. Transportation Research Record, 2673(10), 70--81. [link](https://journals.sagepub.com/doi/full/10.1177/0361198119848413)
+
+### Conference Proceedings
+
+1. **Douglas, G., Boyle, L. N., Kim, H., Moudon, A., Mooney, S., Saelens, B., & Ebel, B.** (2022). A Framework to Assess Pedestrian Exposure Using Personal Device Data. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 66(1), 320--324. [link](https://journals.sagepub.com/doi/abs/10.1177/1071181322661319)
+
+### Upcoming Publications (Pre-prints)
+
+1. **Douglas, G., Boyle, L. N., Saelens, B., Mooney, S., Moudon, A. V., Ebel, B. E., & Kim, H.** (2024, pre-print). A framework for assessing pedestrian exposure using GPS and accelerometer data (Report No. DOT HS xxx xxx). National Highway Traffic Safety Administration. [link](https://rosap.ntl.bts.gov/)
+
+2. **Douglas, G., Li, J., Khaloei, M., Liu, J., Guo, H., Zou, T., Boyle, L.N., MacKenzie, D.** (2024, pre-print). Investigating How Multimodal Environments Affect Multitasking Driving Behaviors (Report No. DOT HS xxx xxx). Federal Highway Administration. [link](https://ntrl.ntis.gov/NTRL/)
+
+### Presentations
+
+1. **Douglas, G., Boyle, L. N., Mooney, S., Sealens, B., Moudon, A., & Ebel, B.** (2025). Pedestrian Exposure Measures for Different Scales of Analysis. Paper to be presented at the 104th Annual Meeting of the Transportation Research Board, Washington, D.C.
+

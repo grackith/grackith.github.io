@@ -1,0 +1,56 @@
+---
+title: "Data & Visualization Tools"
+output:
+  html_document:
+    toc: false
+    theme: lumen
+    includes:
+      in_header: includes/header.html
+      after_body: includes/footer.html  # Add this line to include the footer
+    css: styles.css
+---
+
+## Programming Languages
+
+- **Object-oriented:** Python, C#
+- **Statistics/computation:** R, MATLAB
+- **ML/AI:** Scikit-Learn, Tensorflow
+
+## Data Management
+
+- SQL
+
+## Simulation & Optimization
+
+- SUMO
+- Flow
+- GAMS
+- AMPL
+
+## Visualization & Mapping
+
+- Vega-Lite
+- QGIS
+
+## Version Control
+
+- Git
+
+## Additional Tools
+
+- LaTeX: For academic writing and documentation
+
+### Video Analysis
+
+- ANVIL video coding software
+- Datavyu
+
+### 3D Modeling and Animation
+
+- Unity/3D
+- Unreal Engine
+- Blender
+- MotionBuilder
+- MOTIVE
+- ISAT (miniSim)
+

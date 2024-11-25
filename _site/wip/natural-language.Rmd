@@ -1,0 +1,11 @@
+---
+title: "Natural language"
+output:
+  html_document:
+    toc: false
+    theme: lumen
+    includes:
+      in_header:
+        - includes/header.html
+    css: styles.css
+---

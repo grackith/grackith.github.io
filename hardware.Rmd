@@ -1,0 +1,218 @@
+---
+title: " "
+output:
+  html_document:
+    toc: false
+    theme: null
+    includes:
+      in_header: includes/header.html
+    css:
+      - styles.css
+      - "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+---
+
+```{=html}
+<div class="main-wrapper">
+  <div class="content-wrapper">
+    <!-- Introduction -->
+    <section class="lab-section">
+      <div class="intro-box">
+        <div class="intro-box-title">
+          <span class="emoji">💡</span>DID YA KNOW?
+        </div>
+        <div class="intro-box-content">
+          To ensure safe experimentation settings for human-subjects, driving studies often use a combination of hardware and software tools to develop simulated road settings for controlled experimentation. Simulated environments can provide <em>low-level control</em> over the <em>visual scene</em> and <em>scenario logic</em> participants are exposed to, creating a safe space to study critical road events or other sensitive and unsafe in-vehicle situations. This is particularly crucial when studying mixed-traffic interactions in shared urban spaces, where multiple types of road users—pedestrians, cyclists, and vehicles- navigate complex social and physical environments together.
+        </div>
+      </div>
+    </section>
+
+    <div class="overview-text">
+      Most my experimentation is done in a virtual environment. I use <a href="https://github.com/FAR-Lab/CrossCulturalDriving"><em>Strangeland</em></a> - a Unity-based multiplayer driving simulator where participants can be drivers, pedestrians, or cyclists, all interacting in the same virtual space. These tools allow us to simultaneously capture and cast behavior from multiple road users to eachother in commmon virtual worlds. This real-time synchronization between co-located human-subjects contributes to current novel representations of mixed-traffic driving environments under controlled experimentation settings.
+    </div>
+
+    <!-- Simulators Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h4>Simulation environment</h4>
+          <p><em>Strangeland</em> is the backend of our multiplayer studies, which was developed using the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
+
+          <h4>Vehicle simulators</h4>
+          <p>The <em>NADS miniSim Quarter Cab</em> vehicle simualtor is the largest driving simulator I work with. The system incorporates OEM vehicle components and a tri-screen display configuration, delivering a 180-degree field of view that can ideally mimic real-world driving conditions. The platform's advanced physics engine accurately models various environmental conditions, while integrated eye-tracking and behavioral monitoring systems capture rich data about driver behavior and attention patterns. In addition to the miniSim we also use a <em>Logitech G29</em> force-feedback steering pedal and wheel set, which provides a flexible configuration for 2-driver studies.</p>
+
+          <h4>Free-motion simulators</h4>
+          <p>The integration of <em>Meta Quest Pro</em> and <em>Meta Quest 3</em> systems extends our capability to study pedestrian behavior from a first-person perspective. These advanced HMDs feature high-resolution passthrough capabilities, enabling seamless blending of virtual and physical environments. Integrated eye-tracking and facial expression monitoring systems provide detailed data about participant attention and emotional states during interactions. The systems' natural locomotion trackingand spatial mapping capabilities allow for ecological validity in pedestrian behavior studies, while maintaining precise experimental control.</p>
+        </div>
+
+        <!-- Simulator Images Gallery -->
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="simulator-gallery">
+              <figure>
+                <img src="images/quarter-cab-specs.png" alt="Quarter cab specifications">
+                <figcaption class="image-caption">Quarter cab technical specifications</figcaption>
+              </figure>
+              <figure>
+                <img src="images/viewport.png" alt="Viewport">
+                <figcaption class="image-caption">Simulator viewport configuration</figcaption>
+              </figure>
+              <figure>
+                <img src="images/minisim-stock.png" alt="Strangeland simulator">
+                <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="simulator-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="fun-note">
+      🎮 <em>Fun fact: While simulator sickness occurs specifically when using flight or driving simulators, cybersickness is a broader term covering discomfort from any digital device interaction - from VR to smartphones. Both conditions stem from a mismatch between what your eyes see and what your body feels, leading to symptoms like nausea, dizziness, headache, fatigue, and disorientation.</em>
+    </div>
+
+    <!-- Motion Capture Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3>Motion capture</h3>
+          <p>Motion capture helps to precisely measure, model, and reproduce operational human movement. In my research, motion capture streams are useful for capturing behavior of pedestrians and other vulnerable road users with incredibly granularity.</p>
+
+          <h4>OptiTrack (outside-in tracking)</h4>
+          <p>Our <a href="https://optitrack.com/">OptiTrack</a> setup is like having 24 super-precise cameras all working together. Operating at up to 120hz and integrates directly with Strangeland!</p>
+          <ul>
+            <li>Tracks movement down to fractions of a millimeter</li>
+            <li>Captures movement faster than the human eye can see</li>
+            <li>Can track multiple people at once - perfect for studying group dynamics</li>
+            <li>Streams data in real-time, so we can see results as they happen</li>
+            <li>Integrates beautifully with Unity, letting us recreate movements in virtual environments</li>
+            <li>Perfect for capturing those split-second decisions pedestrians make when crossing streets</li>
+            <li>Can even track props and objects (like phones or coffee cups) to study distracted walking</li>
+          </ul>
+
+          <h4>Sony Mocopi (inside-out tracking)</h4>
+          <p>The <a href="https://www.sony.net/Products/mocopi-dev/en/documents/Home/Aboutmocopi.html">Sony Mocopi</a> is our newest toy, and it lets us catpure movement on the go! As a portable motion capture solution, six wireless IMU-based sensors enable natural movement studies in both lab and field settings. This dual-system approach provides flexibility in studying pedestrian behavior across various environmental contexts while maintaining high data fidelity.</p>
+        </div>
+
+        <!-- Motion Capture Images Gallery -->
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="mocap-gallery">
+              <div class="video-container">
+                <video controls>
+                  <source src="videos/highschoolers-blend.mp4" type="video/mov">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="image-caption">Pre-captured motion casting process</p>
+              </div>
+              <figure>
+                <img src="images/optitrack.jpeg" alt="OptiTrack camera system">
+                <figcaption class="image-caption">OptiTrack motion capture system</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="mocap-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3>A note on networking</h3>
+          <p><em>A humanFUELed hot-pot</em>: Here's where it all comes together! Our lab network is a carefully crafted stew of different technologies (hence <em>hot-pot</em>). Here's what's simmering in our digital kitchen:</p>
+          <ul>
+            <li>Real-time data synchronization between all devices (and logging!).</li>
+            <li>Motion capture systems for exact positioning and operation movement of pedestrian and cyclists throughout experimentation.</li>
+            <li>HMDs for pedestrians, cyclists, and/or desktop vehicle simulator participant.</li>
+          </ul>
+        </div>
+        <div class="image-column">
+          <div class="sticky-images">
+            <figure class="image-item">
+              <figcaption class="image-caption">Network diagram</figcaption>
+              <img src="images/hotpot-network.png" alt="Network diagram">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  class ImageGallery {
+    constructor(container) {
+      this.gallery = container;
+      this.figures = this.gallery.querySelectorAll('figure');
+      this.nav = this.gallery.nextElementSibling;
+      this.dots = this.nav.querySelectorAll('.gallery-dot');
+      this.currentIndex = 0;
+      
+      this.showImage(0);
+      this.setupEventListeners();
+    }
+    
+    showImage(index) {
+      if (index < 0 || index >= this.figures.length) return;
+      
+      this.figures.forEach(fig => {
+        fig.style.display = 'none';
+        fig.classList.remove('active');
+      });
+      
+      this.figures[index].style.display = 'block';
+      this.figures[index].classList.add('active');
+      
+      this.dots.forEach(dot => dot.classList.remove('active'));
+      if (this.dots[index]) {
+        this.dots[index].classList.add('active');
+      }
+      
+      this.currentIndex = index;
+    }
+    
+    setupEventListeners() {
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.showImage(index));
+      });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      this.gallery.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      this.gallery.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+        
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
+            this.showImage(this.currentIndex + 1);
+          } else if (swipeDistance < 0 && this.currentIndex > 0) {
+            this.showImage(this.currentIndex - 1);
+          }
+        }
+      }, { passive: true });
+    }
+  }
+
+  const galleries = document.querySelectorAll('.gallery-images');
+  galleries.forEach(gallery => {
+    new ImageGallery(gallery);
+  });
+});
+</script>
+```
