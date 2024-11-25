@@ -1,7 +1,6 @@
 name: "Grace Douglas Portfolio"
-output_dir: _site
+output_dir: "."  # Changed from "_site" to "." for root
 encoding: utf-8
-exclude: ["README.md", ".gitignore"]
 navbar:
   title: "Grace Douglas"
   left:
