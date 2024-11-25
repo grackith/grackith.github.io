@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>projects.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<!-- header.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="nav-wrapper">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">home</a>
+    <ul class="nav-links">
+      <li><a href="timeline.html" id="about-link">about</a></li>
+      <li><a href="projects.html" id="research-link">research</a></li>
+      <li><a href="hardware.html" id="tools-link">tools</a></li>
+      <li><a href="FUN.html" id="fun-link">.FUN</a></li>
+      <li><a href="resume.html" id="cv-link">cv</a></li>
+    </ul>
+    <div class="header-icons">
+      <a href="mailto:grace.douglas@nyu.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/" aria-label="LinkedIn" target="_blank"
+        rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="http://github.com/grackith/" aria-label="GitHub" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get current page URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Remove active class from all links and add to current
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.classList.remove('active'); // Remove from all first
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Special case for home page
+    if (currentPage === 'index.html') {
+      document.querySelector('.site-title').classList.add('active');
+    }
+  });
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div class="main-wrapper">
+  <div class="content-wrapper">
+    <!-- Pedestrian Exposure Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Pedestrian Exposure for Crash Prediction
+              <a href="https://github.com/grackith/tangle-town" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
+            
+            <p><em>Pedestrian exposure for crash prediction</em>. Prediction models are only as good as the data they learn from. This study uses a previously developed pedestrian exposure to environmental risk measure to track microenvironment pedestrian path-planning and likelihood of vehicle crash incidence at the intersection-level of analysis.</p>
+
+            <ul>
+              <li>How does the inclusion of pedestrian activity in the microenvironment improve the performance of intersection-level crash rate prediction?</li>
+              <li>How do we develop a framework for identifying, analyzing, and learning from prediction model misclassifications?</li>
+            </ul>
+
+            <p><strong>Abstract</strong>: Urban areas in the US are estimated to have faced a 60% increase in pedestrian fatalities over the past decade (GHSA, 2023). However, because these events are inherently rare, it is difficult to develop preventative measures to mitigate collision risk. An important pit stop on the road to safer streets is therefore developing robust geospatial estimates of current pedestrian activity levels. Robust estimates of pedestrian activity serve as a proxy measure for crash likelihood, as locations containing high pedestrian activity levels are naturally prone to higher pedestrian-vehicle crash rates. This project aims to predict pedestrian-vehicle collision risk based on pedestrian exposure and environmental factors at intersections.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="ped-exposure-gallery">
+              <figure>
+                <img src="images/ped_crash_land_use_map.png" alt="Pedestrian crash land use map">
+                <figcaption class="image-caption">Land use and crash patterns</figcaption>
+              </figure>
+              <figure>
+                <img src="images/mcc-crash-risk.png" alt="Comparing model performance to predict intersection crash state (whether or not a pedestina-vehicle crash incident occurred during an 8-year collection period).">
+                <figcaption class="image-caption">Comparing model performance to predict intersection crash state (whether or not a pedestina-vehicle crash incident occurred during an 8-year collection period).</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="ped-exposure-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sim2Real Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Sim2Real: Virtualized mixed-traffic driving environments with human regulated RL agents 
+              <a href="https://github.com/grackith/tangle-town" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Strangeland, a cross-cultural driving simulator.</strong> Reinforcement learning methods have gained traction on the autonomous vehicle front for the ability to explore unknown state spaces and previously unseen environments. This adaptivity produces trained agents that can perform in real-world environments not exactly mimicking previous training environments. However, deploying these algorithms on-line in real-world traffic environments is still relatively nonexistant due to potential safety implications for both the in-vehicle driver and other road users (ORUs). Therefore, this project proposes a sim-to-sim transfer: previously trained human regularized RL agents (HR-PPO) are deployed into an multiplayer experimentation setting (Strangeland) to interact with driving and walking participants. This approach can validate and fine-tune RL agent training in a context-rich setting.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="sim2real-project-gallery">
+              <figure>
+                <img src="images/strangeland-minisim-v2.png" alt="Strangeland deployed on NADS Minisim - driver perspective.">
+                <figcaption class="image-caption">Strangeland deployed on NADS Minisim - driver perspective.</figcaption>
+              </figure>
+              <div class="video-container">
+                <video controls>
+                  <source src="videos/casting-precaptured-motion.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="image-caption">Pre-captured motion casting process</p>
+              </div>
+            </div>
+            <div class="gallery-nav" id="sim2real-project-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Unregulated Pedestrian Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Unregulated pedestrian behavior in mixed-traffic driving environments
+              <a href="https://github.com/grackith/walk-in-the-park" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: National Science Foundation (NSF) - GermanXUS research exchange</strong></p>
+            
+            <p>Locale-specific feature learning is necessary training to ensure safe deployment around vulnerable road users. This project is jointly conducted at NYU and THI (Germany) to examine inter-cultural differences of pedestrian adherence to road regulation.</p>
+            
+            <p>Pedestrians represent a significant portion of road traffic fatalities, accounting for about 23% of the global total in 2021 (World Health Organization, 2023). Their vulnerability, due to the lack of protection compared to vehicle occupants, results in a higher risk of serious injury in crashes. Despite a slight decrease in pedestrian fatalities in Europe compared to total road fatalities (European Commission, 2021), predicting pedestrian behavior remains challenging. Pedestrians follow fewer rules, exhibit dynamic movements, and their actions are less predictable than those of other road users.</p>
+
+            <p>Autonomous vehicles promise to reduce accidents by eliminating human errors caused by fatigue, drowsiness, or distraction. However, they face challenges with unpredictable pedestrian behavior. Unlike human drivers, autonomous vehicles cannot communicate with pedestrians through gestures or eye contact in ambiguous situations. Most accidents involving automated vehicles occur in automated mode, often due to unpredictable actions of other road users, including pedestrians.</p>
+
+            <p>To design safer systems for driver assistance and autonomous driving, we need a thorough understanding of pedestrian behavior. This knowledge is also crucial for traffic planning to protect pedestrians as vulnerable road users. This thesis aims to enhance our understanding of pedestrian behavior at signalized intersections, focusing on the impact of social factors.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="unreg-ped-gallery">
+              <figure>
+                <img src="images/mal-frameworkv4.png" alt="Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments.">
+                <figcaption class="image-caption">Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/linestrings-to-pts.png" alt="Graph-based RL environment">
+                <figcaption class="image-caption">Graph-based RL environment for pedestrian preference learning at Greenlake, Seattle, WA.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/gl-osmnx-afterbouts.png" alt="Graph-based state space">
+                <figcaption class="image-caption">Weighting a step-size within a graph-based state space with historical collections of pedestrian walking activity.</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="unreg-ped-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multimodal Environments Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Multimodal Environments & Multitasking Driving Behaviors
+              <a href="https://github.com/grackith/NRDT-engagement--mixed-traffic-settings" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: Federal Highway Administration (FHWA)</strong></p>
+
+            <p><strong>Abstract</strong>: With more than 42,000 roadway fatalities in 2022, transportation safety researchers are interested in gathering a deeper understanding of how drivers behave, interact, and make decisions while navigating the roadway environment. Within the past decade, researchers have discovered that approximately 50% of a driver's time is spent engaging in non-driving-related tasks (Dingus et al., 2016; Young et al., 2019). This project, Investigating How Multimodal Environments Affect Multitasking Driving Behaviors, approaches this issue of distraction with SHRP2 NDS data, which is the largest naturalistic driving study to date. More specifically, the research team targets 19 urban locations that contain pedestrian and cyclist facilities (crosswalks, bike treatments) to investigate a driver's secondary task engagement amidst other road users. There were three primary groups of variables considered in the analysis: video data to label and identify secondary task behavior and the urban environment, kinematics that describe the state (acceleration, speed, etc.) of the vehicle throughout each video file, and demographic data that was connected anonymously back to the participants in the video data. Initially, two mixed-effect binary logistic regression models were fitted to crosswalk and bike treatment data, respectively; these models were useful to confirm significant findings from the pilot study. In addition to these significant relationships, two Bayesian networks were implemented (crosswalks, bike treatments), which provide a graphical representation of the conditional dependencies between the variables considered in the analysis. Bayesian networks are useful in modeling complex systems with the uncertain relationships and have widely used in many fields, including transportation safety. The results of this study have important implications for transportation safety that could, for example, improve vulnerable road user facility design or inform future Advanced Driver Assist System (ADAS) development.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="multimodal-gallery">
+              <figure>
+                <img src="images/diagram.png" alt="Two operational measures are developed to describe driver NDRT engagement in the presence of vulnerable road users (VRUs): 1. an *overlap state*, and 2. a *disengagement point*.">
+                <figcaption class="image-caption">Two operational measures are developed to describe driver NDRT engagement in the presence of vulnerable road users (VRUs): 1. an *overlap state*, and 2. a *disengagement point*.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/ndrt-dur.png" alt="Average duration of nondriving-related task (NDRT) engagement across 1,000+ driving traversals.">
+                <figcaption class="image-caption">Average duration of nondriving-related task (NDRT) engagement across 1,000+ driving traversals.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/ndrt-dur-prop.png" alt="Average proportion of a driving traversal drivers spent engagemet in NDRTs. The bimodal distribution across VRU facilities suggest two driver distraction profiles: isolated engagement and serial engagement. The highest percentage of driving traversal a serial engagement spanned was 78% of the driver's trip.">
+                <figcaption class="image-caption">Average proportion of a driving traversal drivers spent engagemet in NDRTs. The bimodal distribution across VRU facilities suggest two driver distraction profiles: isolated engagement and serial engagement. The highest percentage of driving traversal a serial engagement spanned was 78% of the driver's trip.</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="multimodal-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mode Choice Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              The Mode Choice Should be my Choice!
+              <a href="https://github.com/grackith/sip-mode-flow" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <ul>
+              <li>How does vulnerable road user (VRU) behavior change between geographically separate locales?</li>
+              <li>Are separate locales identifiable by their VRU behavior?</li>
+              <li>How can locale-specific models of VRU behavior contribute to our current representations of mixed-traffic driving environments?</li>
+            </ul>
+            
+            <p><strong>Abstract</strong>: In response to rising VRU deaths in dense urban settings, and increased support for complete street designs, this project examines the relationship between mode choice and the surrounding built environment. This projects uses New York City as a living lab: mode choice data and trip purpose are from the Regional Establishment Survey (RES), and GIS-linked built environment features (i.e, high-visibility crosswalks, average roadway width, slow-speed zone) are provided by the <a href="https://opendata.cityofnewyork.us/">NYC Open Data Portal</a>. A mixed logit model is developed to compare individual heterogeneity in soft, mass, and personal (vehicle) mode choices with local built environment support for observed choices. Sociodemographics such as age, income, and mobility status are also considered. An alternative-specific travel time variable is considered, and a more thorough discussion of mode choice elasticity to changes in the local microenvironment is provided.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="mode-choice-gallery">
+              <figure>
+                <img src="images/sips-nyc-for-report.png" alt="SIPS NYC report">
+                <figcaption class="image-caption">NYC transportation mode analysis</figcaption>
+              </figure>
+              <figure>
+                <img src="images/socio-fin-final.png" alt="Socio-fin image">
+                <figcaption class="image-caption">Socioeconomic factors analysis</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="mode-choice-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Mobile Office Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              The Next Mobile Office: How will we Work in Self-Driving Cars?
+              <a href="https://github.com/grackith?tab=repositories" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
+            
+            <ul>
+              <li>Investigating the impact of virtual meeting engagement on takeover performance in conditionally automated vehicles using a NADs miniSim vehicle simulator.</li>
+              <li>Participants are randomly assigned Emergency or Planned treatments while actively engaged in a virtual meeting.</li>
+            </ul>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="mobile-office-gallery">
+              <figure>
+                <img src="images/virtual-work-meetings.png" alt="Researchers pre-record a virtual work meeting for in-vehicle participant to join and engage in a common team meeting task: selecting a slide deck.">
+                <figcaption class="image-caption">Researchers pre-record a virtual work meeting for in-vehicle participant to join and engage in a common team meeting task: selecting a slide deck.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/data-collection-drive.png" alt="A level 3 Automated Driving System (ADS) can conditionally take full control over the dynamic driving task. Participants are asked to begin the drive in manual operation, then join engage their ADS and join virtual meeting at their convenience.">
+                <figcaption class="image-caption">A level 3 Automated Driving System (ADS) can conditionally take full control over the dynamic driving task. Participants are asked to begin the drive in manual operation, then join engage their ADS and join virtual meeting at their convenience.</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="mobile-office-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-Cultural Mapping Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Cross-cultural mapping of older drivers
+              <a href="https://github.com/grackith?tab=repositories" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
+            <p><strong>Abstract</strong>: This research develops comprehensive profiles of older drivers to enhance support systems and reduce the likelihood of accidents. Building a database of naturalistic driving behavior is challenging and costly, making it beneficial to map profiles across databases consisting of different subpopulations. This study utilizes the Strategic Highway Research Program (SHRP2), a naturalistic driving database, and the Survey of Health, Aging, and Retirement in Europe (SHARE) database to identify personal characteristics that could be mapped between the two databases for a cross-cultural examination of how the choice to drive becomes a locale-specific question.</p>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="cross-cultural-gallery">
+              <figure>
+                <img src="images/clustering-share-shrp2.jpg" alt="SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.">
+                <figcaption class="image-caption">Database mapping visualization</figcaption>
+              </figure>
+              <figure>
+                <img src="images/sahre-sharp2-mapping.png" alt="Cluster SHARE">
+                <figcaption class="image-caption">Mapping driving profiles across sociodemographics: how do older drivers make the decision to drive?</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="cross-cultural-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pedestrian Exposure Devices Project -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <section class="project-section">
+            <h3>
+              Measuring Pedestrian Exposure Using Electronic Devices
+              <a href="https://github.com/grackith/dc-autoui2024" target="_blank" class="project-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
+            <p><strong>Abstract</strong>: Crashes involving pedestrians continue to be a serious problem in the United States and represent 15% of all traffic collisions. Pedestrians are among the most vulnerable road users. In 2020, pedestrians accounted for 6,516 fatalities and an estimated 54,769 injuries in motor vehicle crashes. Over the last decade, the U.S. has seen a 46% increase in pedestrian fatalities, now representing 17% of all motor vehicle related crash fatalities (NHTSA, 2022). In response to the increased number of fatalities and the increased emphasis on walking and biking for transportation, health, environmental, and other reasons, many localities are looking for ways to make pedestrians safer. One of the challenges to developing and implementing effective pedestrian safety countermeasures is establishing a consistent estimate of the number of pedestrians at risk in a place. This project operationalizes a pedestrian exposure measure from personal electronic device data (GSP, accelerometer) collected at a weeks time from over 700 participants throughout a 4-year period.</p>
+            
+            <ul>
+              <li>How does local infrastructure impact pedestrian decision-making and path-planning in the microenvironment?</li>
+              <li>What inferential methods can provide robust estimates for pedestrian activity?</li>
+            </ul>
+          </section>
+        </div>
+        
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="ped-devices-gallery">
+              <figure>
+                <img src="images/ped-exp-estimates.png" alt="Pedestrian exposure estimates">
+                <figcaption class="image-caption">Pedestrian exposure estimation results</figcaption>
+              </figure>
+              <figure>
+                <img src="images/WB_subsetted_off_map.png" alt="Walking activity">
+                <figcaption class="image-caption">Walking activity patterns</figcaption>
+              </figure>
+              <figure>
+                <img src="images/ped-exp-env-buffers.png" alt="Pedestrian experience environment buffers">
+                <figcaption class="image-caption">Environmental buffer analysis</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="ped-devices-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  class ImageGallery {
+    constructor(container) {
+      this.gallery = container;
+      this.figures = this.gallery.querySelectorAll('figure');
+      this.nav = this.gallery.nextElementSibling;
+      this.dots = this.nav.querySelectorAll('.gallery-dot');
+      this.currentIndex = 0;
+      
+      this.showImage(0);
+      this.setupEventListeners();
+    }
+    
+    showImage(index) {
+      if (index < 0 || index >= this.figures.length) return;
+      
+      this.figures.forEach(fig => {
+        fig.style.display = 'none';
+        fig.classList.remove('active');
+      });
+      
+      this.figures[index].style.display = 'block';
+      this.figures[index].classList.add('active');
+      
+      this.dots.forEach(dot => dot.classList.remove('active'));
+      if (this.dots[index]) {
+        this.dots[index].classList.add('active');
+      }
+      
+      this.currentIndex = index;
+    }
+    
+    setupEventListeners() {
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.showImage(index));
+      });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      this.gallery.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      this.gallery.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+        
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
+            this.showImage(this.currentIndex + 1);
+          } else if (swipeDistance < 0 && this.currentIndex > 0) {
+            this.showImage(this.currentIndex - 1);
+          }
+        }
+      }, { passive: true });
+    }
+  }
+
+  const galleries = document.querySelectorAll('.gallery-images');
+  galleries.forEach(gallery => {
+    new ImageGallery(gallery);
+  });
+});
+</script>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
