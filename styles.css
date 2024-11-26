@@ -429,14 +429,11 @@ p {
   border: none;
 }
 
-/* Common List Styles */
-/* Common List Styles */
 .content-block ul,
 .lab-section ul {
-  margin: 20px 0 20px 40px;  /* Added left margin */
+  margin: 20px 0 20px 60px;  /* Increased left margin */
   padding-left: 40px;
   list-style-type: disc;
-  text-indent: -20px;  /* Creates a hanging indent */
 }
 
 .content-block ul > li,
