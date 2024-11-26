@@ -57,7 +57,7 @@ output:
                 <figcaption class="image-caption">Simulator viewport configuration</figcaption>
               </figure>
               <figure>
-                <img src="images/minisim-stock.png" alt="Strangeland simulator">
+                <img src="images/minisim-stock.jpeg" alt="Strangeland simulator">
                 <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator</figcaption>
               </figure>
             </div>

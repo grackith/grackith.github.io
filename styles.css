@@ -571,8 +571,8 @@ p {
 .grid-item figcaption {
   text-align: center;
   margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--secondary-color);
+  font-size: 0.75rem;
+  color: var(--scondary-color);
   font-style: italic;
 }
 
@@ -636,7 +636,7 @@ p {
 .fun-grid-item figcaption {
   margin-top: 12px;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: var(--secondary-color);
   font-style: italic;
 }
@@ -652,6 +652,16 @@ p {
 
 .fun-note em {
   color: var(--secondary-color);
+}
+
+.image-item.circle img {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;  /* Force square aspect ratio */
+  object-fit: cover;
+  width: 300px;  /* Set fixed width */
+  height: 300px;  /* Set fixed height */
+  margin: 0 auto;
+  display: block;
 }
 
 /* ==========================================================================
