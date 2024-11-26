@@ -24,10 +24,18 @@ output:
       <div class="two-column-layout">
         <!-- Left Column: Content -->
         <div class="content-column">
-          <h4>Human Factors & Urban Ergonomics Lab (HumanFUEL) - New York University Tandon School of Engineering</h4>
+          <h4>NYU Tandon School of Engineering: Human Factors & Urban Ergonomics Lab (HumanFUEL)</h4>
           
           <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Vice Dean of Research, NYU Tandon SOE - C2SMART Institute</strong></p>
           <p><em>September 2023 - Present</em></p>
+          
+          
+          <ul>
+            <li><a href="projects.html#sim2real">Sim2Real: Virtualized mixed-traffic driving environments with human regulated RL agents</a></li>
+            <li><a href="projects.html#unregulated-ped">Unregulated pedestrian behavior in mixed-traffic driving environments</a></li>
+            <li><a href="projects.html#ped-study">Pedestrian Exposure for Crash Prediction</a></li>
+            <li><a href="projects.html#mode-choice">The Mode Choice Should be my Choice!</a></li>
+          </ul>
           
           <p>Since moving to NYU in Fall 2023, and in addition to research on-going, I have also been involved with setting up the new lab:</p>
           <ul>
@@ -57,12 +65,12 @@ output:
           <h4>University of Washington: Human Factors and Statistical Modeling Lab (HFSM)</h4>
           <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Professor, Chair, UW Industrial & Systems Engineering</strong></p>
           <p><em>June 2021 – August 2023</em></p>
-          
-          <p>Worked on multiple projects including:</p>
+
           <ul>
-            <li>Cross-Cultural Mapping of Older Drivers</li>
-            <li>Multimodal Environments & Multitasking Driving Behaviors</li>
-            <li>Measuring Pedestrian Exposure Using Electronic Devices</li>
+            <li><a href="projects.html#mobile-office">The Next Mobile Office: How will we Work in Self-Driving Cars?</a></li>
+            <li><a href="projects.html#multimodal-envs">Multimodal Environments & Multitasking Driving Behaviors</a></li>
+            <li><a href="projects.html#profile-mapping">Cross-cultural mapping of older drivers</a></li>
+            <li><a href="projects.html#pedX">Measuring Pedestrian Exposure Using Electronic Devices</a></li>
           </ul>
 
           <h4>University of Wisconsin-Madison: Cognitive Systems Lab (CSL)</h4>
