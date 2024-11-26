@@ -18,7 +18,7 @@ output:
     <section class="lab-section">
       <div class="fun-photo-grid">
         <figure class="fun-grid-item">
-          <img src="images/selfie-coffee.png" alt="Coffee in Brooklyn">
+          <img src="images/selfie-coffee-v2.jpeg" alt="Coffee in Brooklyn">
           <figcaption>Still searching for the best oat cappucino in Brooklyn..</figcaption>
         </figure>
         

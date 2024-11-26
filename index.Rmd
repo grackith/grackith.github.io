@@ -48,7 +48,7 @@ output:
         </ul>
 
         <h3>☕️ <em>Water cooler coffee?</em><sup>[1,2]</sup></h3>
-        <p>I'm best informally, and with joe :) Please reach out with any questions or to discuss my work!</p>
+        <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work!</p>
 
         <div class="keywords">
           Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
@@ -73,7 +73,7 @@ output:
           </figure>
           <figure class="image-item">
             <figcaption class="image-caption">but cannot wait for shavasana.</figcaption>
-            <img src="images/yoga1.jpg" alt="Grace doing yoga">
+            <img src="images/yogav2.jpeg" alt="Grace doing yoga">
           </figure>
         </div>
       </div>

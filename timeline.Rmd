@@ -81,15 +81,15 @@ output:
           <div class="project-gallery">
             <div class="gallery-images" id="previous-labs-gallery">
               <figure>
-                <img src="images/hfsm-coffee.jpg" alt="Weekly coffee to canvas every coffee shop within 1 mile radius of the lab.">
+                <img src="images/hfsm-coffee-v2.jpeg" alt="Weekly coffee to canvas every coffee shop within 1 mile radius of the lab.">
                 <figcaption class="image-caption">Weekly coffee to canvas every coffee shop within 1 mile radius of the lab.</figcaption>
               </figure>
               <figure>
-                <img src="images/Secret Santa 2023.jpg" alt="Lab Holiday Celebration">
+                <img src="images/Secret Santa 2023-v2.jpeg" alt="Lab Holiday Celebration">
                 <figcaption class="image-caption">Holiday celebrations 2023</figcaption>
               </figure>
               <figure>
-                <img src="images/hfsm-uw.jpg" alt="HFSM Lab at UW">
+                <img src="images/hfsm-uw-v2.jpeg" alt="HFSM Lab at UW">
                 <figcaption class="image-caption">HFSM Lab at University of Washington</figcaption>
               </figure>
               <figure>

@@ -166,7 +166,7 @@ html, body {
 
 .header-icons {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -231,9 +231,6 @@ html, body {
   flex: 0 0 35%;
 }
 
-
-
-
 .image-column img {
   width: 100%;
   height: 400px;
@@ -291,7 +288,6 @@ h3 {
 
 p {
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
 /* Homepage Greeting Styles */
@@ -313,13 +309,13 @@ p {
 }
 
 .greeting {
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 400;
 }
 
 .name {
   margin-left: 65px;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 300;
 }
 
@@ -332,7 +328,7 @@ p {
   border-left: 5px solid var(--accent-color);
   padding: 30px;
   margin: 40px 0 60px;  /* Increased bottom margin */
-  font-size: 0.5rem;
+  font-size: 0.875rem;
   line-height: 1.4;
   width: 100%;
   max-width: var(--container-width);
@@ -395,25 +391,13 @@ p {
 }
 
 .lab-section h4 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
 .lab-section p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 10px;
-}
-
-.lab-section ul {
-  margin: 20px 0;
-  padding-left: 40px;
-  list-style-type: disc;
-}
-
-.lab-section ul li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  line-height: 1.4;
 }
 
 /* PDF Container for Resume Page */
@@ -444,50 +428,48 @@ p {
   border: none;
 }
 
-/* Content Block Lists */
-.content-block ul {
+/* Common List Styles */
+.content-block ul,
+.lab-section ul {
   margin: 20px 0;
   padding-left: 40px;
   list-style-type: disc;
 }
 
-.content-block ul>li {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+.content-block ul > li,
+.lab-section ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   line-height: 1.4;
 }
 
+/* Ordered List Styles */
 .content-block ol {
   margin: 20px 0;
   padding-left: 40px;
   list-style-type: decimal;
 }
 
-.content-block ol>li {
-  font-size: 1.3rem;
+.content-block ol > li {
+  font-size: 1.1rem;
   line-height: 1.4;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
-.content-block ol>li p,
-.content-block ol>li strong {
-  font-size: 1rem;
-}
-
-.content-block ol>li ul {
+/* Nested Lists */
+.content-block ol > li ul {
   margin: 15px 0;
   padding-left: 25px;
   list-style-type: disc;
 }
 
-.content-block ol>li ul>li {
+/* Common Paragraph Styles */
+.content-block ol > li p,
+.content-block ol > li strong,
+.content-block ol > li ul > li p,
+.lab-section p {
   font-size: 1rem;
   margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.content-block ol>li ul>li p {
-  font-size: 1rem;
 }
 
 /* ==========================================================================
