@@ -309,13 +309,13 @@ p {
 }
 
 .greeting {
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: 400;
 }
 
 .name {
   margin-left: 65px;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 300;
 }
 
