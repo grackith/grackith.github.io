@@ -101,24 +101,18 @@ output:
 
         <!-- Motion Capture Images Gallery -->
         <div class="image-column">
-          <div class="project-gallery">
-            <div class="gallery-images" id="mocap-gallery">
-              <div class="video-container">
-                <video controls>
-                  <source src="videos/highschoolers-blend.mp4" type="video/mov">
-                  Your browser does not support the video tag.
-                </video>
-                <p class="image-caption">Pre-captured motion casting process</p>
-              </div>
-              <figure>
-                <img src="images/optitrack.jpeg" alt="OptiTrack camera system">
-                <figcaption class="image-caption">OptiTrack motion capture system</figcaption>
-              </figure>
+          <div class="stacked-images">
+            <div class="video-container">
+              <video controls>
+                <source src="videos/highschoolers-blend.mp4" type="video/mov">
+                Your browser does not support the video tag.
+              </video>
+              <p class="image-caption">Pre-captured motion casting process</p>
             </div>
-            <div class="gallery-nav" id="mocap-nav">
-              <span class="gallery-dot"></span>
-              <span class="gallery-dot"></span>
-            </div>
+            <figure class="image-item">
+              <img src="images/optitrack.jpeg" alt="OptiTrack camera system">
+              <figcaption class="image-caption">OptiTrack motion capture system</figcaption>
+            </figure>
           </div>
         </div>
       </div>
