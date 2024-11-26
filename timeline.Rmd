@@ -37,9 +37,9 @@ output:
             <li><a href="projects.html#mode-choice">The Mode Choice Should be my Choice!</a></li>
           </ul>
           
-          <p>Since moving to NYU in Fall 2023, and in addition to research on-going, I have also been involved with setting up the new lab:</p>
+          <p>Since moving to NYC at the beginning of 2024, I have also been involved with setting up the new lab:</p>
           <ul>
-            <li>Ordering, installing, and calibrating new lab equipment: 2 vehicle simulators, 2 free-motion simulators, eye-tracking equipment, motion capture systems, LANs for real-time synchronization.</li>
+            <li>Ordering, installing, and calibrating new lab equipment: <a href="hardware.html#veh-sim-header">2 vehicle simulators</a>, <a href="hardware.html#free-sim-header">2 free-motion simulators</a>, <a href="hardware.html#mocap-header"> 2 motion capture systems</a>, <a href="hardware.html#network"> LANs for real-time synchronization</a>.</li>
             <li>Designing lab space for human subjects experiments, developing lab name and logo, and creating lab space use documentation.</li>
             <li>Coordinating with building managers, administration, technology manufacturers and equipment suppliers.</li>
             <li>Interviewing potential undergraduate and graduate candidates for research lab positions.</li>
@@ -125,11 +125,11 @@ output:
               <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
                 <img 
                   src="images/temporal-dynamics-domeyer.png" 
-                  alt="Drivers 'short-stop' as a type of nonverbal communication to vulnerable pedestrians. Spatiotemporal traces of mixed-traffic behavior helps identify mechanisms of informal interaction in shared spaces."
+                  alt="short-stop"
                   style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
                 >
                 <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-                  CSL Lab at University of Wisconsin-Madison
+                  Drivers 'short-stop' as a type of nonverbal communication to vulnerable pedestrians. Spatiotemporal traces of mixed-traffic behavior helps identify mechanisms of informal interaction in shared spaces.
                 </figcaption>
               </figure>
               <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
