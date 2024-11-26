@@ -429,11 +429,13 @@ p {
 }
 
 /* Common List Styles */
+/* Common List Styles */
 .content-block ul,
 .lab-section ul {
-  margin: 20px 0;
+  margin: 20px 0 20px 40px;  /* Added left margin */
   padding-left: 40px;
   list-style-type: disc;
+  text-indent: -20px;  /* Creates a hanging indent */
 }
 
 .content-block ul > li,
@@ -441,6 +443,7 @@ p {
   font-size: 1.1rem;
   margin-bottom: 10px;
   line-height: 1.4;
+  padding-left: 20px;  /* Matches the negative text-indent */
 }
 
 /* Ordered List Styles */
@@ -718,14 +721,14 @@ p {
 .footnotes {
   margin-top: 40px;
   padding: 20px 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #666666;
   border-top: 1px solid #eeeeee;
 }
 
 .footnotes p {
   margin: 5px 0;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 @media (max-width: 1200px) {
