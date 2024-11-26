@@ -152,36 +152,24 @@ if (window.hljs) {
     </section>
 
     <!-- Previous Labs Section -->
+<!-- HFSM Lab -->
     <section class="lab-section">
       <div class="two-column-layout">
-        <!-- Left Column: Content -->
         <div class="content-column">
           <h4>University of Washington: Human Factors and Statistical Modeling Lab (HFSM)</h4>
           <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Professor, Chair, UW Industrial & Systems Engineering</strong></p>
           <p><em>June 2021 – August 2023</em></p>
-
           <ul>
             <li><a href="projects.html#mobile-office">The Next Mobile Office: How will we Work in Self-Driving Cars?</a></li>
             <li><a href="projects.html#multimodal-envs">Multimodal Environments & Multitasking Driving Behaviors</a></li>
             <li><a href="projects.html#profile-mapping">Cross-cultural mapping of older drivers</a></li>
             <li><a href="projects.html#pedX">Measuring Pedestrian Exposure Using Electronic Devices</a></li>
           </ul>
-
-          <h4>University of Wisconsin-Madison: Cognitive Systems Lab (CSL)</h4>
-          <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=Qd6nZCAAAAAJ&hl=en">Dr. John Lee</a> | Professor, UW-Madison Industrial & Systems Engineering</strong></p>
-          <p><em>May 2017 – August 2019</em></p>
-          
-          <ul>
-            <li>Conducted an ethnographic study recording driver short-stop behavior at urban intersections using mounted GoPro cameras.</li>
-            <li>Labeled vehicle-pedestrian interaction with ANVIL video coding software.</li>
-            <li>Utilized NADs miniSim software for naturalistic driving environments.</li>
-          </ul>
         </div>
 
-        <!-- Right Column: Gallery -->
         <div class="image-column">
           <div class="project-gallery">
-            <div class="gallery-images" id="previous-labs-gallery">
+            <div class="gallery-images" id="hfsm-gallery">
               <figure>
                 <img src="images/hfsm-coffee-v2.jpeg" alt="Weekly coffee to canvas every coffee shop within 1 mile radius of the lab.">
                 <figcaption class="image-caption">Weekly coffee to canvas every coffee shop within 1 mile radius of the lab.</figcaption>
@@ -198,13 +186,8 @@ if (window.hljs) {
                 <img src="images/vtti.jpeg" alt="VTTI Research Facility">
                 <figcaption class="image-caption">Adventurous RAs take 2-wk trip to Virginia Tech Transportation Institute (VTTI) to hand-label sensitive driving video!</figcaption>
               </figure>
-              <figure>
-                <img src="images/hfsm-csl.jpeg" alt="CSL and HFSM celebration">
-                <figcaption class="image-caption">CSL and HFSM celebration at the annual Human Factors & Ergonomics (HFES) Conference, 2022</figcaption>
-              </figure>
             </div>
-            <div class="gallery-nav" id="previous-labs-nav">
-              <span class="gallery-dot"></span>
+            <div class="gallery-nav" id="hfsm-nav">
               <span class="gallery-dot"></span>
               <span class="gallery-dot"></span>
               <span class="gallery-dot"></span>
@@ -214,9 +197,56 @@ if (window.hljs) {
         </div>
       </div>
     </section>
+
+    <!-- CSL Lab -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h4>University of Wisconsin-Madison: Cognitive Systems Lab (CSL)</h4>
+          <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=Qd6nZCAAAAAJ&hl=en">Dr. John Lee</a> | Professor, UW-Madison Industrial & Systems Engineering</strong></p>
+          <p><em>May 2017 – August 2019</em></p>
+          
+          <ul>
+            <li>Conducted an ethnographic study recording driver short-stop behavior at urban intersections.</li>
+            <li>Labeled vehicle-pedestrian interaction with ANVIL video coding software.</li>
+            <li>Utilized NADs miniSim software for naturalistic driving environments.</li>
+          </ul>
+        </div>
+    
+        <div class="image-column">
+          <div class="project-gallery">
+            <div class="gallery-images" id="csl-gallery" style="width: 100%; display: flex; overflow: hidden;">
+              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
+                <img 
+                  src="images/temporal-dynamics-domeyer.png" 
+                  alt="Drivers 'short-stop' as a type of nonverbal communication to vulnerable pedestrians. Spatiotemporal traces of mixed-traffic behavior helps identify mechanisms of informal interaction in shared spaces."
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+                >
+                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+                  CSL Lab at University of Wisconsin-Madison
+                </figcaption>
+              </figure>
+              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
+                <img 
+                  src="images/hfsm-csl.jpeg" 
+                  alt="CSL and HFSM celebration"
+                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+                >
+                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+                  CSL and HFSM celebration at the annual Human Factors & Ergonomics (HFES) Conference, 2022
+                </figcaption>
+              </figure>
+            </div>
+            <div class="gallery-nav" id="csl-nav" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
+              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
-
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
   class ImageGallery {
