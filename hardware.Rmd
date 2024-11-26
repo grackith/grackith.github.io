@@ -140,7 +140,7 @@ output:
           <div class="sticky-images">
             <figure class="image-item">
               <figcaption class="image-caption">Network diagram</figcaption>
-              <img src="images/hotpot-network.png" alt="Network diagram">
+              <img src="images/hotpot-network.png" alt=" ">
             </figure>
           </div>
         </div>

@@ -54,7 +54,7 @@ output:
       <div class="two-column-layout">
         <!-- Left Column: Content -->
         <div class="content-column">
-          <h4>University of Washington: Human Factors and Statistical Modeling Lab (HFSM) - </h4>
+          <h4>University of Washington: Human Factors and Statistical Modeling Lab (HFSM)</h4>
           <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Professor, Chair, UW Industrial & Systems Engineering</strong></p>
           <p><em>June 2021 – August 2023</em></p>
           

@@ -720,16 +720,19 @@ p {
 }
 
 .footnotes {
+  width: 100%;
   margin-top: 40px;
   padding: 20px 0;
-  font-size: 0.6rem;
-  color: #666666;
   border-top: 1px solid #eeeeee;
 }
 
 .footnotes p {
-  margin: 5px 0;
-  line-height: 1.2;
+  margin: 15px 0;
+  line-height: 1.4;
+  text-indent: -20px;
+  padding-left: 20px;
+  font-size: 0.8rem;
+  color: #666666;
 }
 
 @media (max-width: 1200px) {
