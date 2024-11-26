@@ -36,7 +36,7 @@ output:
             <div class="gallery-images" id="ped-exposure-gallery">
               <figure>
                 <img src="images/ped_crash_land_use_mapV2.jpeg" alt="Pedestrian crash land use map">
-                <figcaption class="image-caption">Land use and crash patterns</figcaption>
+                <figcaption class="image-caption"> </figcaption>
               </figure>
               <figure>
                 <img src="images/mcc-crash-risk.png" alt="Comparing model performance to predict intersection crash state (whether or not a pedestina-vehicle crash incident occurred during an 8-year collection period).">
