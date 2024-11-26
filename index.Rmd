@@ -55,8 +55,8 @@ output:
         </div>
 
         <div class="footnotes">
-          <p>Koch, T., & Denner, N. (2022). Informal communication in organizations: work time wasted at the water-cooler or crucial exchange among co-workers?. Corporate Communications: An International Journal, 27(3), 494-508.</p>
-          <p>Woo, D., Endacott, C. G., & Myers, K. K. (2023). Navigating water cooler talks without the water cooler: Uncertainty and information seeking during remote socialization. Management Communication Quarterly, 37(2), 251-280.</p>
+          Koch, T., & Denner, N. (2022). Informal communication in organizations: work time wasted at the water-cooler or crucial exchange among co-workers?. Corporate Communications: An International Journal, 27(3), 494-508.
+          Woo, D., Endacott, C. G., & Myers, K. K. (2023). Navigating water cooler talks without the water cooler: Uncertainty and information seeking during remote socialization. Management Communication Quarterly, 37(2), 251-280.
         </div>
       </div>
 
