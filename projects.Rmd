@@ -105,70 +105,68 @@ output:
 
 
 ```{=html}
-    <!-- Unregulated Pedestrian Project -->
-    <section class="lab-section">
-      <div class="two-column-layout">
-        <div class="content-column">
-          <section class="project-section">
-            <h3 id="unregulated-ped">
-              Unregulated pedestrian behavior in mixed-traffic driving environments
-              <a href="https://github.com/grackith/walk-in-the-park" target="_blank" class="project-github">
-                <i class="fab fa-github"></i>
-              </a>
-            </h3>
-            <p><strong>Funded by: National Science Foundation (NSF) - GermanXUS research exchange</strong></p>
-            
-            <p>This collaborative research between New York University and Technical University of Ingolstadt (THI) examines cultural influences on pedestrian behavior and regulatory compliance. With pedestrians constituting 23% of global road traffic fatalities in 2021, understanding cross-cultural behavioral patterns is critical for developing adaptive safety systems. Predicting pedestrian behavior remains challenging due to their dynamic movement patterns and variable adherence to traffic regulations.
-In addition, the development of autonomous vehicle systems face significant limitations in replicating human communication protocols that typically resolve ambiguous traffic situations. This is evidenced by incident data showing autonomous vehicle accidents predominantly occur during automated operation involving unexpected pedestrian actions. Through systematic analysis of pedestrian behavior at signalized intersections, this research aims to inform both the development of culturally-adaptive autonomous systems and the implementation of more effective urban infrastructure across diverse societal contexts.</p>
-          </section>
-        </div>
+<!-- Unregulated Pedestrian Project -->
+<section class="lab-section">
+  <div class="two-column-layout">
+    <div class="content-column">
+      <section class="project-section">
+        <h3 id="unregulated-ped">
+          Unregulated pedestrian behavior in mixed-traffic driving environments
+          <a href="https://github.com/grackith/walk-in-the-park" target="_blank" class="project-github">
+            <i class="fab fa-github"></i>
+          </a>
+        </h3>
+        <p><strong>Funded by: National Science Foundation (NSF) - GermanXUS research exchange</strong></p>
         
-        <div class="image-column">
-          <div class="image-column" style="width: 100%; max-width: 1200px; margin: 0 auto;">
-          <!-- Fixed top image -->
-          <figure style="margin-bottom: 30px;">
+        <p>This collaborative research between New York University and Technical University of Ingolstadt (THI) examines cultural influences on pedestrian behavior and regulatory compliance. With pedestrians constituting 23% of global road traffic fatalities in 2021, understanding cross-cultural behavioral patterns is critical for developing adaptive safety systems. Predicting pedestrian behavior remains challenging due to their dynamic movement patterns and variable adherence to traffic regulations.In addition, the development of autonomous vehicle systems face significant limitations in replicating human communication protocols that typically resolve ambiguous traffic situations. This is evidenced by incident data showing autonomous vehicle accidents predominantly occur during automated operation involving unexpected pedestrian actions. Through systematic analysis of pedestrian behavior at signalized intersections, this research aims to inform both the development of culturally-adaptive autonomous systems and the implementation of more effective urban infrastructure across diverse societal contexts.</p>
+
+        <!-- Moved image here, under the text -->
+        <figure style="margin-top: 30px;">
+          <img 
+            src="images/mal-frameworkv4.png"
+            alt="Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments."
+            style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+          >
+          <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+            Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments.
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+    
+    <div class="image-column">
+      <!-- Gallery for remaining images -->
+      <div class="project-gallery">
+        <div class="gallery-images" id="unreg-ped-gallery" style="width: 100%; display: flex; overflow: hidden;">
+          <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
             <img 
-              src="images/mal-frameworkv4.png" 
-              alt="Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments."
+              src="images/linestrings-to-pts.png"
+              alt="Graph-based RL environment"
               style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
             >
             <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-              Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments.
+              Graph-based RL environment for pedestrian preference learning at Greenlake, Seattle, WA.
             </figcaption>
           </figure>
-        
-          <!-- Gallery for remaining images -->
-          <div class="project-gallery">
-            <div class="gallery-images" id="unreg-ped-gallery" style="width: 100%; display: flex; overflow: hidden;">
-              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
-                <img 
-                  src="images/linestrings-to-pts.png" 
-                  alt="Graph-based RL environment"
-                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
-                >
-                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-                  Graph-based RL environment for pedestrian preference learning at Greenlake, Seattle, WA.
-                </figcaption>
-              </figure>
-              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
-                <img 
-                  src="images/gl-osmnx-afterbouts.png" 
-                  alt="Graph-based state space"
-                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
-                >
-                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-                  Weighting a step-size within a graph-based state space with historical collections of pedestrian walking activity.
-                </figcaption>
-              </figure>
-            </div>
-            <div class="gallery-nav" id="unreg-ped-nav" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
-              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
-              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
-            </div>
-          </div>
+          <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
+            <img 
+              src="images/gl-osmnx-afterbouts.png"
+              alt="Graph-based state space"
+              style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+            >
+            <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+              Weighting a step-size within a graph-based state space with historical collections of pedestrian walking activity.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="gallery-nav" id="unreg-ped-nav" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+          <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
+          <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 ```
 
 

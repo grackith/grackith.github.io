@@ -84,16 +84,7 @@ output:
           <p>Motion capture helps to precisely measure, model, and reproduce operational human movement. In my research, motion capture streams are useful for capturing behavior of pedestrians and other vulnerable road users with incredibly granularity.</p>
 
           <h4>OptiTrack (outside-in tracking)</h4>
-          <p>Our <a href="https://optitrack.com/">OptiTrack</a> setup is like having 24 super-precise cameras all working together. Operating at up to 120hz and integrates directly with Strangeland!</p>
-          <ul>
-            <li>Tracks movement down to fractions of a millimeter</li>
-            <li>Captures movement faster than the human eye can see</li>
-            <li>Can track multiple people at once - perfect for studying group dynamics</li>
-            <li>Streams data in real-time, so we can see results as they happen</li>
-            <li>Integrates beautifully with Unity, letting us recreate movements in virtual environments</li>
-            <li>Perfect for capturing those split-second decisions pedestrians make when crossing streets</li>
-            <li>Can even track props and objects (like phones or coffee cups) to study distracted walking</li>
-          </ul>
+          <p>Our <a href="https://optitrack.com/">OptiTrack</a> setup is like having 24 super-precise cameras all working together. Operating at up to 120hz and integrates directly with Strangeland! This system also tracks multiple people at once - perfect for studying group dynamics such as herd behavior and in- and out-group biases. Addtitionally, optiTrack supports a .NET base, allowing participants to interact on-line.</p>
 
           <h4>Sony Mocopi (inside-out tracking)</h4>
           <p>The <a href="https://www.sony.net/Products/mocopi-dev/en/documents/Home/Aboutmocopi.html">Sony Mocopi</a> is our newest toy, and it lets us catpure movement on the go! As a portable motion capture solution, six wireless IMU-based sensors enable natural movement studies in both lab and field settings. This dual-system approach provides flexibility in studying pedestrian behavior across various environmental contexts while maintaining high data fidelity.</p>
