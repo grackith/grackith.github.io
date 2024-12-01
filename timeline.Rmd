@@ -21,38 +21,44 @@ output:
 
     <!-- Current Lab Section: HumanFUEL -->
     <section class="lab-section">
-      <div class="two-column-layout">
-        <!-- Left Column: Content -->
-        <div class="content-column">
-          <h4>NYU Tandon School of Engineering: Human Factors & Urban Ergonomics Lab (HumanFUEL)</h4>
+      <div class="lab-section-split">
+        <!-- Top section with two columns -->
+        <div class="lab-section-top">
+          <!-- Left Column: Content -->
+          <div class="content-column">
+            <h4>NYU Tandon School of Engineering: Human Factors & Urban Ergonomics Lab (HumanFUEL)</h4>
+            
+            <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Vice Dean of Research, NYU Tandon SOE - C2SMART Institute</strong></p>
+            <p><em>September 2023 - Present</em></p>
+            
+            <ul>
+              <li><a href="projects.html#sim2real">Sim2Real: Virtualized mixed-traffic driving environments with human regulated RL agents</a></li>
+              <li><a href="projects.html#unregulated-ped">Unregulated pedestrian behavior in mixed-traffic driving environments</a></li>
+              <li><a href="projects.html#ped-study">Pedestrian Exposure for Crash Prediction</a></li>
+              <li><a href="projects.html#mode-choice">The Mode Choice Should be my Choice!</a></li>
+            </ul>
+          </div>
           
-          <p><strong>Advisor: <a href="https://scholar.google.com/citations?user=-iCRFrsAAAAJ&hl=en&oi=ao">Dr. Linda Ng Boyle</a> | Vice Dean of Research, NYU Tandon SOE - C2SMART Institute</strong></p>
-          <p><em>September 2023 - Present</em></p>
-          
-          
-          <ul>
-            <li><a href="projects.html#sim2real">Sim2Real: Virtualized mixed-traffic driving environments with human regulated RL agents</a></li>
-            <li><a href="projects.html#unregulated-ped">Unregulated pedestrian behavior in mixed-traffic driving environments</a></li>
-            <li><a href="projects.html#ped-study">Pedestrian Exposure for Crash Prediction</a></li>
-            <li><a href="projects.html#mode-choice">The Mode Choice Should be my Choice!</a></li>
-          </ul>
-          
+          <!-- Right Column: Logo -->
+          <div class="image-column">
+            <div class="sticky-images">
+              <figure class="image-item">
+                <img src="images/humanFUEL-logo.png" alt="HumanFUEL NYU">
+                <figcaption class="image-caption"> </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Bottom section in single column -->
+        <div class="lab-section-bottom">
           <p>Since moving to NYC at the beginning of 2024, I have also been involved with setting up the new lab:</p>
           <ul>
-            <li>Ordering, installing, and calibrating new lab equipment: <a href="hardware.html#veh-sim-header">2 vehicle simulators</a>, <a href="hardware.html#free-sim-header">2 free-motion simulators</a>, <a href="hardware.html#mocap-header"> 2 motion capture systems</a>, <a href="hardware.html#network"> LANs for real-time synchronization</a>.</li>
+            <li>Ordering, installing, and calibrating new lab equipment: <a href="hardware.html#veh-sim-header">2 vehicle simulators</a>, <a href="hardware.html#free-sim-header">2 free-motion simulators</a>, <a href="hardware.html#mocap-header">2 motion capture systems</a>, <a href="hardware.html#network">LANs for real-time synchronization</a>.</li>
             <li>Designing lab space for human subjects experiments, developing lab name and logo, and creating lab space use documentation.</li>
             <li>Coordinating with building managers, administration, technology manufacturers and equipment suppliers.</li>
             <li>Interviewing potential undergraduate and graduate candidates for research lab positions.</li>
           </ul>
-        </div>
-        <!-- Right Column: Logo -->
-        <div class="image-column">
-          <div class="sticky-images">
-            <figure class="image-item">
-              <img src="images/humanFUEL-logo.png" alt="HumanFUEL NYU">
-              <figcaption class="image-caption"> </figcaption>
-            </figure>
-          </div>
         </div>
       </div>
     </section>

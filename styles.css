@@ -401,6 +401,68 @@ p {
   margin-bottom: 10px;
 }
 
+.lab-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* New styles for the split layout */
+.lab-section-split {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lab-section-top {
+  display: flex;
+  gap: 2rem;
+}
+
+.lab-section-bottom {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* Maintain the existing two-column layout styles for the top section */
+.lab-section-top .content-column {
+  flex: 0 0 65%;
+}
+
+.lab-section-top .image-column {
+  flex: 0 0 35%;
+}
+
+/* Style adjustments for the bottom section */
+.lab-section-bottom ul {
+  margin: 20px 0;
+  padding-left: 40px;
+  list-style-type: disc;
+  max-width: var(--content-width);
+}
+
+.lab-section-bottom li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Media query adjustments */
+@media (max-width: 1200px) {
+  .lab-section-top {
+    flex-direction: column;
+  }
+
+  .lab-section-top .content-column,
+  .lab-section-top .image-column {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    flex: 0 0 100%;
+  }
+}
+
 /* PDF Container for Resume Page */
 .pdf-container {
   width: 100%;
