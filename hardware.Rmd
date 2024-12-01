@@ -102,13 +102,18 @@ output:
         <!-- Motion Capture Images Gallery -->
         <div class="image-column">
           <div class="stacked-images">
-            <div class="video-container">
-              <video controls>
+            <figure style="margin: 0;">
+              <video 
+                controls
+                style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+              >
                 <source src="videos/highschoolers-blend.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <p class="image-caption">Pre-captured motion casting process</p>
-            </div>
+              <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+                Pre-captured motion casting process
+              </figcaption>
+            </figure>
             <figure class="image-item">
               <img src="images/optitrack.jpeg" alt="OptiTrack camera system">
               <figcaption class="image-caption">OptiTrack motion capture system</figcaption>
