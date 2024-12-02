@@ -77,9 +77,8 @@ output:
             alt="Strangeland deployed on NADS Minisim - driver perspective."
             style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
           >
-          <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-            Driver perspective of Strangetown, an inter-urban instantiation of Strangeland to investigate informal behavior among mixed-traffic road agents.
-          </figcaption>
+          <figcaption class = "image-caption">
+            Driver perspective of Strangetown, an inter-urban instantiation of Strangeland to investigate informal behavior among mixed-traffic road agents.</figcaption>
         </figure>
 
         <figure style="margin: 0;">
@@ -90,7 +89,7 @@ output:
             <source src="videos/casting-precaptured-motion.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+          <figcaption class = "image-caption">
             Pre-captured motion using the Optitrack system of two friends high-fiving: spawned in Strangeland.
           </figcaption>
         </figure>

@@ -29,6 +29,10 @@ output:
         <div class="intro-box">
           Hey! grace-io here. As a human-subjects researcher, I focus on developing human-like models that capture how road users behave in shared urban spaces. My dissertation work specifically explores how different cultures represent vulnerable road users in mixed-traffic environments. The goal is to create computational models that are <em>fair</em>, <em>safe</em>, and <em>robust</em> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
         </div>
+        
+        <div class="keywords">
+          Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
+        </div>
 
         <p>Currently I'm a Transportation Systems Ph.D. Candidate at the <a href="https://c2smarter.engineering.nyu.edu/">C2SMART Institute</a> in the Civil & Urban Engineering Department at the New York University Tandon School of Engineering in Downtown Brooklyn, NY. My advisor is <a href="https://engineering.nyu.edu/faculty/linda-ng-boyle">Dr. Linda Ng Boyle</a> at C2SMART's HumanFUEL (Human Factors and Urban Ergonomics Lab), where we develop user-centered road safety solutions for a dynamic set of motorized and nonmotorized agents. Some current project work I am involved with:</p>
 
@@ -45,10 +49,6 @@ output:
           <li>How does the inclusion of pedestrian activity as an exposure measure in the microenvironment improve the performance of intersection-level crash rate prediction?</li>
           <li>How do we develop a framework for identifying, analyzing, and learning from prediction model misclassifications in rare event prediction?</li>
         </ul>
-        
-        <div class="keywords">
-          Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
-        </div>
 
         <h3>☕️ <em>Water cooler coffee?</em><sup>[1,2]</sup></h3>
         <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work!</p>
