@@ -1092,12 +1092,19 @@ p {
     line-height: 1.4;  /* Slightly reduced for tighter text */
   }
 
-  /* Content block text adjustments */
+  .content-block ul,
+  .lab-section ul {
+    margin: 20px 0;  /* Remove left margin */
+    padding-left: 2rem; /* Use consistent padding */
+    list-style-type: disc;
+  }
+
   .content-block ul > li,
-  .lab-section ul li {
-    font-size: 1rem;  /* Reduced from 1.1rem */
-    margin-bottom: 8px;  /* Reduced from 10px */
-    padding-left: 15px;  /* Reduced from 20px */
+  .lab-section ul > li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    padding-left: 0;  /* Remove the padding that was causing extra indentation */
+    text-indent: 0;   /* Remove any text indentation */
   }
 }
 
