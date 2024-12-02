@@ -123,7 +123,7 @@ output:
             alt="Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments."
             style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
           >
-          <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+          <figcaption class = "image-caption">
             Generative Adversarial Imitation Learning (GAIL) of pedestrian path-planning in informal urban environments.
           </figcaption>
         </figure>
@@ -140,7 +140,7 @@ output:
               alt="Graph-based RL environment"
               style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
             >
-            <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+            <figcaption class = "image-caption">
               Graph-based RL environment for pedestrian preference learning at Greenlake, Seattle, WA.
             </figcaption>
           </figure>
@@ -150,7 +150,7 @@ output:
               alt="Graph-based state space"
               style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
             >
-            <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+            <figcaption class = "image-caption">
               Weighting a step-size within a graph-based state space with historical collections of pedestrian walking activity.
             </figcaption>
           </figure>
@@ -312,11 +312,11 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <div class="gallery-images" id="cross-cultural-gallery">
             <figure>
                 <img src="images/share-sharp2-mapping.jpeg" alt="Cluster SHARE">
-                <figcaption class="image-caption">Mapping driving profiles across sociodemographics: how do older drivers navigate their decision to continue driving?</figcaption>
+                <figcaption class="image-caption"> Mapping driving profiles across sociodemographics: how do older drivers navigate their decision to continue driving?</figcaption>
               </figure>
               <figure>
                 <img src="images/clustering-share-shrp2-v2.jpeg" alt="SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.">
-                <figcaption class="image-caption">SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.</figcaption>
+                <figcaption class="image-caption"> SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.</figcaption>
               </figure>
             </div>
             <div class="gallery-nav" id="cross-cultural-nav">
@@ -351,7 +351,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <div class="gallery-images" id="ped-devices-gallery">
               <figure>
                 <img src="images/ped-exp-estimates.jpeg" alt="Pedestrian exposure estimates">
-                <figcaption class="image-caption">Walking activity patterns in Seattle, WA from two NIH studies about health and wellness in urban infrastructure.</figcaption>
+                <figcaption class="image-caption"> Walking activity patterns in Seattle, WA from two NIH studies about health and wellness in urban infrastructure.</figcaption>
               </figure>
               <figure>
                 <img src="images/ped-exp-env-buffers.png" alt="Pedestrian experience environment buffers">
