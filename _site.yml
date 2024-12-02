@@ -1,0 +1,30 @@
+name: "Grace Douglas Portfolio"
+output_dir: "."  # Changed from "_site" to "." for root
+encoding: utf-8
+navbar:
+  title: "Grace Douglas"
+  left:
+    - text: "home"
+      href: index.html
+    - text: "about"
+      href: timeline.html
+    - text: "research"
+      href: projects.html
+    - text: "tools"
+      href: hardware.html
+    - text: ".FUN"
+      href: FUN.html
+    - text: "cv"
+      href: resume.html
+output:
+  html_document:
+    toc: false
+    number_sections: false
+    theme: lumen
+    includes:
+      in_header:
+        - includes/header.html
+    css:
+      - "styles.css"
+      - "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+

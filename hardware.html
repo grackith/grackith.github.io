@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>hardware.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<!-- header.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="nav-wrapper">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">home</a>
+    <ul class="nav-links">
+      <li><a href="timeline.html" id="about-link">about</a></li>
+      <li><a href="projects.html" id="research-link">research</a></li>
+      <li><a href="hardware.html" id="tools-link">tools</a></li>
+      <li><a href="FUN.html" id="fun-link">.FUN</a></li>
+      <li><a href="resume.html" id="cv-link">cv</a></li>
+    </ul>
+    <div class="header-icons">
+      <a href="mailto:grace.douglas@nyu.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/" aria-label="LinkedIn" target="_blank"
+        rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="http://github.com/grackith/" aria-label="GitHub" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get current page URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Remove active class from all links and add to current
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.classList.remove('active'); // Remove from all first
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Special case for home page
+    if (currentPage === 'index.html') {
+      document.querySelector('.site-title').classList.add('active');
+    }
+  });
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div class="main-wrapper">
+  <div class="content-wrapper">
+    <!-- Introduction -->
+    <section class="lab-section">
+      <div class="intro-box">
+        <div class="intro-box-title">
+          <span class="emoji">💡</span>DID YA KNOW?
+        </div>
+        <div class="intro-box-content">
+          To ensure safe experimentation settings for human-subjects, driving studies often use a combination of hardware and software tools to develop simulated road settings for controlled experimentation. Simulated environments serve as experimental testbeds that allow researchers to systematically manipulate traffic conditions, road infrastructure, and interaction scenarios while ensuring participant safety during potentially hazardous driving situations. This is particularly crucial when studying mixed-traffic interactions in shared urban spaces, where multiple types of road users—motorized and nonmotorized- navigate complex social and physical environments together.
+        </div>
+      </div>
+
+    <div class="overview-text">
+      Most my experimentation is done in a virtual environment. I use <a href="https://github.com/FAR-Lab/CrossCulturalDriving"><em>Strangeland</em></a> - a Unity-based multiplayer driving simulator where participants can be drivers, pedestrians, or cyclists, all interacting in the same virtual space. These tools allow us to simultaneously capture and cast behavior from multiple road users to eachother in commmon virtual worlds. This real-time synchronization between co-located human-subjects contributes to current novel representations of mixed-traffic driving environments under controlled experimentation settings.
+    </div>
+    </section>
+
+    <!-- Simulators Section -->
+    <section class="lab-section">
+      <!-- First row: Simulation Environment with Strangeland image -->
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h4>Simulation environment</h4>
+          <p><em>Strangeland</em> is the backend of our multiplayer studies, which was developed in the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
+        </div>
+        <div class="image-column">
+          <figure>
+            <img src="images/minisim-stock.jpeg" alt="Strangeland simulator" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+            <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator.</figcaption>
+          </figure>
+        </div>
+      </div>
+    
+      <!-- Second row: Vehicle and Free-motion simulators with stacked images -->
+      <div class="two-column-layout" style="margin-top: 2rem;">
+        <div class="content-column">
+          <h4 id="veh-sim-header">Vehicle simulators</h4>
+          <p>The <a href="https://dsri.uiowa.edu/minisim"> NADS miniSim Quarter Cab</a> vehicle simualtor is the largest driving simulator I work with. The system incorporates OEM vehicle components and a tri-screen display configuration, delivering a 180-degree field of view that can ideally mimic real-world driving conditions. The platform's advanced physics engine accurately models various environmental conditions, while integrated eye-tracking and behavioral monitoring systems capture rich data about driver behavior and attention patterns. In addition to the miniSim we also use a <em>Logitech G29</em> force-feedback steering pedal and wheel set, which provides a flexible configuration for 2-driver studies.</p>
+    
+          <h4 id="free-sim-header">Free-motion simulators</h4>
+          <p>The integration of <a href="https://www.meta.com/quest/products/quest-2/?srsltid=AfmBOoouxT45H6qu0Ke8vjGBRk9JPxnHfb89alTFlnZJIBIDoSqmn3Bx"> Meta Quest 2</a> and <a href="https://www.meta.com/quest/quest-pro/"> Meta Quest Pro</a> systems extends our capability to provide more immersive experimentation solutions. For example, becoming a pedestrian requires the construct of a road space and traffic environment. These advanced HMDs feature high-resolution immersion that allows us to design environments to target certain rare traffic scenarios. Integrated eye-tracking and facial expression monitoring systems provide detailed data about participant attention and ~emotional states during interactions.</p>
+        </div>
+        
+        <div class="image-column">
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <figure>
+              <img src="images/quarter-cab-specs.png" alt="Quarter cab specifications" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+              <figcaption class="image-caption">Quarter cab technical specifications.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/viewport.png" alt="Viewport" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+              <figcaption class="image-caption">Simulator viewport configuration.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Motion Capture Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3 id="mocap-header"> Motion capture</h3>
+          <p>Motion capture helps to precisely measure, model, and reproduce operational human movement. In my research, motion capture streams are useful for capturing behavior of pedestrians and other vulnerable road users with incredibly granularity.</p>
+
+          <h4>OptiTrack (outside-in tracking)</h4>
+          <p>Our <a href="https://optitrack.com/">OptiTrack</a> setup is like having 24 super-precise cameras all working together. Operating at up to 120hz and integrates directly with Strangeland! This system also tracks multiple people at once - perfect for studying group dynamics such as herd behavior and in- and out-group biases. Addtitionally, optiTrack supports a .NET base, allowing participants to interact on-line.</p>
+
+          <h4>Sony Mocopi (inside-out tracking)</h4>
+          <p>The <a href="https://www.sony.net/Products/mocopi-dev/en/documents/Home/Aboutmocopi.html">Sony Mocopi</a> is our newest toy, and it lets us catpure movement on the go! As a portable motion capture solution, six wireless IMU-based sensors enable natural movement studies in both lab and field settings. This dual-system approach provides flexibility in studying pedestrian behavior across various environmental contexts while maintaining high data fidelity.</p>
+        </div>
+
+        <!-- Motion Capture Images Gallery -->
+        <div class="image-column">
+          <div class="stacked-images">
+            <figure style="margin: 0;">
+              <video 
+                controls
+                style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+              >
+                <source src="videos/highschooler-blend.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;"></figcaption>
+            </figure>
+            <figure class="image-item">
+              <img src="images/optitrack.jpeg" alt="OptiTrack camera system">
+              <figcaption class="image-caption">OptiTrack motion capture system</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3 id="network"> A note on networking</h3>
+          <p><em>A humanFUELed hot-pot</em>: Here's where it all comes together! Our lab network is a carefully crafted stew of different technologies (hence <em>hot-pot</em>). Here's what's simmering in our digital kitchen:</p>
+          <ul>
+            <li>Real-time data synchronization (and logging!) between all devices and participants.</li>
+            <li>Exact positioning and operation movement of participants throughout experimentation.</li>
+            <li>HMDs for pedestrians, cyclists, and/or desktop vehicle simulator participant.</li>
+            <li>NADS MiniSim for driving participants.</li>
+          </ul>
+        </div>
+        <div class="image-column">
+          <div class="sticky-images">
+            <figure class="image-item">
+              <figcaption class="image-caption"></figcaption>
+              <img src="images/hotpot-network.png" alt=" ">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footnotes">
+      <p><sup>1</sup>Laessoe, U., Abrahamsen, S., Zepernick, S., Raunsbaek, A., & Stensen, C. (2023). Motion sickness and cybersickness - Sensory mismatch. Physiology & Behavior, 258(114015), 114015. https://doi.org/10.1016/j.physbeh.2022.114015
+</p>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  class ImageGallery {
+    constructor(container) {
+      this.gallery = container;
+      this.figures = this.gallery.querySelectorAll('figure');
+      this.nav = this.gallery.nextElementSibling;
+      this.dots = this.nav.querySelectorAll('.gallery-dot');
+      this.currentIndex = 0;
+      
+      this.showImage(0);
+      this.setupEventListeners();
+    }
+    
+    showImage(index) {
+      if (index < 0 || index >= this.figures.length) return;
+      
+      this.figures.forEach(fig => {
+        fig.style.display = 'none';
+        fig.classList.remove('active');
+      });
+      
+      this.figures[index].style.display = 'block';
+      this.figures[index].classList.add('active');
+      
+      this.dots.forEach(dot => dot.classList.remove('active'));
+      if (this.dots[index]) {
+        this.dots[index].classList.add('active');
+      }
+      
+      this.currentIndex = index;
+    }
+    
+    setupEventListeners() {
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.showImage(index));
+      });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      this.gallery.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      this.gallery.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+        
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
+            this.showImage(this.currentIndex + 1);
+          } else if (swipeDistance < 0 && this.currentIndex > 0) {
+            this.showImage(this.currentIndex - 1);
+          }
+        }
+      }, { passive: true });
+    }
+  }
+
+  const galleries = document.querySelectorAll('.gallery-images');
+  galleries.forEach(gallery => {
+    new ImageGallery(gallery);
+  });
+});
+</script>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

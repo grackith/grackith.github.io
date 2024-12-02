@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>$if(title)$$title$$endif$</title>
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="$if(css)$$css$$endif$">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        $for(sidebar)$
+                        <li class="nav-item">
+                            <a class="nav-link" href="$sidebar.href$">$sidebar.title$</a>
+                        </li>
+                        $endfor$
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-6 col-lg-7 ml-sm-auto px-md-4">
+                $body$
+            </main>
+
+            <!-- Image column -->
+            <div class="col-md-3 col-lg-3 d-none d-md-block image-column">
+                $for(images)$
+                <img src="$images.src$" alt="$images.alt$" class="img-fluid mb-3">
+                $endfor$
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
