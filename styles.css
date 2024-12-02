@@ -126,31 +126,24 @@ html, body {
   text-decoration: none;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color);
+/* Basic nav-link styles */
+.nav-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
   transition: var(--transition);
+  font-size: 1rem;
+  padding: 0.5rem 0;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
+/* Hover effect - just color change */
+.nav-links a:hover {
+  color: var(--accent-color);
 }
 
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
+/* Active page - just color */
+.nav-links a.active {
+  color: var(--accent-color);
 }
-
 
 .header-icons {
   display: flex;
