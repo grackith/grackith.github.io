@@ -268,11 +268,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
               </a>
             </h3>
             <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
-            
-            <ul>
-              <li>Investigating the impact of virtual meeting engagement on takeover performance in conditionally automated vehicles using a NADs miniSim vehicle simulator.</li>
-              <li>Participants are randomly assigned Emergency or Planned treatments while actively engaged in a virtual meeting.</li>
-            </ul>
+            <p><strong>Abstract</strong>: In this NSF-funded research project exploring the intersection of autonomous vehicles and mobile work environments, participants engage in a comprehensive experimental protocol that begins with informed consent and pre-experimental surveys, followed by essential training on the driving simulator. The study takes place in a simulated two-lane rural road environment where participants, initially driving manually, are instructed to activate conditional automation when comfortable and join a pre-recorded virtual meeting featuring three distinct voiceovers in a Wizard-of-Oz approach. During the meeting, which involves discussing and revising presentation slides, participants encounter a critical red-light running scenario where a lead vehicle obstructs their view of the violating vehicle, requiring them to take control of the vehicle under either Emergency or Planned conditions. The research aims to understand how meeting participation and engagement impact a driver's takeover timing in autonomous vehicles, while also examining the reciprocal effects of takeover scenarios on meeting performance, with participants completing a post-drive survey to capture their overall experience. This innovative study utilizes the NADS miniSim vehicle simulator to create a controlled environment for investigating the complex dynamics between virtual work engagement and autonomous vehicle safety protocols.</p>
           </section>
         </div>
         
@@ -320,10 +316,10 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <div class="gallery-images" id="cross-cultural-gallery">
               <figure>
                 <img src="images/clustering-share-shrp2-v2.jpeg" alt="SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.">
-                <figcaption class="image-caption">Database mapping visualization</figcaption>
+                <figcaption class="image-caption">SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.</figcaption>
               </figure>
               <figure>
-                <img src="images/share-sharp2-mapping.png" alt="Cluster SHARE">
+                <img src="images/share-sharp2-mapping.jpeg" alt="Cluster SHARE">
                 <figcaption class="image-caption">Mapping driving profiles across sociodemographics: how do older drivers navigate their decision to continue driving?</figcaption>
               </figure>
             </div>
@@ -358,11 +354,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
           <div class="project-gallery">
             <div class="gallery-images" id="ped-devices-gallery">
               <figure>
-                <img src="images/ped-exp-estimates-v2.jpeg" alt="Pedestrian exposure estimates">
-                <figcaption class="image-caption">Pedestrian exposure estimation results</figcaption>
-              </figure>
-              <figure>
-                <img src="images/WB_subsetted_off_mapV2.jpeg" alt="Walking activity">
+                <img src="images/ped-exp-estimates.jpeg" alt="Pedestrian exposure estimates">
                 <figcaption class="image-caption">Walking activity patterns in Seattle, WA from two NIH studies about health and wellness in urban infrastructure.</figcaption>
               </figure>
               <figure>
@@ -371,7 +363,6 @@ Our analysis integrates three key data sources: video recordings of driver behav
               </figure>
             </div>
             <div class="gallery-nav" id="ped-devices-nav">
-              <span class="gallery-dot"></span>
               <span class="gallery-dot"></span>
               <span class="gallery-dot"></span>
             </div>
