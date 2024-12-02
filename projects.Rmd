@@ -27,7 +27,7 @@ output:
             </h3>
             <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
             
-            <p><em>Pedestrian exposure for crash prediction</em>. Pedestrian safety in urban environments remains a critical challenge, with U.S. cities experiencing a dramatic 60% increase in pedestrian fatalities over the past decade. To address this crisis, we're developing more sophisticated crash prediction models that incorporate detailed measures of pedestrian exposure to environmental risk. Our approach focuses on tracking pedestrian path-planning behaviors within microenvironments and analyzing their relationship to vehicle crash incidents at intersections. By incorporating granular data about pedestrian activity levels and environmental factors, we aim to create more accurate predictions of collision risk. The rarity of pedestrian-vehicle crashes, while fortunate, presents a significant challenge for developing preventative measures. Our research addresses this by establishing robust geospatial estimates of pedestrian activity as a proxy measure for crash likelihood—acknowledging that areas with higher pedestrian activity naturally face increased crash potential. Through this work, we're advancing both the performance of intersection-level crash predictions and developing a systematic framework for analyzing prediction model misclassifications, ultimately contributing to the design of safer urban spaces.</p>
+            <p><strong>Abstract:</strong> Pedestrian safety in urban environments remains a critical challenge, with U.S. cities experiencing a dramatic 60% increase in pedestrian fatalities over the past decade. To address this crisis, we're developing more sophisticated crash prediction models that incorporate detailed measures of pedestrian exposure to environmental risk. Our approach focuses on tracking pedestrian path-planning behaviors within microenvironments and analyzing their relationship to vehicle crash incidents at intersections. By incorporating granular data about pedestrian activity levels and environmental factors, we aim to create more accurate predictions of collision risk. The rarity of pedestrian-vehicle crashes, while fortunate, presents a significant challenge for developing preventative measures. Our research addresses this by establishing robust geospatial estimates of pedestrian activity as a proxy measure for crash likelihood—acknowledging that areas with higher pedestrian activity naturally face increased crash potential. Through this work, we're advancing both the performance of intersection-level crash predictions and developing a systematic framework for analyzing prediction model misclassifications, ultimately contributing to the design of safer urban spaces.</p>
           </section>
         </div>
         
@@ -65,10 +65,7 @@ output:
             <i class="fab fa-github"></i>
           </a>
         </h3>
-        
-        <p>
-          Reinforcement learning methods have gained traction on the autonomous vehicle front for the ability to explore unknown state spaces and previously unseen environments. This adaptivity produces trained agents that can perform in real-world environments not exactly mimicking previous training environments. However, deploying these algorithms on-line in real-world traffic environments is still relatively nonexistant due to potential safety implications for both the in-vehicle driver and other road users (ORUs). Therefore, this project proposes a sim-to-sim transfer: previously trained human regularized RL agents (HR-PPO) are deployed into an multiplayer experimentation setting (Strangeland) to interact with driving and walking participants. This approach can validate and fine-tune RL agent training in a context-rich setting.
-        </p>
+          <p><strong>Abstract:</strong> Reinforcement learning methods have gained traction on the autonomous vehicle front for the ability to explore unknown state spaces and previously unseen environments. This adaptivity produces trained agents that can perform in real-world environments not exactly mimicking previous training environments. However, deploying these algorithms on-line in real-world traffic environments is still relatively nonexistant due to potential safety implications for both the in-vehicle driver and other road users (ORUs). Therefore, this project proposes a sim-to-sim transfer: previously trained human regularized RL agents (HR-PPO) are deployed into an multiplayer experimentation setting (Strangeland) to interact with driving and walking participants. This approach can validate and fine-tune RL agent training in a context-rich setting.</p>
       </section>
     </div>
 
@@ -94,7 +91,7 @@ output:
             Your browser does not support the video tag.
           </video>
           <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
-            Pre-captured motion casting process
+            Pre-captured motion using the Optitrack system of two friends high-fiving: spawned in Strangeland.
           </figcaption>
         </figure>
       </div>
@@ -118,7 +115,7 @@ output:
         </h3>
         <p><strong>Funded by: National Science Foundation (NSF) - GermanXUS research exchange</strong></p>
         
-        <p>This collaborative research between New York University and Technical University of Ingolstadt (THI) examines cultural influences on pedestrian behavior and regulatory compliance. With pedestrians constituting 23% of global road traffic fatalities in 2021, understanding cross-cultural behavioral patterns is critical for developing adaptive safety systems. Predicting pedestrian behavior remains challenging due to their dynamic movement patterns and variable adherence to traffic regulations.In addition, the development of autonomous vehicle systems face significant limitations in replicating human communication protocols that typically resolve ambiguous traffic situations. This is evidenced by incident data showing autonomous vehicle accidents predominantly occur during automated operation involving unexpected pedestrian actions. Through systematic analysis of pedestrian behavior at signalized intersections, this research aims to inform both the development of culturally-adaptive autonomous systems and the implementation of more effective urban infrastructure across diverse societal contexts.</p>
+        <p><strong>Abstract:</strong> This collaborative research between New York University and Technical University of Ingolstadt (THI) examines cultural influences on pedestrian behavior and regulatory compliance. With pedestrians constituting 23% of global road traffic fatalities in 2021, understanding cross-cultural behavioral patterns is critical for developing adaptive safety systems. Predicting pedestrian behavior remains challenging due to their dynamic movement patterns and variable adherence to traffic regulations.In addition, the development of autonomous vehicle systems face significant limitations in replicating human communication protocols that typically resolve ambiguous traffic situations. This is evidenced by incident data showing autonomous vehicle accidents predominantly occur during automated operation involving unexpected pedestrian actions. Through systematic analysis of pedestrian behavior at signalized intersections, this research aims to inform both the development of culturally-adaptive autonomous systems and the implementation of more effective urban infrastructure across diverse societal contexts.</p>
 
         <!-- Moved image here, under the text -->
         <figure style="margin-top: 30px;">
@@ -229,7 +226,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
                 <i class="fab fa-github"></i>
               </a>
             </h3>
-            <p><strong>Abstract</strong>: In response to rising VRU deaths in dense urban settings, and increased support for complete street designs, this project examines the relationship between mode choice and the surrounding built environment. This projects uses New York City as a living lab: mode choice data and trip purpose are from the Regional Establishment Survey (RES), and GIS-linked built environment features (i.e, high-visibility crosswalks, average roadway width, slow-speed zone) are provided by the <a href="https://opendata.cityofnewyork.us/">NYC Open Data Portal</a>. A mixed logit model is developed to compare individual heterogeneity in soft, mass, and personal (vehicle) mode choices with local built environment support for observed choices. Sociodemographics such as age, income, and mobility status are also considered. An alternative-specific travel time variable is considered, and a more thorough discussion of mode choice elasticity to changes in the local microenvironment is provided.</p>
+            <p><strong>Abstract</strong>: In response to rising VRU deaths in dense urban settings, and increased support for complete street designs, this project examines the relationship between mode choice and the surrounding built environment. This projects uses New York City as a living lab: mode choice data and trip purpose are from the <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Travel-Surveys/Regional-Establishment-Survey">Regional Establishment Survey (RES)</a>, and GIS-linked built environment features (i.e, high-visibility crosswalks, average roadway width, slow-speed zone) are provided by the <a href="https://opendata.cityofnewyork.us/">NYC Open Data Portal</a>. A mixed logit model is developed to compare individual heterogeneity in soft, mass, and personal (vehicle) mode choices with local built environment support for observed choices. Sociodemographics such as age, income, and mobility status are also considered. An alternative-specific travel time variable is considered, and a more thorough discussion of mode choice elasticity to changes in the local microenvironment is provided.</p>
           </section>
         </div>
         
@@ -238,7 +235,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <div class="gallery-images" id="mode-choice-gallery">
               <figure>
                 <img src="images/sips-nyc-for-report.png" alt="SIPS NYC report">
-                <figcaption class="image-caption">NYC transportation mode analysis</figcaption>
+                <figcaption class="image-caption">NYC Open Data Portal tracks Vision Zero's <em>Street Improvement Projects</em>, which are safety and well-being solutions in historically risky urban areas. Some treatments: curb extensions (red circle), slow-speed zones (pink areas), enhanced crossings (purple circle), improved green space (green areas).</figcaption>
               </figure>
               <figure>
                 <img src="images/socio-fin-final.png" alt="Socio-fin image">
@@ -307,20 +304,20 @@ Our analysis integrates three key data sources: video recordings of driver behav
               </a>
             </h3>
             <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
-            <p><strong>Abstract</strong>: Older drivers face unique challenges that can contribute to age-related accidents, prompting our research into developing targeted sociodemographic profiles to enhance in-vehicle support systems. Building comprehensive naturalistic driving databases is both time-intensive and costly, which led us to explore an innovative approach: mapping driving profiles across different databases that share similar sociodemographic features but represent distinct populations. By bridging the Strategic Highway Research Program (SHRP2) naturalistic driving database with the Survey of Health, Aging, and Retirement in Europe (SHARE), we identify personal characteristics that allow us to examine how the choice to continue driving becomes a deeply contextual decision, shaped by one's cultural and geographic environment.</p>
+            <p><strong>Abstract</strong>: Older drivers face unique challenges that can contribute to age-related accidents, prompting our research into developing targeted sociodemographic profiles to enhance in-vehicle support systems. Building comprehensive naturalistic driving databases is both time-intensive and costly, which led us to explore an innovative approach: mapping driving profiles across different databases that share similar sociodemographic features but represent distinct populations. By bridging the <a href="https://insight.shrp2nds.us/">Strategic Highway Research Program (SHRP2) naturalistic driving database</a> with the <a href="https://share-eric.eu/">Survey of Health, Aging, and Retirement in Europe (SHARE)</a>, we identify personal characteristics that allow us to examine how the choice to continue driving becomes a deeply contextual decision, shaped by one's cultural and geographic environment.</p>
           </section>
         </div>
         
         <div class="image-column">
           <div class="project-gallery">
             <div class="gallery-images" id="cross-cultural-gallery">
+            <figure>
+                <img src="images/share-sharp2-mapping.jpeg" alt="Cluster SHARE">
+                <figcaption class="image-caption">Mapping driving profiles across sociodemographics: how do older drivers navigate their decision to continue driving?</figcaption>
+              </figure>
               <figure>
                 <img src="images/clustering-share-shrp2-v2.jpeg" alt="SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.">
                 <figcaption class="image-caption">SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.</figcaption>
-              </figure>
-              <figure>
-                <img src="images/share-sharp2-mapping.jpeg" alt="Cluster SHARE">
-                <figcaption class="image-caption">Mapping driving profiles across sociodemographics: how do older drivers navigate their decision to continue driving?</figcaption>
               </figure>
             </div>
             <div class="gallery-nav" id="cross-cultural-nav">
@@ -346,7 +343,7 @@ Our analysis integrates three key data sources: video recordings of driver behav
               </a>
             </h3>
             <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
-            <p><strong>Abstract</strong>: Crashes involving pedestrians continue to be a serious problem in the United States and represent 15% of all traffic collisions. Pedestrians are among the most vulnerable road users. In 2020, pedestrians accounted for 6,516 fatalities and an estimated 54,769 injuries in motor vehicle crashes. Over the last decade, the U.S. has seen a 46% increase in pedestrian fatalities, now representing 17% of all motor vehicle related crash fatalities (NHTSA, 2022). In response to the increased number of fatalities and the increased emphasis on vulnerable road modes (walking, cycling) as healthy transportation options, many localities are looking for ways to make walking safer. One of the challenges to developing and implementing effective pedestrian safety countermeasures is establishing a consistent and reliable estimate of the number of pedestrians at risk in a given *spatiotemporal slice*. This project operationalizes a pedestrian exposure measure from personal electronic device data (GSP, accelerometer) collected at a weeks time from over 700 participants throughout a 4-year period.</p>
+            <p><strong>Abstract</strong>: Crashes involving pedestrians continue to be a serious problem in the United States and represent 15% of all traffic collisions. Pedestrians are among the most vulnerable road users. In 2020, pedestrians accounted for 6,516 fatalities and an estimated 54,769 injuries in motor vehicle crashes. Over the last decade, the U.S. has seen a 46% increase in pedestrian fatalities, now representing 17% of all motor vehicle related crash fatalities (NHTSA, 2022). In response to the increased number of fatalities and the increased emphasis on vulnerable road modes (walking, cycling) as healthy transportation options, many localities are looking for ways to make walking safer. One of the challenges to developing and implementing effective pedestrian safety countermeasures is establishing a consistent and reliable estimate of the number of pedestrians at risk in a given <em>spatiotemporal slice</em>. This project operationalizes a pedestrian exposure measure from personal electronic device data (GSP, accelerometer) collected at a weeks time from over 700 participants throughout a 4-year period.</p>
           </section>
         </div>
         
