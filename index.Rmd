@@ -32,27 +32,26 @@ output:
 
         <p>Currently I'm a Transportation Systems Ph.D. Candidate at the <a href="https://c2smarter.engineering.nyu.edu/">C2SMART Institute</a> in the Civil & Urban Engineering Department at the New York University Tandon School of Engineering in Downtown Brooklyn, NY. My advisor is <a href="https://engineering.nyu.edu/faculty/linda-ng-boyle">Dr. Linda Ng Boyle</a> at C2SMART's HumanFUEL (Human Factors and Urban Ergonomics Lab), where we develop user-centered road safety solutions for a dynamic set of motorized and nonmotorized agents. Some current project work I am involved with:</p>
 
-        <p><strong>Unregulated pedestrian behavior in mixed-traffic driving environments</strong>. Locale-specific feature learning is necessary training to ensure safe deployment around vulnerable road users. This project is jointly conducted at NYU and THI (Germany) to examine inter-cultural differences of pedestrian adherence to road regulation.</p>
+        <p><strong>Unregulated pedestrian behavior in mixed-traffic driving environments</strong>. Locale-specific feature learning is necessary training to ensure safe deployment around vulnerable road users. This project is jointly conducted at NYU (NYC, NY) and THI (Ingolstadt, Germany) to examine inter-cultural differences of pedestrian adherence to road regulation.</p>
 
         <ul>
           <li>How does vulnerable road user (VRU) behavior change between geographically separate locales?</li>
-          <li>Are separate locales identifiable by their VRU behavior?</li>
-          <li>How can locale-specific models of VRU behavior contribute to our current representations of mixed-traffic driving environments?</li>
+          <li>Are geographically separate locales identifiable by their VRU behavior?</li>
         </ul>
 
-        <p><strong>Pedestrian exposure for crash prediction.</strong> Prediction models are only as good as the data they learn from. This study uses a previously developed pedestrian exposure to environmental risk measure to track microenvironment pedestrian path-planning and likelihood of vehicle crash incidence at the intersection-level of analysis.</p>
+        <p><strong>Pedestrian exposure for crash prediction.</strong> Prediction models are only as good as the data they're trained on! This study uses a previously developed pedestrian exposure to environmental risk measure to track microenvironment pedestrian path-planning and likelihood of vehicle crash incidence at the intersection-level of analysis.</p>
 
         <ul>
-          <li>How does the inclusion of pedestrian activity in the microenvironment improve the performance of intersection-level crash rate prediction?</li>
-          <li>How do we develop a framework for identifying, analyzing, and learning from prediction model misclassifications?</li>
+          <li>How does the inclusion of pedestrian activity as an exposure measure in the microenvironment improve the performance of intersection-level crash rate prediction?</li>
+          <li>How do we develop a framework for identifying, analyzing, and learning from prediction model misclassifications in rare event prediction?</li>
         </ul>
-
-        <h3>☕️ <em>Water cooler coffee?</em><sup>[1,2]</sup></h3>
-        <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work!</p>
-
+        
         <div class="keywords">
           Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
         </div>
+
+        <h3>☕️ <em>Water cooler coffee?</em><sup>[1,2]</sup></h3>
+        <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work!</p>
         <div class="footnotes">
           <p><sup>1</sup>Koch, T., & Denner, N. (2022). Informal communication in organizations: work time wasted at the water-cooler or crucial exchange among co-workers?. Corporate Communications: An International Journal, 27(3), 494-508.</p>
          

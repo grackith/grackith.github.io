@@ -66,40 +66,6 @@ output:
       </div>
     </section>
 
-    <!-- 3D Models Section -->
-    <section class="lab-section">
-      <div class="two-column-layout">
-        <div class="content-column">
-          <h3>3D Models of Friends</h3>
-          <p>Using photogrammetry techniques to create 3D models of friends and family. Each model is created from hundreds of photos processed through specialized software.</p>
-          
-          <ul>
-            <li>Capture Setup: DSLR camera with controlled lighting</li>
-            <li>Processing: Agisoft Metashape for photogrammetry</li>
-            <li>Post-processing: Blender for mesh cleanup and texturing</li>
-          </ul>
-        </div>
-        <div class="image-column">
-          <div class="project-gallery">
-            <div class="gallery-images" id="models-gallery">
-              <figure>
-                <img src="/api/placeholder/400/300" alt="3D Model 1">
-                <figcaption class="image-caption">3D scan of friend during soccer practice</figcaption>
-              </figure>
-              <figure>
-                <img src="/api/placeholder/400/300" alt="3D Model 2">
-                <figcaption class="image-caption">Family portrait in 3D</figcaption>
-              </figure>
-            </div>
-            <div class="gallery-nav" id="models-nav">
-              <span class="gallery-dot"></span>
-              <span class="gallery-dot"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Health Tracking Section -->
     <section class="lab-section">
       <div class="two-column-layout">

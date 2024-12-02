@@ -109,7 +109,7 @@ output:
         </div>
       </div>
     </section>
-
+    
     <!-- CSL Lab -->
     <section class="lab-section">
       <div class="two-column-layout">
@@ -124,34 +124,26 @@ output:
             <li>Utilized NADs miniSim software for naturalistic driving environments.</li>
           </ul>
         </div>
-    
+        
         <div class="image-column">
           <div class="project-gallery">
-            <div class="gallery-images" id="csl-gallery" style="width: 100%; display: flex; overflow: hidden;">
-              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
-                <img 
-                  src="images/temporal-dynamics-domeyer.png" 
-                  alt="short-stop"
-                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
-                >
-                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+            <div class="gallery-images" id="csl-gallery">
+              <figure>
+                <img src="images/temporal-dynamics-domeyer.png" alt="short-stop">
+                <figcaption class="image-caption">
                   Drivers 'short-stop' as a type of nonverbal communication to vulnerable pedestrians. Spatiotemporal traces of mixed-traffic behavior helps identify mechanisms of informal interaction in shared spaces.
                 </figcaption>
               </figure>
-              <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
-                <img 
-                  src="images/hfsm-csl.jpeg" 
-                  alt="CSL and HFSM celebration"
-                  style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
-                >
-                <figcaption style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic;">
+              <figure>
+                <img src="images/hfsm-csl.jpeg" alt="CSL and HFSM celebration">
+                <figcaption class="image-caption">
                   CSL and HFSM celebration at the annual Human Factors & Ergonomics (HFES) Conference, 2022
                 </figcaption>
               </figure>
             </div>
-            <div class="gallery-nav" id="csl-nav" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
-              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
-              <span class="gallery-dot" style="width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease;"></span>
+            <div class="gallery-nav" id="csl-nav">
+              <span class="gallery-dot"></span>
+              <span class="gallery-dot"></span>
             </div>
           </div>
         </div>
