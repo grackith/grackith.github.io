@@ -125,8 +125,42 @@ html, body {
   color: var(--accent-color);
   text-decoration: none;
 }
+/* Navigation */
+.nav-wrapper {
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  height: var(--nav-height);
+  z-index: 1000;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+}
 
-/* Basic nav-link styles */
+.nav-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
 .nav-links a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -135,12 +169,10 @@ html, body {
   padding: 0.5rem 0;
 }
 
-/* Hover effect - just color change */
 .nav-links a:hover {
   color: var(--accent-color);
 }
 
-/* Active page - just color */
 .nav-links a.active {
   color: var(--accent-color);
 }
