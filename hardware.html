@@ -126,47 +126,47 @@ if (window.hljs) {
 
     <!-- Simulators Section -->
     <section class="lab-section">
+      <!-- First row: Simulation Environment with Strangeland image -->
       <div class="two-column-layout">
         <div class="content-column">
           <h4>Simulation environment</h4>
           <p><em>Strangeland</em> is the backend of our multiplayer studies, which was developed using the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
-
-          <h4 id="veh-sim-header"> Vehicle simulators</h4>
-          <p>The <em>NADS miniSim Quarter Cab</em> vehicle simualtor is the largest driving simulator I work with. The system incorporates OEM vehicle components and a tri-screen display configuration, delivering a 180-degree field of view that can ideally mimic real-world driving conditions. The platform's advanced physics engine accurately models various environmental conditions, while integrated eye-tracking and behavioral monitoring systems capture rich data about driver behavior and attention patterns. In addition to the miniSim we also use a <em>Logitech G29</em> force-feedback steering pedal and wheel set, which provides a flexible configuration for 2-driver studies.</p>
-
-          <h4 id="free-sim-header"> Free-motion simulators</h4>
-          <p>The integration of <em>Meta Quest Pro</em> and <em>Meta Quest 3</em> systems extends our capability to study pedestrian behavior from a first-person perspective. These advanced HMDs feature high-resolution passthrough capabilities, enabling seamless blending of virtual and physical environments. Integrated eye-tracking and facial expression monitoring systems provide detailed data about participant attention and emotional states during interactions. The systems' natural locomotion trackingand spatial mapping capabilities allow for ecological validity in pedestrian behavior studies, while maintaining precise experimental control.</p>
         </div>
-
-        <!-- Simulator Images Gallery -->
         <div class="image-column">
-          <div class="project-gallery">
-            <div class="gallery-images" id="simulator-gallery">
-              <figure>
-                <img src="images/quarter-cab-specs.png" alt="Quarter cab specifications">
-                <figcaption class="image-caption">Quarter cab technical specifications</figcaption>
-              </figure>
-              <figure>
-                <img src="images/viewport.png" alt="Viewport">
-                <figcaption class="image-caption">Simulator viewport configuration</figcaption>
-              </figure>
-              <figure>
-                <img src="images/minisim-stockv2.jpeg" alt="Strangeland simulator">
-                <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator</figcaption>
-              </figure>
-            </div>
-            <div class="gallery-nav" id="simulator-nav">
-              <span class="gallery-dot"></span>
-              <span class="gallery-dot"></span>
-              <span class="gallery-dot"></span>
-            </div>
-          </div>
+          <figure>
+            <img src="images/minisim-stock.jpeg" alt="Strangeland simulator" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+            <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator.</figcaption>
+          </figure>
         </div>
       </div>
     
+      <!-- Second row: Vehicle and Free-motion simulators with stacked images -->
+      <div class="two-column-layout" style="margin-top: 2rem;">
+        <div class="content-column">
+          <h4 id="veh-sim-header">Vehicle simulators</h4>
+          <p>The <em>NADS miniSim Quarter Cab</em> vehicle simualtor is the largest driving simulator I work with. The system incorporates OEM vehicle components and a tri-screen display configuration, delivering a 180-degree field of view that can ideally mimic real-world driving conditions. The platform's advanced physics engine accurately models various environmental conditions, while integrated eye-tracking and behavioral monitoring systems capture rich data about driver behavior and attention patterns. In addition to the miniSim we also use a <em>Logitech G29</em> force-feedback steering pedal and wheel set, which provides a flexible configuration for 2-driver studies.</p>
+    
+          <h4 id="free-sim-header">Free-motion simulators</h4>
+          <p>The integration of <em>Meta Quest Pro</em> and <em>Meta Quest 3</em> systems extends our capability to study pedestrian behavior from a first-person perspective. These advanced HMDs feature high-resolution passthrough capabilities, enabling seamless blending of virtual and physical environments. Integrated eye-tracking and facial expression monitoring systems provide detailed data about participant attention and emotional states during interactions. The systems' natural locomotion trackingand spatial mapping capabilities allow for ecological validity in pedestrian behavior studies, while maintaining precise experimental control.</p>
+        </div>
+        
+        <div class="image-column">
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <figure>
+              <img src="images/quarter-cab-specs.png" alt="Quarter cab specifications" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+              <figcaption class="image-caption">Quarter cab technical specifications.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/viewport.png" alt="Viewport" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+              <figcaption class="image-caption">Simulator viewport configuration.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="fun-note">
-      🎮 <em>Fun fact: While simulator sickness occurs specifically when using flight or driving simulators, cybersickness is a broader term covering discomfort from any digital device interaction - from VR to smartphones. Both conditions stem from a mismatch between what your eyes see and what your body feels, leading to symptoms like nausea, dizziness, headache, fatigue, and disorientation.</em>
+      🎮 <em>Fun fact: While both motion sickness and cybersickness can cause similar symptoms like nausea and dizziness, the key difference is that motion sickness is triggered by physical movement in the real world, while cybersickness is caused by visually perceived motion on a screen, usually in virtual reality environments, where there is minimal or no actual physical movement involved; essentially, motion sickness is triggered by a sensory mismatch between what your body feels and what your eyes see, while cybersickness is triggered by a similar mismatch solely based on visual cues on a screen.<sup>[1]</sup></em>
     </div>
     </section>
 
@@ -230,8 +230,14 @@ if (window.hljs) {
         </div>
       </div>
     </section>
+    <div class="footnotes">
+      <p><sup>1</sup>Laessoe, U., Abrahamsen, S., Zepernick, S., Raunsbaek, A., & Stensen, C. (2023). Motion sickness and cybersickness - Sensory mismatch. Physiology & Behavior, 258(114015), 114015. https://doi.org/10.1016/j.physbeh.2022.114015
+</p>
+    </div>
   </div>
 </div>
+
+
 
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
