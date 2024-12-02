@@ -40,7 +40,7 @@ output:
         <div class="content-column">
           <h3>Just a washed-up Wisconsin Badger...</h3>
           <ul>
-            <li>4-year Varsity Letter winner at University of Wisconsin – Madison</li>
+            <li>4-year Varsity Womans Soccer at University of Wisconsin – Madison</li>
             <li>NCAA Sweet 16 (2018, 2019, 2020)</li>
             <li>Elected for Big Ten Conference's 'Return to Play' Taskforce after COVID-19</li>
           </ul>

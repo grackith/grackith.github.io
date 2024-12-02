@@ -1028,6 +1028,122 @@ p {
   }
 }
 
+/* Mobile Spacing Fixes */
+
+/* Reduce root padding for mobile */
+@media (max-width: 768px) {
+  :root {
+    --padding-x: 15px;  /* Reduced from 20px */
+  }
+
+  /* Fix content padding */
+  .content-column,
+  .image-column {
+    padding-bottom: 40px;  /* Reduced from 120px */
+  }
+
+  /* Adjust section margins */
+  .project-section {
+    margin-bottom: 30px;  /* Reduced from 60px */
+    padding-bottom: 20px; /* Reduced from 40px */
+  }
+
+  /* Fix intro box spacing */
+  .intro-box {
+    margin: 15px 0 25px;  /* Reduced from 20px 0 40px */
+    padding: 15px;  /* Reduced from 20px */
+  }
+
+  /* Adjust heading margins */
+  h1, h2, h3 {
+    margin: 20px 0 15px;  /* Reduced from varying larger values */
+  }
+
+  /* Fix list spacing */
+  .content-block ul,
+  .lab-section ul {
+    margin: 10px 0 10px 20px;  /* Reduced from 20px 0 20px 60px */
+    padding-left: 20px;  /* Reduced from 40px */
+  }
+
+  /* Adjust image containers */
+  .image-item {
+    margin-bottom: 15px;  /* Reduced from 30px */
+  }
+
+  /* Fix gallery spacing */
+  .gallery-images {
+    padding: 0.5rem;  /* Already good, but explicitly set */
+  }
+
+  /* Adjust fun photo grid */
+  .fun-photo-grid {
+    gap: 20px;  /* Reduced from 40px */
+    margin: 20px 0;  /* Reduced from 40px */
+  }
+
+  /* Fix nav height and related spacing */
+  :root {
+    --nav-height: 60px;  /* Reduced from 80px */
+  }
+
+  /* Typography adjustments */
+  body {
+    padding-top: var(--nav-height);
+    line-height: 1.4;  /* Slightly reduced for tighter text */
+  }
+
+  /* Content block text adjustments */
+  .content-block ul > li,
+  .lab-section ul li {
+    font-size: 1rem;  /* Reduced from 1.1rem */
+    margin-bottom: 8px;  /* Reduced from 10px */
+    padding-left: 15px;  /* Reduced from 20px */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  :root {
+    --padding-x: 12px;  /* Further reduced padding */
+  }
+
+  /* Even tighter spacing for smallest screens */
+  .content-block ul,
+  .lab-section ul {
+    margin: 8px 0 8px 15px;
+    padding-left: 15px;
+  }
+
+  /* Adjust image heights */
+  .fun-grid-item img,
+  .image-item img,
+  .content-column img {
+    max-height: 250px;  /* Reduced from 300-400px */
+  }
+
+  /* Further reduce section spacing */
+  .project-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+/* Fix two-column layout collapse */
+@media (max-width: 1200px) {
+  .two-column-layout {
+    gap: 1rem;  /* Reduced from 2rem */
+  }
+
+  .project-content,
+  .project-gallery,
+  .content-column,
+  .image-column {
+    padding-bottom: 40px;  /* Reduced from 120px */
+  }
+}
+
+
 /* Additional Styles */
 .nav-links a.active {
   color: var(--accent-color);
