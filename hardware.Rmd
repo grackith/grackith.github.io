@@ -35,8 +35,8 @@ output:
       <!-- First row: Simulation Environment with Strangeland image -->
       <div class="two-column-layout">
         <div class="content-column">
-          <h4>Simulation environment</h4>
-          <p><em>Strangeland</em> is the backend of our multiplayer studies, which was developed in the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
+          <h3>Simulation</h3>
+          <p>The <em>Strangeland</em> environment is the backend of our multiplayer studies, which was developed in the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
         </div>
         <div class="image-column">
           <figure>
@@ -45,13 +45,11 @@ output:
           </figure>
         </div>
       </div>
-    
+      <div class="fun-note"> 🚗🥽 <em>Fun fact: Motion sickness occurs when your body feels movement but your eyes don't match it. Cybersickness is the opposite - your eyes see movement on screens (like in VR) but your body isn't actually moving. Both can cause nausea and dizziness, but they're triggered differently.<sup>[1]</sup></em>
+      </div>
       <!-- Second row: Vehicle and Free-motion simulators with stacked images -->
       <div class="two-column-layout" style="margin-top: 2rem;">
         <div class="content-column">
-          <div class="fun-note">
-            🎮 <em>Fun fact: While both motion sickness and cybersickness can cause similar symptoms like nausea and dizziness, the key difference is that motion sickness is triggered by physical movement in the real world, while cybersickness is caused by visually perceived motion on a screen, usually in virtual reality environments, where there is minimal or no actual physical movement involved; essentially, motion sickness is triggered by a sensory mismatch between what your body feels and what your eyes see, while cybersickness is triggered by a similar mismatch solely based on visual cues on a screen.<sup>[1]</sup></em>
-          </div>
           <h4 id="veh-sim-header">Vehicle simulators</h4>
           <p>The <a href="https://dsri.uiowa.edu/minisim"> NADS miniSim Quarter Cab</a> vehicle simualtor is the largest driving simulator I work with. The system incorporates OEM vehicle components and a tri-screen display configuration, delivering a 180-degree field of view that can ideally mimic real-world driving conditions. The platform's advanced physics engine accurately models various environmental conditions, while integrated eye-tracking and behavioral monitoring systems capture rich data about driver behavior and attention patterns. In addition to the miniSim we also use a <a href="https://www.logitechg.com/en-us/products/driving/driving-force-racing-wheel.html?srsltid=AfmBOoryEslRt19bCjdeIB_mZbhCj2-IXkjB7EHYvGlUei3H0D2yZ7et"> Logitech G29</a> <em></em> force-feedback steering pedal and wheel set, which provides a flexible configuration for 2-driver studies.</p>
     
