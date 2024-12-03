@@ -16,8 +16,11 @@ output:
   <div class="content-wrapper">
     <section class="lab-section">
     <div class="intro-box">
+      <div class="intro-box-title">
+        <span class="emoji">🌎</span>WHERE ARE YOU FROM?
+      </div>
       <div class="intro-box-content">
-        Where are you from? I think your story matters! In fact, I believe the experiences and environments we are exposed to is fundamental to who we become and how we behave (this is <em>observational learning</em>, identified infamously by <a href="https://psycnet.apa.org/record/1963-00856-001">Bandura's Bobo Doll experiment</a>). Below is a timeline of the professional environments I've been exposed to, and subsequent past and current research conducted in these spaces.</div>
+I think your story matters! In fact, I believe the experiences and environments we are exposed to is fundamental to who we become and how we behave (this is <em>Observational Learning</em>, investigated infamously in <a href="https://psycnet.apa.org/record/1963-00856-001">Bandura's Bobo Doll experiment</a>). Below is a timeline of the professional environments I've been exposed to, and subsequent past and current research conducted in these spaces.</div>
     </div>
     <!-- Timeline Section -->
     <section class="timeline-section">
