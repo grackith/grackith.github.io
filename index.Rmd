@@ -27,7 +27,11 @@ output:
       <!-- Left Column: Content -->
       <div class="content-column">
         <div class="intro-box">
-          Hey! grace-io here. As a human-subjects researcher, I focus on developing human-like models that capture how road users behave in shared urban spaces. My dissertation work specifically explores how different cultures represent vulnerable road users in mixed-traffic environments. The goal is to create computational models that are <em>fair</em>, <em>safe</em>, and <em>robust</em> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
+          <div class="intro-box-title">
+              Welcome in! 👋
+          </div>
+          <div class="intro-box-content" style="--n:78;"> I am a human-subjects researcher interested in modeling road user negotiations in shared urban spaces. My dissertation work specifically explores how different cultures represent and design for vulnerable road users (VRUs) in mixed-traffic environments. The goal is to create computational models that are <em>fair</em>, <em>safe</em>, and <em>shareable</em> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
+          </div>
         </div>
         
         <div class="keywords">

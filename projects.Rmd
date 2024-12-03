@@ -16,10 +16,10 @@ output:
   <div class="content-wrapper">
     <div class="intro-box">
       <div class="intro-box-title">
-        <span class="emoji">🌎</span>WHERE ARE YOU FROM?
+        <span class="emoji">⏩</span>tldr;
       </div>
-      <div class="intro-box-content">
-My work is a mix obervational and experimental methods. <em>Traffic safety</em> and <em> road user behavior</em> are underlying themes throughout my research, with an underlying question: how does the design of in- and out- vehicle traffic environments contribute to fair, safe, and <em>shared</em> urban spaces?
+      <div class="intro-box-content" style="--n:39;">
+My work is a mix of obervational and experimental methods. <em>Traffic safety</em> and <em> road user behavior</em> are underlying themes throughout my research, paired with an underlying question: <em>How can we design traffic environments for safe and fair urban space negotiation?</em>
       </div>
     </div>
     <!-- Pedestrian Exposure Project -->
