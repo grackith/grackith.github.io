@@ -338,23 +338,27 @@ p {
 /* Intro Box Styles */
 .intro-box {
   width: fit-content;
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+  max-width: 100%;
   background-color: #e8f1ff;
   padding: 2rem;
   border-radius: 0.5rem;
-  /* Add these to prevent jumping */
-  min-width: min-content;
-  max-width: 100%;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
 }
 
 .intro-box-content {
-  opacity: 1; /* Changed from 0 */
-  overflow: hidden;
+  display: block;
+  width: 0;
   white-space: pre-wrap;
-  width: 0; /* Start with 0 width */
-  animation: typing 3s steps(50) forwards; /* Removed fadeIn animation */
-  position: relative; /* Added for cursor positioning */
+  animation: typing 3s steps(60) forwards;
+  overflow: hidden;
+}
+
+.intro-box-content::after {
+  content: '|';
+  position: absolute;
+  right: -2px;
+  animation: blink 1s step-end infinite;
 }
 
 .intro-box-title {
@@ -365,16 +369,6 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-/* Add a pseudo-element for cursor effect */
-.intro-box-content::after {
-  content: '|';
-  position: absolute;
-  right: -2px; /* Position cursor right after text */
-  top: 0;
-  height: 100%;
-  animation: blink 1s step-end infinite;
 }
 
 .intro-box-title .emoji {
