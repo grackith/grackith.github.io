@@ -343,11 +343,26 @@ p {
   margin: 40px 0 60px;  /* Increased bottom margin */
   font-size: 0.875rem;
   line-height: 1.4;
-  width: 100%;
   max-width: var(--container-width);
   position: relative;
+  width: auto;
+  height: auto;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
+}
+
+.intro-box {
+  width: auto;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.intro-box-content {
+  overflow: hidden;
+  white-space: pre-wrap; /* Changed from nowrap to allow text wrapping */
+  width: 0;
+  animation: typing 3s steps(50) 1s forwards;
 }
 
 .intro-box-title {
@@ -358,14 +373,6 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.intro-box-content {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 3s steps(50) 1s forwards,
-             glow 2s ease-in-out infinite 4s;
 }
 
 /* Add a pseudo-element for cursor effect */
