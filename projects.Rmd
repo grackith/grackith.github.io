@@ -15,11 +15,8 @@ output:
 <div class="main-wrapper">
   <div class="content-wrapper">
     <div class="intro-box">
-      <div class="intro-box-title">
-        <span class="emoji">👩‍💻</span>research
-      </div>
       <div class="intro-box-content">
-My work is a mix obervational and experimental methods. Common themes throughout my research is traffic safety and road user behavior, with an underlying research question: how does the design of in- and out- vehicle environments contribute to fair, safe, and <em>shared</em> urban spaces? 
+My work is a mix obervational and experimental methods. <em>Traffic safety</em> and <em> road user behavior</em> are underlying themes throughout my research, with an underlying question: how does the design of in- and out- vehicle traffic environments contribute to fair, safe, and <em>shared</em> urban spaces? 
       </div>
     </div>
     <!-- Pedestrian Exposure Project -->
@@ -382,8 +379,17 @@ Our analysis integrates three key data sources: video recordings of driver behav
 ```{=html}
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
+  // Animation initialization
+  if (!sessionStorage.getItem('animationPlayed')) {
+    const introBox = document.querySelector('.intro-box');
+    introBox.classList.add('animate');
+    sessionStorage.setItem('animationPlayed', 'true');
+  }
+
+  // Image Gallery class
   class ImageGallery {
     constructor(container) {
+      // Your existing ImageGallery code
       this.gallery = container;
       this.figures = this.gallery.querySelectorAll('figure');
       this.nav = this.gallery.nextElementSibling;
@@ -394,6 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setupEventListeners();
     }
     
+    // Rest of your ImageGallery class methods
     showImage(index) {
       if (index < 0 || index >= this.figures.length) return;
       
@@ -441,6 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Initialize galleries
   const galleries = document.querySelectorAll('.gallery-images');
   galleries.forEach(gallery => {
     new ImageGallery(gallery);

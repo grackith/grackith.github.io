@@ -346,6 +346,8 @@ p {
   width: 100%;
   max-width: var(--container-width);
   position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
 .intro-box-title {
@@ -359,8 +361,17 @@ p {
 }
 
 .intro-box-content {
-  margin-top: 8px;
-  font-size: 0.875rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(50) 1s forwards,
+             glow 2s ease-in-out infinite 4s;
+}
+
+/* Add a pseudo-element for cursor effect */
+.intro-box-content::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
 }
 
 .intro-box-title .emoji {

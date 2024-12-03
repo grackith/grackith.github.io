@@ -16,11 +16,8 @@ output:
   <div class="content-wrapper">
     <section class="lab-section">
     <div class="intro-box">
-      <div class="intro-box-title">
-        <span class="emoji">🎞️</span>tiMEline
-      </div>
       <div class="intro-box-content">
-        I think your story matters! In fact, I believe the experiences and environments we are exposed to is fundamental to who we become and how we behave (<a href="https://psycnet.apa.org/record/1963-00856-001">this is <em>observational learning</em>, identified infamously by Bandura's Bobo Doll experiment</a>). Below is a timeline of the professional environments I've been exposed to, and subsequent past and current research conducted in these spaces.
+        I think your story matters! In fact, I believe the experiences and environments we are exposed to is fundamental to who we become and how we behave (this is <em>observational learning</em>, identified infamously by <a href="https://psycnet.apa.org/record/1963-00856-001">Bandura's Bobo Doll experiment</a>). Below is a timeline of the professional environments I've been exposed to, and subsequent past and current research conducted in these spaces.
       </div>
     </div>
     <!-- Timeline Section -->
@@ -162,8 +159,17 @@ output:
 </div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
+  // Animation initialization
+  if (!sessionStorage.getItem('animationPlayed')) {
+    const introBox = document.querySelector('.intro-box');
+    introBox.classList.add('animate');
+    sessionStorage.setItem('animationPlayed', 'true');
+  }
+
+  // Image Gallery class
   class ImageGallery {
     constructor(container) {
+      // Your existing ImageGallery code
       this.gallery = container;
       this.figures = this.gallery.querySelectorAll('figure');
       this.nav = this.gallery.nextElementSibling;
@@ -174,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setupEventListeners();
     }
     
+    // Rest of your ImageGallery class methods
     showImage(index) {
       if (index < 0 || index >= this.figures.length) return;
       
@@ -221,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Initialize galleries
   const galleries = document.querySelectorAll('.gallery-images');
   galleries.forEach(gallery => {
     new ImageGallery(gallery);
