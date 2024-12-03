@@ -336,24 +336,20 @@ p {
    Content Components
    ========================================================================== */
 .intro-box {
- width: fit-content;
- max-width: 100%;
- background-color: #e8f1ff;
- padding: 2.5rem;
- border-radius: 0.5rem;
- border-left: 5px solid var(--accent-color);
- opacity: 0;
- animation: fadeIn 0.5s ease forwards;
+  width: max-content;
+  background-color: #e8f1ff;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  border-left: 5px solid var(--accent-color);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
 }
 
 .intro-box-content {
- visibility: hidden;
- width: 0;
- position: relative;
- animation:
-   contentAppear 0.1s linear forwards,
-   typing 3s steps(60) forwards;
- white-space: pre-wrap;
+  color: transparent;
+  white-space: pre-wrap;
+  animation: typing 3s steps(60) forwards, textReveal 0.1s forwards;
+  animation-delay: 0.5s, 0.5s;
 }
 
 .intro-box-content::after {
@@ -754,6 +750,10 @@ p {
 /* ==========================================================================
    Animations
    ========================================================================== */
+@keyframes textReveal {
+  to { color: var(--primary-color); }
+}
+
 @keyframes contentAppear {
  to { visibility: visible; }
 }
