@@ -225,6 +225,43 @@ html, body {
   padding: 0 var(--padding-x);
 }
 
+.project-list {
+  counter-reset: project-counter;
+  margin: 2rem 0;
+}
+
+.project-list p strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  counter-increment: project-counter;
+}
+
+.project-list p strong::before {
+  content: counter(project-counter) ". ";
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.project-list p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-list ul {
+  margin: 0.5rem 0 1.5rem 2.5rem;  /* Increased left margin for indentation */
+  padding-left: 1rem;
+}
+
+.project-list ul li {
+  font-size: 0.95rem;  /* Slightly smaller than main text */
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: var(--secondary-color);  /* Slightly lighter color for questions */
+  font-style: italic;
+}
+
 /* Two Column Layout */
 .two-column-layout {
   width: 100%;

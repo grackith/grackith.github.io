@@ -137,8 +137,9 @@ output:
   </div>
 </div>
 
+```
 
-
+```{=html}
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
   // Animation initialization

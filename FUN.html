@@ -189,11 +189,19 @@ if (window.hljs) {
     </section>
   </div>
 </div>
-
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
+  // Animation initialization
+  if (!sessionStorage.getItem('animationPlayed')) {
+    const introBox = document.querySelector('.intro-box');
+    introBox.classList.add('animate');
+    sessionStorage.setItem('animationPlayed', 'true');
+  }
+
+  // Image Gallery class
   class ImageGallery {
     constructor(container) {
+      // Your existing ImageGallery code
       this.gallery = container;
       this.figures = this.gallery.querySelectorAll('figure');
       this.nav = this.gallery.nextElementSibling;
@@ -204,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setupEventListeners();
     }
     
+    // Rest of your ImageGallery class methods
     showImage(index) {
       if (index < 0 || index >= this.figures.length) return;
       
@@ -251,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Initialize galleries
   const galleries = document.querySelectorAll('.gallery-images');
   galleries.forEach(gallery => {
     new ImageGallery(gallery);
