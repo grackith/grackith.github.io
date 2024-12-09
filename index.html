@@ -19,10 +19,14 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <!-- header.html -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <div class="nav-wrapper">
   <div class="nav-container">
     <a href="index.html" class="site-title">home</a>
+
+    <button class="mobile-menu-button">
+      <i class="fas fa-bars"></i>
+    </button>
+
     <ul class="nav-links">
       <li><a href="timeline.html" id="about-link">about</a></li>
       <li><a href="projects.html" id="research-link">research</a></li>
@@ -30,12 +34,13 @@
       <li><a href="FUN.html" id="fun-link">.FUN</a></li>
       <li><a href="resume.html" id="cv-link">cv</a></li>
     </ul>
+
+    <!-- Single set of icons that will adapt for both mobile and desktop -->
     <div class="header-icons">
       <a href="mailto:grace.douglas@nyu.edu" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/" aria-label="LinkedIn" target="_blank"
-        rel="noopener">
+      <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/" aria-label="LinkedIn" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
       </a>
       <a href="http://github.com/grackith/" aria-label="GitHub" target="_blank" rel="noopener">
@@ -45,19 +50,32 @@
   </div>
 </div>
 
+<!-- Add JavaScript for mobile menu toggle -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuButton.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLinks.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+
     // Get current page URL
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
     // Remove active class from all links and add to current
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.classList.remove('active'); // Remove from all first
+      link.classList.remove('active');
       if (link.getAttribute('href') === currentPage) {
         link.classList.add('active');
       }
     });
-
     // Special case for home page
     if (currentPage === 'index.html') {
       document.querySelector('.site-title').classList.add('active');
@@ -122,10 +140,10 @@ if (window.hljs) {
       <div class="content-column">
         <div class="intro-box">
           <div class="intro-box-title">
-            Welcome in! 👋
+            👋  WELCOME IN
           </div>
-          <div class="intro-box-content" style="--n:78;">
-            I am a human-subjects researcher interested in modeling road user negotiations in shared urban spaces. My dissertation work specifically explores how different cultures represent and design for vulnerable road users (VRUs) in mixed-traffic environments. The goal is to create computational models that are <em>fair</em>, <em>safe</em>, and <em>shareable</em> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
+          <div class="intro-box-content" style="--n:604;">
+            I am a human-subjects researcher interested in modeling road user negotiations in shared urban spaces. My dissertation work specifically explores how different cultures represent and design for vulnerable road users (VRUs) in mixed-traffic environments. The goal is to create computational models that are <span class="italic">fair</span>, <span class="italic">safe</span>, and <span class="italic">shareable</span> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
           </div>
         </div>
         
@@ -151,24 +169,24 @@ if (window.hljs) {
           </ul>
         </div>
 
-        <h3 id="coffee">☕️ <em>Water cooler coffee?</em><sup>[1,2]</sup></h3>
-        <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work!</p>
+        <h3 id="coffee">☕️ <em>Water cooler coffee?</em><sup>1,2</sup></h3>
+          <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work! You can email me at <a href="mailto:grace.douglas@nyu.edu">grace.douglas@nyu.edu</a> or connect with me on <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/">LinkedIn</a>.</p>
       </div>
 
       <!-- Right Column: Images -->
       <div class="image-column">
         <div class="sticky-images">
           <figure class="image-item circle">
-            <figcaption class="image-caption">AFK grace...</figcaption>
             <img src="images/selfie-index.jpeg" alt="AFK grace">
+            <figcaption class="image-caption">AFK grace...</figcaption>
           </figure>
           <figure class="image-item">
-            <figcaption class="image-caption">is learning to boulder,</figcaption>
             <img src="images/boulder.jpeg" alt="Grace bouldering">
+            <figcaption class="image-caption">is learning to boulder,</figcaption>
           </figure>
           <figure class="image-item">
-            <figcaption class="image-caption">but cannot wait for shavasana.</figcaption>
             <img src="images/yogav2.jpeg" alt="Grace doing yoga">
+            <figcaption class="image-caption">but cannot wait for shavasana.</figcaption>
           </figure>
         </div>
       </div>

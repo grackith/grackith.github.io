@@ -18,7 +18,7 @@
   /* Colors */
   --primary-color: #333;
   --secondary-color: #666;
-  --accent-color: #007bff;
+  --accent-color: #1E4D6B;
   --background-color: rgba(255, 255, 255, 0.95);
   --border-color: rgba(0, 0, 0, 0.1);
 
@@ -67,6 +67,7 @@ body {
   padding: 0 var(--padding-x);
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -96,8 +97,6 @@ html, body {
   height: var(--nav-height);
   z-index: 1000;
   background: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
-  /* backdrop-filter: blur(5px); */
   display: flex;
   align-items: center;
 }
@@ -135,7 +134,6 @@ html, body {
   height: var(--nav-height);
   z-index: 1000;
   background: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
 }
@@ -369,48 +367,96 @@ p {
   font-weight: 300;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 /* ==========================================================================
    Content Components
    ========================================================================== */
+/* Update intro-box styles with typing animation */
+/* Base styles for the intro box */
 .intro-box {
   width: fit-content;
   max-width: 1600px;
-  background-color: #e8f1ff;
+  background-color: #f8f9fa;
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  border-left: 5px solid var(--accent-color);
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+  border-left: 5px solid #1E4D6B;
 }
 
 .intro-box-content {
-  display: block;
+  display: inline;
+  width: 100%;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  position: relative;
   color: #0000;
-  background:
-    linear-gradient(-90deg, var(--accent-color) 5px, #0000 0) 10px 0,
-    linear-gradient(var(--primary-color) 0 0) 0 0;
+  background: linear-gradient(-90deg, #1E4D6B 5px, #0000 0) 10px 0,
+              linear-gradient(#1E4D6B 0 0) 0 0;
   background-size: calc(var(--n)*1ch) 200%;
   -webkit-background-clip: padding-box, text;
   background-clip: padding-box, text;
   background-repeat: no-repeat;
-  animation:
-    b .7s infinite steps(1),
-    t calc(var(--n)*.03s) steps(var(--n)) forwards;
-  animation-delay: 0.5s;
+  animation: b 0.3s infinite steps(1), t calc(var(--n)*0.03s) steps(var(--n)) forwards;
 }
 
+.intro-box-content strong {
+  display: inline;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  background-repeat: inherit;
+  animation: b 0.3s infinite steps(1), t calc(var(--n)*0.01s) steps(var(--n)) forwards;
+  text-decoration: none;
+  font-style: normal;
+}
+/* Apply same animation to inline elements */
+.intro-box-content em,
+.intro-box-content a {
+  display: inline;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  background-repeat: inherit;
+  animation: inherit;
+  text-decoration: none;
+  font-style: italic;  /* This controls italics */
+}
+
+.intro-box-content .superscript {
+  font-size: 0.75em;
+  vertical-align: super;
+}
+.intro-box-content .italic {
+  font-style: italic;  /* This controls italics */
+}
+
+/* Title styling */
 .intro-box-title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
-  color: var(--accent-color);
+  color: #1E4D6B;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Animation keyframes */
 @keyframes t {
   from { background-size: 0 200% }
 }
@@ -418,14 +464,6 @@ p {
 @keyframes b {
   50% { background-position: 0 -100%, 0 0 }
 }
-
-@keyframes fadeIn {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
-
-
-
 
 .keywords {
   font-style: italic;
@@ -467,11 +505,6 @@ p {
 .lab-section h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-}
-
-.lab-section p {
-  font-size: 1rem;
-  margin-bottom: 10px;
 }
 
 .lab-section {
@@ -608,6 +641,78 @@ p {
   margin-bottom: 10px;
 }
 
+/* CSS */
+.feedback-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.feedback-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-button i {
+  margin-right: 5px;
+}
+
+.feedback-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback-form-container {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.feedback-submit-button,
+.feedback-close-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-submit-button:hover,
+.feedback-close-button:hover {
+  background-color: #0056b3;
+}
+
 /* ==========================================================================
    Gallery Components
    ========================================================================== */
@@ -679,52 +784,22 @@ p {
   background-color: var(--accent-color);
 }
 
-/* Video Container */
+/* Center video container */
 .video-container {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-}
-
-.video-container video {
-  width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Image Components */
-.sticky-images {
-  position: sticky;
-  top: 40px;
-  padding-bottom: 40px;
-}
-
-.image-item {
-  margin-bottom: 30px;
-}
-
-.image-caption,
-.grid-item figcaption {
   text-align: center;
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: var(--scondary-color);
-  font-style: italic;
+  margin: 2rem auto;  /* Add some vertical spacing */
+  width: 100%;
+  max-width: 800px;  /* Or whatever max width you prefer */
 }
 
-/* ==========================================================================
-   Interactive Elements
-   ========================================================================== */
-.project-github {
-  color: var(--primary-color);
-  font-size: 0.8em;
-  margin-left: 10px;
-  transition: var(--transition);
+/* Make sure iframe fills container */
+.video-container iframe {
+  width: 60%;
+  aspect-ratio: 16/9;  /* Maintain video aspect ratio */
+  border: none;
 }
 
-.project-github:hover {
-  color: var(--accent-color);
-}
-
+/* Base button link styles */
 .button-link {
   display: inline-block;
   padding: 12px 24px;
@@ -740,6 +815,52 @@ p {
   color: white;
   text-decoration: none;
 }
+
+/* Add centered variant */
+.button-link.centered {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+/* Keep project github styles as is */
+.project-github {
+  color: var(--primary-color);
+  font-size: 0.8em;
+  margin-left: 10px;
+  transition: var(--transition);
+}
+
+.project-github:hover {
+  color: var(--accent-color);
+}
+
+/* Image Components */
+.sticky-images {
+  position: sticky;
+  border-radius: 1rem;
+  top: 40px;
+  padding-bottom: 40px;
+}
+
+.image-item {
+  margin-bottom: 30px;
+  border-radius: 1rem;
+}
+
+.image-caption,
+.grid-item figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Interactive Elements
+   ========================================================================== */
 
 /* Fun Page Specific Styles */
 .fun-photo-grid {
@@ -785,18 +906,20 @@ p {
   border-radius: 0 8px 8px 0;
 }
 
-.fun-note em {
-  color: var(--secondary-color);
-}
-
 .image-item.circle img {
   border-radius: 50%;
   aspect-ratio: 1 / 1;  /* Force square aspect ratio */
   object-fit: cover;
-  width: 300px;  /* Set fixed width */
-  height: 300px;  /* Set fixed height */
+  width: 400px;  /* Increased from 300px */
+  height: 400px;  /* Increased from 300px */
   margin: 0 auto;
   display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+}
+.image-item.circle img:hover {
+  transform: scale(1.02);
 }
 
 /* ==========================================================================
@@ -884,7 +1007,7 @@ p {
   }
 
   .intro-box-content {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .intro-box-title {
@@ -1036,16 +1159,8 @@ p {
     gap: 1.5rem;
   }
 
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
   .header-icons {
     gap: 1.5rem;
-  }
-
-  .header-icons a {
-    font-size: 1.1rem;
   }
 
   .site-title {
@@ -1058,7 +1173,7 @@ p {
   }
 
   .intro-box-content {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .intro-box-title {
@@ -1085,7 +1200,89 @@ p {
   }
 }
 
-/* Mobile Spacing Fixes */
+/* Mobile menu button styling */
+.mobile-menu-button {
+  display: none;  /* Hidden by default */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.mobile-menu-button i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-menu-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-menu-button:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--background-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 0;
+  }
+
+  /* Move header icons into menu when in mobile view */
+  .header-icons {
+    display: none;  /* Hide desktop version */
+  }
+
+  .nav-links.active + .header-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: calc(var(--nav-height) + 100%);
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    border-top: 1px solid var(--border-color);
+  }
+}
 
 /* Reduce root padding for mobile */
 @media (max-width: 768px) {
@@ -1111,7 +1308,7 @@ p {
   }
 
   .intro-box-content {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .intro-box-title {
@@ -1173,6 +1370,18 @@ p {
   }
 }
 
+/* Desktop styles */
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* Extra small devices */
 @media (max-width: 480px) {
   :root {
@@ -1214,22 +1423,6 @@ p {
   }
 }
 
-
-/* Additional Styles */
-.nav-links a.active {
-  color: var(--accent-color);
-}
-
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
-}
-
 .section-title {
   font-size: 2rem;
   margin: 40px 0 20px;
@@ -1252,7 +1445,14 @@ p {
   width: 100%;
   height: auto;
   max-height: 400px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.02);
 }
 
 /* Fun photo grid image control */
@@ -1261,7 +1461,7 @@ p {
   height: auto;
   max-height: 300px;
   /* Reduced from 400px */
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Timeline image specific control */
