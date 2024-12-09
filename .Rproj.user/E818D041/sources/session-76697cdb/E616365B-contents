@@ -1,0 +1,171 @@
+---
+title: " "
+output:
+  html_document:
+    toc: false
+    theme: null
+    includes:
+      in_header: includes/header.html
+    css:
+      - styles.css
+      - "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+---
+
+```{=html}
+<div class="main-wrapper">
+  <div class="content-wrapper">
+    <!-- Header Section -->
+    <div class="typing-container">
+      <h1 class="typing-text">
+        <span class="greeting">g r a c e</span>
+        <span class="name">d o u g l a s</span>
+      </h1>
+    </div>
+
+    <!-- Main Two Column Layout -->
+    <div class="two-column-layout">
+      <!-- Left Column: Content -->
+      <div class="content-column">
+        <div class="intro-box">
+          <div class="intro-box-title">
+            👋  WELCOME IN
+          </div>
+          <div class="intro-box-content" style="--n:604;">
+            I am a human-subjects researcher interested in modeling road user negotiations in shared urban spaces. My dissertation work specifically explores how different cultures represent and design for vulnerable road users (VRUs) in mixed-traffic environments. The goal is to create computational models that are <span class="italic">fair</span>, <span class="italic">safe</span>, and <span class="italic">shareable</span> representations of real-time negotiations between motorized and nonmotorized road users, ultimately supporting the development of more equitable and inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
+          </div>
+        </div>
+        
+        <div class="keywords">
+          Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
+        </div>
+
+        <p>Currently I'm a Transportation Systems Ph.D. Candidate at the <a href="https://c2smarter.engineering.nyu.edu/">C2SMART Institute</a> in the Civil & Urban Engineering Department at the New York University Tandon School of Engineering in Downtown Brooklyn, NY. My advisor is <a href="https://engineering.nyu.edu/faculty/linda-ng-boyle">Dr. Linda Ng Boyle</a> at C2SMART's HumanFUEL (Human Factors and Urban Ergonomics Lab), where we develop user-centered road safety solutions for a dynamic set of motorized and nonmotorized agents. Some current project work I am involved with:</p>
+
+        <div class="project-list">
+          <p><strong><em>JAYWALK</em>: Unregulated Pedestrian Behavior in Mixed-traffic Driving Environments</strong></p>
+          <p>Locale-specific feature learning is necessary training to ensure safe deployment around vulnerable road users. This project is jointly conducted at NYU (New York City, New York) and THI (Ingolstadt, Germany) to examine inter-cultural differences of pedestrian adherence to road regulation.</p>
+          <ul>
+            <li>How does vulnerable road user (VRU) behavior change between geographically separate locales?</li>
+            <li>Are geographically separate locales identifiable by their VRU behavior?</li>
+          </ul>
+
+          <p><strong><em>SIM-2-SIM</em>: Virtualized Mixed-traffic Driving Environments with Human-regulated RL agents</strong></p>
+          <p>Amazing work done by <a href="https://scholar.google.com/citations?user=ScR5fBYAAAAJ&hl=en">Daphne Cornelisse</a> and the <a href="https://emerge-lab.github.io/">EMERGE Lab</a> are using reference driving data to inform self-play training solutions for <em>human-compatible</em> RL agents. Scaling learned policies into naturalistic settings can be unsafe for human agents, particularly in dynamic settings like mixed-traffic driving environments. Therefore, this project proposes an intermediate training step exposing trained agents to human drivers in a simulated multi-player environment, Strangeland.</p>
+          <ul>
+            <li>How do we map MARL training frameworks into high(er) fidelity simulation environments?</li>
+            <li>Are there advantages to fine-tuning trained RL agents in context-rich environments?</li>
+          </ul>
+        </div>
+
+        <h3 id="coffee">☕️ <em>Water cooler coffee?</em><sup>1,2</sup></h3>
+          <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work! You can email me at <a href="mailto:grace.douglas@nyu.edu">grace.douglas@nyu.edu</a> or connect with me on <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/">LinkedIn</a>.</p>
+      </div>
+
+      <!-- Right Column: Images -->
+      <div class="image-column">
+        <div class="sticky-images">
+          <figure class="image-item circle">
+            <img src="images/selfie-index.jpeg" alt="AFK grace">
+            <figcaption class="image-caption">AFK grace...</figcaption>
+          </figure>
+          <figure class="image-item">
+            <img src="images/boulder.jpeg" alt="Grace bouldering">
+            <figcaption class="image-caption">is learning to boulder,</figcaption>
+          </figure>
+          <figure class="image-item">
+            <img src="images/yogav2.jpeg" alt="Grace doing yoga">
+            <figcaption class="image-caption">but cannot wait for shavasana.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Width Footnotes -->
+    <div class="footnotes">
+      <p><sup>1</sup>Koch, T., & Denner, N. (2022). Informal communication in organizations: work time wasted at the water-cooler or crucial exchange among co-workers?. Corporate Communications: An International Journal, 27(3), 494-508.</p>
+      <p><sup>2</sup>Woo, D., Endacott, C. G., & Myers, K. K. (2023). Navigating water cooler talks without the water cooler: Uncertainty and information seeking during remote socialization. Management Communication Quarterly, 37(2), 251-280.</p>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  // Animation initialization
+  if (!sessionStorage.getItem('animationPlayed')) {
+    const introBox = document.querySelector('.intro-box');
+    introBox.classList.add('animate');
+    sessionStorage.setItem('animationPlayed', 'true');
+  }
+
+  // Image Gallery class
+  class ImageGallery {
+    constructor(container) {
+      // Your existing ImageGallery code
+      this.gallery = container;
+      this.figures = this.gallery.querySelectorAll('figure');
+      this.nav = this.gallery.nextElementSibling;
+      this.dots = this.nav.querySelectorAll('.gallery-dot');
+      this.currentIndex = 0;
+      
+      this.showImage(0);
+      this.setupEventListeners();
+    }
+    
+    // Rest of your ImageGallery class methods
+    showImage(index) {
+      if (index < 0 || index >= this.figures.length) return;
+      
+      this.figures.forEach(fig => {
+        fig.style.display = 'none';
+        fig.classList.remove('active');
+      });
+      
+      this.figures[index].style.display = 'block';
+      this.figures[index].classList.add('active');
+      
+      this.dots.forEach(dot => dot.classList.remove('active'));
+      if (this.dots[index]) {
+        this.dots[index].classList.add('active');
+      }
+      
+      this.currentIndex = index;
+    }
+    
+    setupEventListeners() {
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.showImage(index));
+      });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      this.gallery.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      this.gallery.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+        
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
+            this.showImage(this.currentIndex + 1);
+          } else if (swipeDistance < 0 && this.currentIndex > 0) {
+            this.showImage(this.currentIndex - 1);
+          }
+        }
+      }, { passive: true });
+    }
+  }
+
+  // Initialize galleries
+  const galleries = document.querySelectorAll('.gallery-images');
+  galleries.forEach(gallery => {
+    new ImageGallery(gallery);
+  });
+});
+</script>
+```

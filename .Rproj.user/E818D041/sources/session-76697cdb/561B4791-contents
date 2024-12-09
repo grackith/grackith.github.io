@@ -1,0 +1,65 @@
+<!-- header.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<div class="nav-wrapper">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">home</a>
+
+    <button class="mobile-menu-button">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="timeline.html" id="about-link">about</a></li>
+      <li><a href="projects.html" id="research-link">research</a></li>
+      <li><a href="hardware.html" id="tools-link">tools</a></li>
+      <li><a href="FUN.html" id="fun-link">.FUN</a></li>
+      <li><a href="resume.html" id="cv-link">cv</a></li>
+    </ul>
+
+    <!-- Single set of icons that will adapt for both mobile and desktop -->
+    <div class="header-icons">
+      <a href="mailto:grace.douglas@nyu.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="http://github.com/grackith/" aria-label="GitHub" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Add JavaScript for mobile menu toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuButton.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navLinks.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+
+    // Get current page URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    // Remove active class from all links and add to current
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+    // Special case for home page
+    if (currentPage === 'index.html') {
+      document.querySelector('.site-title').classList.add('active');
+    }
+  });
+</script>
