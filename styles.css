@@ -179,7 +179,7 @@ html, body {
   width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0;
+  padding: 0 var(--padding-x);
   position: relative;
 }
 
@@ -947,7 +947,7 @@ video {
   margin: 70px 0 50px;
   position: relative;
   max-width: var(--max-width);
-  padding: 0 50px;
+  padding: 0 var(--padding-x);
 }
 
 .typing-text {
