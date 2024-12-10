@@ -1044,7 +1044,7 @@ video {
 /* Medium screens */
 @media (max-width: 1024px) {
   :root {
-    --padding-x: 30px;
+    --padding-x: 10px;
   }
 }
 
@@ -1059,7 +1059,7 @@ video {
 @media (max-width: 768px) {
   /* Root variables */
   :root {
-    --padding-x: 15px;
+    --padding-x: 8px;
     --nav-height: 60px;
   }
 
@@ -1207,7 +1207,7 @@ video {
 /* Small screens */
 @media (max-width: 480px) {
   :root {
-    --padding-x: 12px;
+    --padding-x: 8px;
   }
   .nav-wrapper {
     height: 40px;
@@ -1421,7 +1421,7 @@ video {
 /* Medium screens */
 @media (max-width: 1024px) {
   :root {
-    --padding-x: 30px;
+    --padding-x: 20px;
   }
 }
 
@@ -1590,7 +1590,7 @@ video {
 @media (max-width: 480px) {
   :root {
     --nav-height: 60px;
-    --padding-x: 15px;
+    --padding-x: 8px;
   }
   .nav-wrapper {
     height: 40px;
