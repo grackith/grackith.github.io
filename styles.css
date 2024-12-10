@@ -1070,7 +1070,7 @@ video {
     line-height: 1.4;
   }
 
-  h1, .typing-text {
+  h1 {
     font-size: 2rem;
     white-space: normal;
     word-wrap: break-word;
