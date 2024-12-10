@@ -1044,7 +1044,7 @@ video {
 /* Medium screens */
 @media (max-width: 1024px) {
   :root {
-    --padding-x: 10px;
+    --padding-x: 8px;
   }
 }
 
@@ -1421,7 +1421,7 @@ video {
 /* Medium screens */
 @media (max-width: 1024px) {
   :root {
-    --padding-x: 20px;
+    --padding-x: 8px;
   }
 }
 
@@ -1436,7 +1436,7 @@ video {
 @media (max-width: 768px) {
   /* Root variables */
   :root {
-    --padding-x: 15px;
+    --padding-x: 8px;
     --nav-height: 60px;
   }
 
@@ -1617,7 +1617,7 @@ video {
 
   .name {
     font-size: 3.5rem;
-    margin-left: 15px;
+    margin-left: 8px;
   }
   .name span:last-child {
     display: block;
