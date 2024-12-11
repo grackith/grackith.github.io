@@ -39,8 +39,8 @@ output:
           <p>The <em>Strangeland</em> environment is the backend of our multiplayer studies, which was developed in the Unity game engine with a .NET codebase for multi-platform deployments. This virtual environment facilitates real-time multi-agent interaction in shared urban spaces, enabling natural interactions between drivers, pedestrians, and other road users. Instantiations of customizable urban environments allow for the re-creation of culturally-specific urban scenarios, enabling comparative studies across different cultural contexts.</p>
         </div>
         <div class="image-column">
-          <figure>
-            <img src="images/minisim-stock.jpeg" alt="Strangeland simulator" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+          <figure class="image-item">
+            <img src="images/minisim-stock.jpeg" alt="Strangeland simulator">
             <figcaption class="image-caption">Strangeland, a Unity-based VR driving simulator.</figcaption>
           </figure>
         </div>
