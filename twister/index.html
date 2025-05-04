@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twister Spinner</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+      }
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .spinner {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        margin: 20px auto;
+      }
+      .spinner-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(
+          red 0% 25%,
+          blue 25% 50%,
+          green 50% 75%,
+          yellow 75% 100%
+        );
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: transform 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      }
+      .spinner-arrow {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 30px solid #333;
+        z-index: 10;
+      }
+      .result {
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .color-dot {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 0;
+        cursor: pointer;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      .history {
+        margin-top: 20px;
+        text-align: left;
+        max-height: 150px;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+      }
+      .history-item {
+        margin: 5px 0;
+        padding: 5px;
+        border-bottom: 1px solid #eee;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Twister Spinner</h1>
+
+      <div class="spinner">
+        <div class="spinner-inner" id="wheel"></div>
+        <div class="spinner-arrow"></div>
+      </div>
+
+      <button id="spin-btn">SPIN</button>
+
+      <div class="result" id="result">Press SPIN to start!</div>
+
+      <div class="history">
+        <h3>History:</h3>
+        <div id="history-list"></div>
+      </div>
+
+      <div class="footer">
+        <p>DIY Twister Game | Tap anywhere on screen to keep device awake</p>
+      </div>
+    </div>
+
+    <script>
+      const colors = [
+        { name: "Red", code: "#FF0000" },
+        { name: "Blue", code: "#0000FF" },
+        { name: "Green", code: "#00AA00" },
+        { name: "Yellow", code: "#FFFF00" },
+      ];
+
+      const bodyParts = ["Left Hand", "Right Hand", "Left Foot", "Right Foot"];
+
+      const wheel = document.getElementById("wheel");
+      const spinBtn = document.getElementById("spin-btn");
+      const result = document.getElementById("result");
+      const historyList = document.getElementById("history-list");
+
+      let spinning = false;
+      let currentRotation = 0;
+      let history = [];
+
+      spinBtn.addEventListener("click", () => {
+        if (spinning) return;
+
+        spinning = true;
+        spinBtn.disabled = true;
+
+        // Random rotation between 5 and 10 full rotations plus an offset
+        const rotations = 5 + Math.random() * 5;
+        const offset = Math.random() * 360;
+        const totalRotation = rotations * 360 + offset;
+
+        currentRotation += totalRotation;
+        wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+        setTimeout(() => {
+          // Calculate which color was selected
+          const finalPosition = currentRotation % 360;
+          const colorIndex = Math.floor((finalPosition / 90) % 4);
+
+          // Randomly select a body part
+          const bodyPartIndex = Math.floor(Math.random() * bodyParts.length);
+
+          const selectedColor = colors[colorIndex];
+          const selectedBodyPart = bodyParts[bodyPartIndex];
+
+          // Display the result
+          result.innerHTML = `
+                    <div class="color-dot" style="background-color: ${selectedColor.code};"></div>
+                    ${selectedColor.name} - ${selectedBodyPart}
+                `;
+
+          // Add to history
+          addToHistory(selectedColor, selectedBodyPart);
+
+          spinning = false;
+          spinBtn.disabled = false;
+        }, 3000);
+      });
+
+      function addToHistory(color, bodyPart) {
+        const historyItem = {
+          color: color,
+          bodyPart: bodyPart,
+          timestamp: new Date(),
+        };
+
+        history.unshift(historyItem);
+        if (history.length > 10) {
+          history.pop();
+        }
+
+        updateHistoryDisplay();
+      }
+
+      function updateHistoryDisplay() {
+        historyList.innerHTML = "";
+
+        history.forEach((item) => {
+          const historyItemElement = document.createElement("div");
+          historyItemElement.className = "history-item";
+          historyItemElement.innerHTML = `
+                    <div class="color-dot" style="background-color: ${item.color.code}; display: inline-block; vertical-align: middle;"></div>
+                    ${item.color.name} - ${item.bodyPart}
+                `;
+          historyList.appendChild(historyItemElement);
+        });
+      }
+
+      // Keep screen awake by handling touch/click events
+      document.addEventListener("click", function () {
+        if ("wakeLock" in navigator) {
+          try {
+            navigator.wakeLock
+              .request("screen")
+              .catch((err) => console.log("Wake Lock error:", err));
+          } catch (err) {
+            console.log("Wake Lock API not supported:", err);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
