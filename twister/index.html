@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spinner</title>
+    <title>Twister Spinner</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -183,7 +183,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Spinner</h1>
+      <h1>Twister Time!</h1>
 
       <div class="spinner-container">
         <canvas id="spinner-canvas" width="300" height="300"></canvas>
@@ -199,9 +199,9 @@
         <div class="spinner-center"></div>
       </div>
 
-      <button id="spin-btn">TWIST</button>
+      <button id="spin-btn">SPIN</button>
 
-      <div class="result" id="result">Press TWIST to start!</div>
+      <div class="result" id="result">Press SPIN to start!</div>
 
       <div class="history">
         <h3>History:</h3>
@@ -209,16 +209,14 @@
       </div>
 
       <div class="footer">
-        <p>
-          Happy Birthday Brit! | Tap anywhere on screen to keep device awake
-        </p>
+        <p>!Happy Brithday Brit!</p>
       </div>
     </div>
 
     <script>
       // Colors and limbs
       const colors = [
-        { name: "Red", code: "#FF0000" },
+        { name: "Pink", code: "#FF69B4" },
         { name: "Blue", code: "#0000FF" },
         { name: "Green", code: "#00AA00" },
         { name: "Yellow", code: "#FFFF00" },
@@ -397,7 +395,7 @@
 
           spinning = false;
           spinBtn.disabled = false;
-        }, 3000);
+        }, 2000);
       });
 
       function addToHistory(color, bodyPart) {
