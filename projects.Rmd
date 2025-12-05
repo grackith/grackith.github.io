@@ -18,7 +18,7 @@ output:
      <div class="intro-box-title">
        <span class="emoji">⏩</span>TLDR;
      </div>
-     <div class="intro-box-content" style="--n:261;">My work is a mix of obervational and experimental methods. Safety in automation and road user behvior are underlying themes throughout my research, paired with an underlying question: <span class="italic">How can the built environment support safe and fair mixed-traffic negotiations?</span>
+     <div class="intro-box-content" style="--n:267;">My work is a mix of obervational and experimental methods. Safety in automation and road user behvior are underlying themes throughout my research, paired with an underlying question: <span class="italic">How can the built environment support safe and fair mixed-traffic negotiations?</span>
      </div>
     </div>
 ```
