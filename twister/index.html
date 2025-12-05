@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twister Spinner</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+      }
+      .container {
+        max-width: 500px;
+        width: 92%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .spinner-container {
+        width: 280px;
+        height: 280px;
+        position: relative;
+        margin: 30px auto;
+      }
+
+      /* Canvas for drawing the spinner */
+      #spinner-canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Limb labels */
+      .limb-label {
+        position: absolute;
+        font-weight: bold;
+        font-size: 14px;
+        color: #000;
+        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+          -1px 1px 0 #fff;
+      }
+
+      .left-hand {
+        top: 10px;
+        left: 10px;
+      }
+
+      .right-hand {
+        top: 10px;
+        right: 10px;
+      }
+
+      .left-foot {
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .right-foot {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      /* Spinner arrow */
+      .spinner-arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 140px;
+        height: 8px;
+        margin-left: 0;
+        margin-top: -4px;
+        background-color: #333;
+        transform-origin: 0 50%;
+        z-index: 10;
+        border-radius: 4px;
+        transform: rotate(0deg);
+        transition: transform 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      }
+
+      .spinner-arrow:after {
+        content: "";
+        position: absolute;
+        right: -6px;
+        top: -6px;
+        width: 0;
+        height: 0;
+        border-left: 12px solid #333;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+      }
+
+      .spinner-center {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #333;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+      }
+
+      .result {
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .color-dot {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 0;
+        cursor: pointer;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      .history {
+        margin-top: 20px;
+        text-align: left;
+        max-height: 150px;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+      }
+      .history-item {
+        margin: 5px 0;
+        padding: 5px;
+        border-bottom: 1px solid #eee;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Twister</h1>
+
+      <div class="spinner-container">
+        <canvas id="spinner-canvas" width="300" height="300"></canvas>
+
+        <!-- Limb section labels -->
+        <div class="limb-label left-hand">LEFT HAND</div>
+        <div class="limb-label right-hand">RIGHT HAND</div>
+        <div class="limb-label right-foot">RIGHT FOOT</div>
+        <div class="limb-label left-foot">LEFT FOOT</div>
+
+        <!-- Spinner arrow and center -->
+        <div class="spinner-arrow" id="arrow"></div>
+        <div class="spinner-center"></div>
+      </div>
+
+      <button id="spin-btn">SPIN</button>
+
+      <div class="result" id="result">Spin me sista!</div>
+
+      <div class="history">
+        <h3>History:</h3>
+        <div id="history-list"></div>
+      </div>
+
+      <div class="footer">
+        <p>! Happy Birthday Brit !</p>
+      </div>
+    </div>
+
+    <script>
+      // Colors and limbs
+      const colors = [
+        { name: "Pink", code: "#FF69B4" },
+        { name: "Blue", code: "#3399FF" },
+        { name: "Green", code: "#006600" },
+        { name: "Yellow", code: "#FFFF00" },
+      ];
+
+      const limbs = [
+        { name: "Left Hand", position: "left-hand" },
+        { name: "Right Hand", position: "right-hand" },
+        { name: "Right Foot", position: "right-foot" },
+        { name: "Left Foot", position: "left-foot" },
+      ];
+
+      // Create the spinner segments using canvas
+      const canvas = document.getElementById("spinner-canvas");
+      const ctx = canvas.getContext("2d");
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const radius = canvas.width / 2;
+
+      // Define quadrant angle ranges (important for result calculation)
+      const quadrants = [
+        { startAngle: 0, endAngle: 90, limb: "Left Hand" },
+        { startAngle: 90, endAngle: 180, limb: "Right Hand" },
+        { startAngle: 180, endAngle: 270, limb: "Right Foot" },
+        { startAngle: 270, endAngle: 360, limb: "Left Foot" },
+      ];
+
+      // Draw the spinner board with all segments
+      function drawSpinner() {
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Settings for spinner
+        const totalSegments = 16; // 4 limbs × 4 colors
+        const anglePerSegment = (Math.PI * 2) / totalSegments;
+
+        // Map segments to colors and limbs
+        for (let i = 0; i < totalSegments; i++) {
+          const startAngle = i * anglePerSegment;
+          const endAngle = startAngle + anglePerSegment;
+
+          // Calculate which color and limb this segment belongs to
+          const limbIndex = Math.floor(i / 4);
+          const colorIndex = i % 4;
+
+          // Draw the segment
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+          ctx.closePath();
+
+          // Fill with color
+          ctx.fillStyle = colors[colorIndex].code;
+          ctx.fill();
+
+          // Add thin lines between segments
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.3)";
+          ctx.lineWidth = 1;
+          ctx.stroke();
+
+          // Store segment data for later reference
+          const midAngle = startAngle + anglePerSegment / 2;
+          const segmentData = {
+            angle: midAngle,
+            color: colors[colorIndex],
+            limb: limbs[limbIndex],
+          };
+        }
+
+        // Draw white circle in center
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius * 0.15, 0, Math.PI * 2);
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      // Draw initial spinner
+      drawSpinner();
+
+      const arrow = document.getElementById("arrow");
+      const spinBtn = document.getElementById("spin-btn");
+      const result = document.getElementById("result");
+      const historyList = document.getElementById("history-list");
+
+      // Create data structure for segments
+      const segments = [];
+      const totalSegments = 16;
+      const anglePerSegment = 360 / totalSegments;
+
+      // Initialize segments data
+      for (let i = 0; i < totalSegments; i++) {
+        const limbIndex = Math.floor(i / 4);
+        const colorIndex = i % 4;
+
+        segments.push({
+          startAngle: i * anglePerSegment,
+          endAngle: (i + 1) * anglePerSegment,
+          color: colors[colorIndex],
+          limb: limbs[limbIndex].name,
+        });
+      }
+
+      let spinning = false;
+      let currentRotation = 0;
+      let history = [];
+
+      spinBtn.addEventListener("click", () => {
+        if (spinning) return;
+
+        spinning = true;
+        spinBtn.disabled = true;
+
+        // Random rotation between 2 and 5 full rotations plus an offset
+        const rotations = 2 + Math.random() * 3;
+        const offset = Math.random() * 360;
+        const totalRotation = rotations * 360 + offset;
+
+        // We spin the arrow in this version, not the board
+        currentRotation += totalRotation;
+        arrow.style.transform = `rotate(${currentRotation}deg)`;
+
+        setTimeout(() => {
+          // Calculate the final position of the arrow in degrees
+          const finalPosition = currentRotation % 360;
+
+          // Determine which segment the arrow is pointing to
+          // We need to find which segment contains this angle
+          let selectedSegment = null;
+
+          for (const segment of segments) {
+            if (
+              finalPosition >= segment.startAngle &&
+              finalPosition < segment.endAngle
+            ) {
+              selectedSegment = segment;
+              break;
+            }
+          }
+
+          // Handle the case where the position is between 359-360 degrees
+          if (!selectedSegment) {
+            selectedSegment = segments[0];
+          }
+
+          // In the Twister spinner, we need to determine which quadrant the arrow is in
+          // to know which body part it's pointing to
+          let selectedLimb = "";
+
+          // Arrow points opposite to rotation direction, so use opposite angle
+          const arrowAngle = (finalPosition + 180) % 360;
+
+          // Find the quadrant based on the arrow angle
+          if (arrowAngle >= 0 && arrowAngle < 90) {
+            selectedLimb = "Left Hand";
+          } else if (arrowAngle >= 90 && arrowAngle < 180) {
+            selectedLimb = "Right Hand";
+          } else if (arrowAngle >= 180 && arrowAngle < 270) {
+            selectedLimb = "Right Foot";
+          } else {
+            selectedLimb = "Left Foot";
+          }
+
+          const selectedColor = selectedSegment.color;
+
+          // Display the result
+          result.innerHTML = `
+            <div class="color-dot" style="background-color: ${selectedColor.code};"></div>
+            ${selectedColor.name} - ${selectedLimb}
+          `;
+
+          // Add to history
+          addToHistory(selectedColor, selectedLimb);
+
+          spinning = false;
+          spinBtn.disabled = false;
+        }, 2000);
+      });
+
+      function addToHistory(color, bodyPart) {
+        const historyItem = {
+          color: color,
+          bodyPart: bodyPart,
+          timestamp: new Date(),
+        };
+
+        history.unshift(historyItem);
+        if (history.length > 10) {
+          history.pop();
+        }
+
+        updateHistoryDisplay();
+      }
+
+      function updateHistoryDisplay() {
+        historyList.innerHTML = "";
+
+        history.forEach((item) => {
+          const historyItemElement = document.createElement("div");
+          historyItemElement.className = "history-item";
+          historyItemElement.innerHTML = `
+            <div class="color-dot" style="background-color: ${item.color.code}; display: inline-block; vertical-align: middle;"></div>
+            ${item.color.name} - ${item.bodyPart}
+          `;
+          historyList.appendChild(historyItemElement);
+        });
+      }
+
+      // Keep screen awake by handling touch/click events
+      document.addEventListener("click", function () {
+        if ("wakeLock" in navigator) {
+          try {
+            navigator.wakeLock
+              .request("screen")
+              .catch((err) => console.log("Wake Lock error:", err));
+          } catch (err) {
+            console.log("Wake Lock API not supported:", err);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
