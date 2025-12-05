@@ -18,11 +18,11 @@ output:
       <div class="responsive-iframe-wrapper">
         <iframe 
           class="responsive-iframe"
-          src="scripts/resume-oct-2024.pdf"
+          src="scripts/resume.pdf"
           type="application/pdf"
           title="Resume PDF">
           <p>Your browser doesn't support PDF viewing. Please download the PDF to view it: 
-            <a href="resume-oct-2024.pdf">Download PDF</a>
+            <a href="resume.pdf">Download PDF</a>
           </p>
         </iframe>
       </div>

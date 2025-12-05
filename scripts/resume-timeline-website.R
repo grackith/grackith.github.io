@@ -38,7 +38,9 @@ publications <- tribble(
   "Framework to Assess\nPedestrian Exposure (HFES)", "2022-01-01", "Publications", 300, 0.4, # nolint: line_length_linter.
   "Comparing Pedestrian\nExposure Measures (TRB)", "2024-01-01", "Publications", -400, -0.4, # nolint: line_length_linter.
   "Examining drivers' secondary task\nengagement at intersections using\nnaturalistic driving data (AAP)", "2024-10-01", "Publications", 100, -0.1, # nolint: line_length_linter.
-  "Misclassications in rare\nevent prediction (TR-F)", "2025-01-01", "Publications", -500, -0.6 # nolint: line_length_linter.
+  "Google Street View analysis\nfor Traffic Safety Models (JSM)", "2025-06-01", "Publications", -350, 0.4, # nolint: line_length_linter.
+  "Virtual Worlds for\nReal Agents (AutomotiveUI)", "2025-09-01", "Publications", 300, -0.4, # nolint: line_length_linter.
+  "Misclassifications in rare\nevent prediction (TR-F)", "2025-12-01", "Publications", 400, 0.5 # nolint: line_length_linter.
 ) %>%
   mutate(date = ymd(date))
 

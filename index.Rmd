@@ -31,34 +31,28 @@ output:
             👋  WELCOME IN
           </div>
           <div class="intro-box-content" style="--n:606;">
-            My research explores the role of the built environment as a platform for safe and equitable negotiation between diverse sets of dynamic road users. Specifically, my dissertation work builds computational models that capture locale-specific context between motorized and nonmotorized agents in mixed-traffic driving environments. The goal is to develop <span class="italic">fair</span>, <span class="italic">safe</span>, and <span class="italic">shareable</span> representations of these real-time negotiations in shared urban spaces. This work can inform the design of more inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
+            My research explores the role of the built environment as a platform for safe and equitable negotiation between diverse sets of road users. Specifically, my dissertation work builds computational models that capture locale-specific context between motorized and nonmotorized agents in mixed-traffic driving environments. The goal is to develop <span class="italic">fair</span>, <span class="italic">safe</span>, and <span class="italic">scalable</span> representations of these real-time negotiations in shared urban spaces. This work can inform the design of more inclusive transportation infrastructure, connected technologies, and automated systems in these complex urban environments.
           </div>
         </div>
         
         <div class="keywords">
-Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human subjects research, simulation, mixed-traffic driving environments
+Keywords: human factors, road safety, naturalistic driving environments, road user behavior, statistical modeling, human-computer interaction, human-subjects research, simulation, mixed-traffic driving environments
         </div>
 
-        <p>Currently I'm a Transportation Systems Ph.D. Candidate at the <a href="https://c2smarter.engineering.nyu.edu/">C2SMART Institute</a> in the Civil & Urban Engineering Department at the New York University Tandon School of Engineering in Downtown Brooklyn, NY. My advisor is <a href="https://engineering.nyu.edu/faculty/linda-ng-boyle">Dr. Linda Ng Boyle</a> at C2SMART's HumanFUEL (Human Factors and Urban Ergonomics Lab), where we develop user-centered road safety solutions for a dynamic set of motorized and nonmotorized agents. Some current project work I am involved with:</p>
+        <p>Currently I'm a Transportation Systems Ph.D. Candidate at the <a href="https://c2smarter.engineering.nyu.edu/">C2SMART Institute</a> in the Civil & Urban Engineering Department at the New York University Tandon School of Engineering in Downtown Brooklyn, NY. My advisor is <a href="https://engineering.nyu.edu/faculty/linda-ng-boyle">Dr. Linda Ng Boyle</a> at C2SMART's HumanFUEL (<a href="https://wp.nyu.edu/tandonschoolofengineering-humanfuel/">Human Factors and Urban Ergonomics Lab</a>), where we develop user-centered road safety solutions for a dynamic set of motorized and nonmotorized agents.</p>
 
-        <div class="project-list">
-          <p><strong><em>JAYWALK</em>: Unregulated Pedestrian Behavior in Mixed-traffic Driving Environments</strong></p>
-          <p>Locale-specific feature learning is necessary training to ensure safe deployment around vulnerable road users. This project is jointly conducted at NYU (New York City, New York) and THI (Ingolstadt, Germany) to examine inter-cultural differences of pedestrian adherence to road regulation.</p>
-          <ul>
-            <li>How does vulnerable road user (VRU) behavior change between geographically separate locales?</li>
-            <li>Are geographically separate locales identifiable by their VRU behavior?</li>
-          </ul>
-
-          <p><strong><em>SIM-2-SIM</em>: Virtualized Mixed-traffic Driving Environments with Human-regulated RL agents</strong></p>
-          <p>Amazing work done by <a href="https://scholar.google.com/citations?user=ScR5fBYAAAAJ&hl=en">Daphne Cornelisse</a> and the <a href="https://emerge-lab.github.io/">EMERGE Lab</a> are using reference driving data to inform self-play training solutions for <em>human-compatible</em> RL agents. Scaling learned policies into naturalistic settings can be unsafe for human agents, particularly in dynamic settings like mixed-traffic driving environments. Therefore, this project proposes an intermediate training step exposing trained agents to human drivers in a simulated multi-player environment, Strangeland.</p>
-          <ul>
-            <li>How do we map MARL training frameworks into high(er) fidelity simulation environments?</li>
-            <li>Are there advantages to fine-tuning trained RL agents in context-rich environments?</li>
-          </ul>
+        <div class="recruitment-flyer" style="margin: 30px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border: 2px solid #e0e0e0;">
+          <h3 style="text-align: center; color: #333; margin-bottom: 20px;">Interested in participating? <a href="https://forms.gle/FCjkd6fMVFEtEArt6" style="font-size: 0.8em;">click here</a></h3>
+          <figure style="margin: 0; text-align: center;">
+            <embed 
+              src="scripts/flyer.pdf" 
+              type="application/pdf" 
+              style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 4px;"
+            />
+            <figcaption class="image-caption" style="margin-top: 15px; font-size: 0.95em;">
+            </figcaption>
+          </figure>
         </div>
-
-        <h3 id="coffee">☕️ <em>Water cooler coffee?</em><sup>1,2</sup></h3>
-          <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work! You can email me at <a href="mailto:grace.douglas@nyu.edu">grace.douglas@nyu.edu</a> or connect with me on <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/">LinkedIn</a>.</p>
       </div>
 
       <!-- Right Column: Images -->
@@ -76,6 +70,12 @@ Keywords: human factors, road safety, naturalistic driving environments, road us
             <img src="images/yogav2.jpeg" alt="Grace doing yoga">
             <figcaption class="image-caption">but cannot wait for shavasana.</figcaption>
           </figure>
+        </div>
+        
+        <!-- Water Cooler Coffee Section -->
+        <div style="margin-top: 40px;">
+          <h3 id="coffee">☕️ <em>Water cooler coffee?</em><sup>1,2</sup></h3>
+          <p>I'm best over a cup of joe :) Please reach out with any questions or to discuss my work! You can email me at <a href="mailto:grace.douglas@nyu.edu">grace.douglas@nyu.edu</a> or connect with me on <a href="https://www.linkedin.com/in/grace-douglas-a92a44132/">LinkedIn</a>.</p>
         </div>
       </div>
     </div>

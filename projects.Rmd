@@ -18,10 +18,107 @@ output:
      <div class="intro-box-title">
        <span class="emoji">⏩</span>TLDR;
      </div>
-     <div class="intro-box-content" style="--n:260;">My work is a mix of obervational and experimental methods. Traffic safety and road user behavior are underlying themes throughout my research, paired with an underlying question: <span class="italic">How can the built environment support safe and fair mixed-traffic negotiations?</span>
+     <div class="intro-box-content" style="--n:260;">My work is a mix of obervational and experimental methods. Safety in automation and road user behvior are underlying themes throughout my research, paired with an underlying question: <span class="italic">How can the built environment support safe and fair mixed-traffic negotiations?</span>
      </div>
     </div>
 ```
+
+
+```{=html}
+<!-- Current Projects Section -->
+<section class="lab-section" style="padding-top: 40px; border-bottom: 2px solid #e0e0e0; padding-bottom: 40px; margin-bottom: 40px;">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px; color: #333;">Current Projects</h2>
+  
+  <!-- Visible Pedestrians Project -->
+  <div style="margin-bottom: 50px;">
+    <section class="project-section">
+      <h3 id="visible-pedestrians">
+        Visible Pedestrians: Level of Detail in Pedestrian Detection Systems
+        <a href="https://github.com/grackith/NYU-UT-PDS" target="_blank" class="project-github">
+          <i class="fab fa-github"></i>
+        </a>
+      </h3>
+      <p><strong>Collaboration:</strong> NYU's HumanFUEL and UT-Austin's Mobility Systems Laboratory</p>
+      
+      <p>Pedestrian detection systems in Level 3 automated vehicles can provide varying levels of information detail to drivers, but optimal information granularity remains unclear. This study examines how different levels of detail (LOD0-LOD4) in pedestrian detection displays affect driver attention allocation, trust in automation, and situational awareness during mixed-traffic scenarios. Using a vehicle simulator with eye tracking capabilities (Meta Aria Gen1 glasses), participants complete driving tasks while monitoring pedestrian detection displays ranging from no information (LOD0) to comprehensive displays including position, orientation, and uncertainty visualization (LOD4). Eye tracking provides objective measurement of attention allocation between road monitoring and display interaction, while subjective measures assess trust calibration and cognitive load. Results establish optimal information granularity for pedestrian detection interfaces that balance information utility with attention demands in Level 3 automated driving contexts.</p>
+      
+      <figure style="margin-top: 30px; margin-bottom: 0;">
+        <video 
+          controls
+          muted
+          playsinline
+          style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
+        >
+          <source src="videos/lod3-2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="image-caption">
+          Pedestrian detection system levels of detail demonstration
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <!-- Virtual Worlds Project -->
+  <div class="two-column-layout">
+    <div class="content-column">
+      <section class="project-section">
+        <h3 id="virtual-worlds">
+          Virtual Worlds for Real Agents: Inter-block Way-finding in Strategic-level Pedestrian Behavior
+          <a href="https://github.com/grackith/TangleTown6" target="_blank" class="project-github">
+            <i class="fab fa-github"></i>
+          </a>
+        </h3>
+        <p><strong>Collaboration:</strong> NYU's HumanFUEL and Cornell Tech's Interaction Research Lab</p>
+        
+        <p>Virtual reality environments provide controlled settings for pedestrian behavior research, but their correspondence to real-world behavior requires thorough validation. This study compares VR walking behavior to naturalistic pedestrian traces collected at the same physical location in South Lake Union, Seattle. Participants complete utility-based (goal-directed bus catching) and non-utility (exploratory bus stop search) navigation tasks in VR that match naturalistic behavior classifications. Validation employs the Hoogendoorn behavioral hierarchy framework, measuring correspondence across strategic (task completion patterns), tactical (route choice, navigation strategies), and operational (speed, trajectory, movement patterns) levels. Comprehensive assessment protocols include motion sickness monitoring (VRSQ), cognitive workload evaluation (NASA-TLX), and presence measurement (IPQ) to ensure ecological validity. Results establish validity benchmarks and provide calibration factors for VR pedestrian research. This 45-minute protocol demonstrates systematic validation of virtual pedestrian environments against real-world baselines.</p>
+        
+        <p><strong>Objectives:</strong></p>
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
+          <li>Validate VR pedestrian behavior against naturalistic traces by comparing navigation patterns across behavioral hierarchy levels</li>
+          <li>Assess virtual-to-real correspondence for utility-based versus non-utility pedestrian tasks</li>
+          <li>Establish validity benchmarks and calibration factors for pedestrian-aware virtual environments</li>
+        </ul>
+      </section>
+    </div>
+    
+    <div class="image-column">
+      <div style="display: flex; flex-direction: column; gap: 30px;">
+        <figure style="margin: 0;">
+          <video 
+            controls
+            muted
+            playsinline
+            style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
+          >
+            <source src="videos/tangletown-stabilized-clip-compressed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="image-caption">
+            VR pedestrian navigation in South Lake Union, Seattle
+          </figcaption>
+        </figure>
+        
+        <figure style="margin: 0;">
+          <video 
+            controls
+            muted
+            playsinline
+            style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
+          >
+            <source src="videos/website-snip-rdw-lowerbodyik_compressed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="image-caption">
+            Redirected walking and lower body IK demonstration
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
 
 ```{=html}
 <!-- Pedestrian Exposure Project -->
