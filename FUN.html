@@ -83,6 +83,9 @@
   });
 </script>
 
+<!-- shared gallery / video behavior for every page -->
+<script src="scripts/site.js" defer></script>
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -179,111 +182,68 @@ if (window.hljs) {
 
     <!-- Health Tracking Section -->
     <section class="lab-section">
+      <h3>go go garmin</h3>
+      <p>I'm most comfortable moving. A Garmin Forerunner 245 logs the daily damage &mdash; heart rate, stress, sleep, steps &mdash; and a scheduled job pulls it into this page every morning, so the numbers below are however I actually did this week rather than a screenshot from a good one.</p>
+      <div id="health-dashboard" class="hd-root">
+        <p class="hd-stamp">Loading&hellip;</p>
+      </div>
+    </section>
+
+    <!-- Ferret Tracking Section -->
+    <section class="lab-section">
       <div class="two-column-layout">
         <div class="content-column">
-          <h3>go go garmin</h3>
-          <p>I'm most comfortable moving! I wear a Garmin Forerunner 245 to track daily physiological measures such as heart rate, stress, sleep, steps, or other activities.</p>
+          <h3>Six ferrets, one camera 🦦</h3>
+          <p>I work with the <a href="https://med.emory.edu/" target="_blank" rel="noopener">Lakdawala Lab</a> at Emory University School of Medicine on something a long way from traffic: tracking ferrets in influenza-transmission studies. Ferrets are the standard model for how flu moves between hosts, and the question is who contacted whom, for how long &mdash; which means you have to keep five or six of them straight on video, continuously, while they pile on top of each other in a corner and sleep.</p>
+
+          <p>Pose estimation handles the bodies. Identity is the hard part: every existing approach ties who-you-are to where-your-joints-are, so the moment two animals overlap, the labels swap and stay swapped for the rest of the video. Working with <a href="https://sleap.ai/" target="_blank" rel="noopener">SLEAP</a>'s creator Dr. Talmo Pereira, we pulled identity apart from pose &mdash; a Random Forest classifier reads the dye markings straight off the coat in HSV, and Hungarian matching assigns animals frame to frame.</p>
+
+          <p>The part I like most is that it's allowed to give up. Assignment is gated on both confidence and margin, so when the model isn't sure it abstains instead of guessing &mdash; because one confident wrong guess under occlusion poisons every frame after it. The whole thing runs on an AWS GPU pipeline that streams a 2-hour video in about 1.5 hours at flat memory.</p>
+
+          <p style="font-size: 0.9em;"><em>Protocol paper in preparation for PLOS Biology.</em></p>
         </div>
         <div class="image-column">
-          <div class="project-gallery">
-            <div class="gallery-images" id="health-gallery">
-              <figure>
-                <img src="/api/placeholder/400/300" alt="Activity Dashboard">
-                <figcaption class="image-caption">Custom activity dashboard showing weekly trends</figcaption>
-              </figure>
-              <figure>
-                <img src="/api/placeholder/400/300" alt="Training Analysis">
-                <figcaption class="image-caption">Training load analysis over time</figcaption>
-              </figure>
-            </div>
-            <div class="gallery-nav" id="health-nav">
-              <span class="gallery-dot"></span>
-              <span class="gallery-dot"></span>
-            </div>
-          </div>
+          <figure style="margin: 0;">
+            <video class="autoloop" muted loop playsinline controls preload="metadata"
+                   style="width: 100%; height: auto; max-height: 460px; object-fit: contain;">
+              <source src="videos/sleap-ferret-tracking.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="image-caption">
+              Multi-animal pose and identity tracking, holding through occlusion.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
+
+    <!-- BrewVision Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3>BrewVision: teaching a computer to watch skee-ball 🎳</h3>
+          <p>I roll in the <a href="https://www.brewskeeball.com/" target="_blank" rel="noopener">BrEWSKEE-BALL&reg;</a> league at <a href="https://www.fullcirclebar.com/brooklyn" target="_blank" rel="noopener">Full Circle Bar</a> in Williamsburg. I got to know the owner, one thing led to another, and now I am helping build the computer vision system that scores the lanes.</p>
+
+          <p>Two cameras watch each lane &mdash; one overhead, one angled &mdash; and a YOLO detector picks the ball out of every frame. A Kalman filter carries it up the ramp, the two views agree on which ball is which, and the score comes from wherever the ball was last seen before it vanished into a cup. No sensors in the lane, no beam breaks. Just watching, the way a person would.</p>
+
+          <p>The delightful failure mode is the hundo. Sinking the 100 means throwing hard, and throwing hard is exactly when the overhead camera loses the ball at the frame edge and the angled camera decides this must be some <em>other</em> ball &mdash; two cameras, two IDs, one very annoyed player. Also unsolved: the system has no concept of a gutter ball, and no idea that a 10th ball doesn't count. Though honestly, tracking who racks up the most meaningless 10th balls might be the best stat in the league.</p>
+        </div>
+        <div class="image-column">
+          <figure style="margin: 0;">
+            <img src="images/brewvision-train-batch.jpg"
+                 alt="A batch of annotated training frames showing skee-balls detected on the lane"
+                 style="width: 100%; height: auto; border-radius: 8px;">
+            <figcaption class="image-caption">
+              A training batch: every ball on the lane, boxed and labeled.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
   </div>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', () => {
-  // Animation initialization
-  if (!sessionStorage.getItem('animationPlayed')) {
-    const introBox = document.querySelector('.intro-box');
-    introBox.classList.add('animate');
-    sessionStorage.setItem('animationPlayed', 'true');
-  }
-
-  // Image Gallery class
-  class ImageGallery {
-    constructor(container) {
-      // Your existing ImageGallery code
-      this.gallery = container;
-      this.figures = this.gallery.querySelectorAll('figure');
-      this.nav = this.gallery.nextElementSibling;
-      this.dots = this.nav.querySelectorAll('.gallery-dot');
-      this.currentIndex = 0;
-      
-      this.showImage(0);
-      this.setupEventListeners();
-    }
-    
-    // Rest of your ImageGallery class methods
-    showImage(index) {
-      if (index < 0 || index >= this.figures.length) return;
-      
-      this.figures.forEach(fig => {
-        fig.style.display = 'none';
-        fig.classList.remove('active');
-      });
-      
-      this.figures[index].style.display = 'block';
-      this.figures[index].classList.add('active');
-      
-      this.dots.forEach(dot => dot.classList.remove('active'));
-      if (this.dots[index]) {
-        this.dots[index].classList.add('active');
-      }
-      
-      this.currentIndex = index;
-    }
-    
-    setupEventListeners() {
-      this.dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => this.showImage(index));
-      });
-      
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      this.gallery.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      }, { passive: true });
-      
-      this.gallery.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
-        
-        if (Math.abs(swipeDistance) > swipeThreshold) {
-          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
-            this.showImage(this.currentIndex + 1);
-          } else if (swipeDistance < 0 && this.currentIndex > 0) {
-            this.showImage(this.currentIndex - 1);
-          }
-        }
-      }, { passive: true });
-    }
-  }
-
-  // Initialize galleries
-  const galleries = document.querySelectorAll('.gallery-images');
-  galleries.forEach(gallery => {
-    new ImageGallery(gallery);
-  });
-});
-</script>
+<script src="scripts/health-dashboard.js" defer></script>
 
 
 

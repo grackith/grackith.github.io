@@ -1653,3 +1653,243 @@ video {
     height: 350px;
   }
 }
+
+/* ============================================================
+   Gallery arrows + video slides  (see scripts/site.js)
+   ============================================================ */
+.gallery-nav {
+  align-items: center;
+}
+
+.gallery-arrow {
+  background: none;
+  border: none;
+  padding: 0 0.35rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+
+.gallery-dot:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* videos inside a gallery match the image slides */
+.gallery-images video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #000;
+}
+
+/* a gallery holding video needs its own height rule: the generic
+   .project-gallery img { height: 500px } would letterbox them badly */
+.project-gallery.has-video img,
+.project-gallery.has-video video {
+  height: auto;
+  max-height: 460px;
+}
+
+/* standalone silent looping clips */
+video.autoloop {
+  border-radius: 8px;
+  background: #000;
+}
+
+/* ============================================================
+   Recruitment call-out (index)
+   ============================================================ */
+.recruitment-flyer {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+}
+
+.recruitment-tag {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recruitment-flyer h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+
+.recruitment-flyer p {
+  margin-bottom: 1.1rem;
+}
+
+/* ============================================================
+   Garmin health dashboard (.FUN)  — scripts/health-dashboard.js
+   ============================================================ */
+.hd-root {
+  position: relative;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.hd-kpi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hd-tile-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.hd-tile-value {
+  margin-top: 0.15rem;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  color: var(--primary-color);
+}
+
+.hd-unit {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.hd-meter {
+  margin-top: 0.45rem;
+  height: 4px;
+  border-radius: 999px;
+  background: #eceef1;
+  overflow: hidden;
+}
+
+.hd-meter-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #2a78d6;
+}
+
+.hd-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.hd-fig { margin: 0; }
+
+.hd-cap {
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.hd-chart { width: 100%; height: auto; overflow: visible; }
+.hd-bar   { transition: opacity 0.15s ease; }
+.hd-bar:hover { opacity: 0.78; }
+.hd-dot   { cursor: pointer; }
+
+.hd-axis { font-size: 9px; fill: #8a8f96; }
+.hd-val  { font-size: 10px; fill: var(--primary-color); }
+
+/* tooltip */
+.hd-tip {
+  position: absolute;
+  z-index: 5;
+  padding: 0.3rem 0.55rem;
+  border-radius: 5px;
+  background: rgba(30, 34, 40, 0.94);
+  color: #fff;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.hd-tip.on { opacity: 1; }
+
+.hd-table { margin-top: 1.25rem; font-size: 0.8rem; }
+.hd-table summary { cursor: pointer; color: var(--secondary-color); }
+.hd-table-scroll { overflow-x: auto; margin-top: 0.6rem; }
+.hd-table table { width: 100%; border-collapse: collapse; }
+
+.hd-table th,
+.hd-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: right;
+}
+
+.hd-table th[scope="row"],
+.hd-table thead th:first-child { text-align: left; }
+.hd-table thead th { color: var(--secondary-color); font-weight: 500; }
+
+.hd-stamp {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .hd-kpi { grid-template-columns: repeat(2, 1fr); }
+  .hd-charts { grid-template-columns: 1fr; }
+}
+
+.hd-ref { color: #9aa0a6; }
+
+/* ============================================================
+   Timeline figure — override the shared 400px img cap and let
+   narrow screens pan instead of shrinking labels to nothing
+   ============================================================ */
+.timeline-section .timeline-image {
+  max-height: none;
+  object-fit: fill;
+}
+
+.timeline-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* below ~1000px the label text stops being readable, so scroll instead */
+.timeline-scroll .timeline-image {
+  min-width: 1000px;
+}
+
+@media (min-width: 1040px) {
+  .timeline-scroll .timeline-image { min-width: 0; }
+}
+
+.timeline-hint {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--secondary-color);
+}
+
+@media (min-width: 1040px) {
+  .timeline-hint { display: none; }
+}

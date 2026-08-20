@@ -1,0 +1,65 @@
+{
+  "updated": "2026-08-19T11:02:00Z",
+  "source": "sample",
+  "stepGoal": 10000,
+  "today": {
+    "steps": 8432,
+    "restingHeartRate": 48,
+    "bodyBattery": 67,
+    "sleepHours": 7.4,
+    "stress": 24,
+    "activeCalories": 612,
+    "intensityMinutes": 45
+  },
+  "week": [
+    {
+      "date": "2026-08-13",
+      "steps": 9120,
+      "restingHeartRate": 49,
+      "bodyBattery": 72,
+      "sleepHours": 7.1
+    },
+    {
+      "date": "2026-08-14",
+      "steps": 7430,
+      "restingHeartRate": 50,
+      "bodyBattery": 64,
+      "sleepHours": 6.4
+    },
+    {
+      "date": "2026-08-15",
+      "steps": 12680,
+      "restingHeartRate": 48,
+      "bodyBattery": 58,
+      "sleepHours": 7.8
+    },
+    {
+      "date": "2026-08-16",
+      "steps": 6890,
+      "restingHeartRate": 51,
+      "bodyBattery": 61,
+      "sleepHours": 6.9
+    },
+    {
+      "date": "2026-08-17",
+      "steps": 10240,
+      "restingHeartRate": 48,
+      "bodyBattery": 70,
+      "sleepHours": 7.5
+    },
+    {
+      "date": "2026-08-18",
+      "steps": 14310,
+      "restingHeartRate": 47,
+      "bodyBattery": 55,
+      "sleepHours": 8.2
+    },
+    {
+      "date": "2026-08-19",
+      "steps": 8432,
+      "restingHeartRate": 48,
+      "bodyBattery": 67,
+      "sleepHours": 7.4
+    }
+  ]
+}

@@ -83,6 +83,9 @@
   });
 </script>
 
+<!-- shared gallery / video behavior for every page -->
+<script src="scripts/site.js" defer></script>
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -126,15 +129,20 @@ if (window.hljs) {
 
 <div class="main-wrapper">
   <div class="content-wrapper">
+    <p style="text-align: center; margin-bottom: 1.25rem;">
+      <a href="scripts/resume.pdf" class="button-link" download="grace-douglas-cv.pdf">
+        Download CV (PDF)
+      </a>
+    </p>
     <div class="pdf-container">
       <div class="responsive-iframe-wrapper">
-        <iframe 
+        <iframe
           class="responsive-iframe"
           src="scripts/resume.pdf"
           type="application/pdf"
-          title="Resume PDF">
-          <p>Your browser doesn't support PDF viewing. Please download the PDF to view it: 
-            <a href="resume.pdf">Download PDF</a>
+          title="Grace Douglas CV">
+          <p>Your browser doesn't support inline PDF viewing.
+            <a href="scripts/resume.pdf">Download the PDF instead</a>.
           </p>
         </iframe>
       </div>

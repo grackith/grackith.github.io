@@ -28,93 +28,123 @@ output:
 <!-- Current Projects Section -->
 <section class="lab-section" style="padding-top: 40px; border-bottom: 2px solid #e0e0e0; padding-bottom: 40px; margin-bottom: 40px;">
   <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px; color: #333;">Current Projects</h2>
-  
-  <!-- Visible Pedestrians Project -->
-  <div style="margin-bottom: 50px;">
-    <section class="project-section">
-      <h3 id="visible-pedestrians">
-        Visible Pedestrians: Level of Detail in Pedestrian Detection Systems
-        <a href="https://github.com/grackith/NYU-UT-PDS" target="_blank" class="project-github">
-          <i class="fab fa-github"></i>
-        </a>
-      </h3>
-      <p><strong>Collaboration:</strong> NYU's HumanFUEL and UT-Austin's Mobility Systems Laboratory</p>
-      
-      <p>Pedestrian detection systems in Level 3 automated vehicles can provide varying levels of information detail to drivers, but optimal information granularity remains unclear. This study examines how different levels of detail (LOD0-LOD4) in pedestrian detection displays affect driver attention allocation, trust in automation, and situational awareness during mixed-traffic scenarios. Using a vehicle simulator with eye tracking capabilities (Meta Aria Gen1 glasses), participants complete driving tasks while monitoring pedestrian detection displays ranging from no information (LOD0) to comprehensive displays including position, orientation, and uncertainty visualization (LOD4). Eye tracking provides objective measurement of attention allocation between road monitoring and display interaction, while subjective measures assess trust calibration and cognitive load. Results establish optimal information granularity for pedestrian detection interfaces that balance information utility with attention demands in Level 3 automated driving contexts.</p>
-      
-      <figure style="margin-top: 30px; margin-bottom: 0;">
-        <video 
-          controls
-          muted
-          playsinline
-          style="width: 100%; height: auto; max-height: 500px; object-fit: contain;"
-        >
-          <source src="videos/lod3-2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <figcaption class="image-caption">
-          Pedestrian detection system levels of detail demonstration
-        </figcaption>
-      </figure>
-    </section>
-  </div>
 
-  <!-- Virtual Worlds Project -->
+  <!-- Virtual Worlds for Real Agents -->
   <div class="two-column-layout">
     <div class="content-column">
       <section class="project-section">
         <h3 id="virtual-worlds">
-          Virtual Worlds for Real Agents: Inter-block Way-finding in Strategic-level Pedestrian Behavior
+          Virtual Worlds for Real Agents: Validating VR Pedestrian Behavior
           <a href="https://github.com/grackith/TangleTown6" target="_blank" class="project-github">
             <i class="fab fa-github"></i>
           </a>
         </h3>
-        <p><strong>Collaboration:</strong> NYU's HumanFUEL and Cornell Tech's Interaction Research Lab</p>
-        
-        <p>Virtual reality environments provide controlled settings for pedestrian behavior research, but their correspondence to real-world behavior requires thorough validation. This study compares VR walking behavior to naturalistic pedestrian traces collected at the same physical location in South Lake Union, Seattle. Participants complete utility-based (goal-directed bus catching) and non-utility (exploratory bus stop search) navigation tasks in VR that match naturalistic behavior classifications. Validation employs the Hoogendoorn behavioral hierarchy framework, measuring correspondence across strategic (task completion patterns), tactical (route choice, navigation strategies), and operational (speed, trajectory, movement patterns) levels. Comprehensive assessment protocols include motion sickness monitoring (VRSQ), cognitive workload evaluation (NASA-TLX), and presence measurement (IPQ) to ensure ecological validity. Results establish validity benchmarks and provide calibration factors for VR pedestrian research. This 45-minute protocol demonstrates systematic validation of virtual pedestrian environments against real-world baselines.</p>
-        
-        <p><strong>Objectives:</strong></p>
-        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
-          <li>Validate VR pedestrian behavior against naturalistic traces by comparing navigation patterns across behavioral hierarchy levels</li>
-          <li>Assess virtual-to-real correspondence for utility-based versus non-utility pedestrian tasks</li>
-          <li>Establish validity benchmarks and calibration factors for pedestrian-aware virtual environments</li>
-        </ul>
+        <p><strong>Dissertation research</strong> &middot; with Cornell Tech's Interaction Research Lab</p>
+
+        <p>VR is only a useful testbed for pedestrian research if people walk in it the way they walk outside. This study puts that assumption to the test: participants complete goal-directed (catching a bus) and exploratory (finding a bus stop) tasks in a virtual South Lake Union, Seattle, and their behavior is compared against naturalistic pedestrian traces recorded at the same physical corner.</p>
+
+        <p>Correspondence is measured across the Hoogendoorn behavioral hierarchy &mdash; strategic (task completion), tactical (route choice), and operational (speed, trajectory) &mdash; while presence (IPQ), workload (NASA-TLX), and motion sickness (VRSQ) are tracked to keep ecological validity honest. The output is a set of validity benchmarks and calibration factors for anyone building pedestrian-aware virtual environments.</p>
+
+        <p style="font-size: 0.9em;"><em>Presented at AutomotiveUI 2025 (Adjunct Proceedings, 73&ndash;77).</em></p>
       </section>
     </div>
-    
+
     <div class="image-column">
-      <div style="display: flex; flex-direction: column; gap: 30px;">
-        <figure style="margin: 0;">
-          <video 
-            controls
-            muted
-            playsinline
-            style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-          >
-            <source src="videos/tangletown-stabilized-clip-compressed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <figcaption class="image-caption">
-            VR pedestrian navigation in South Lake Union, Seattle
-          </figcaption>
-        </figure>
-        
-        <figure style="margin: 0;">
-          <video 
-            controls
-            muted
-            playsinline
-            style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-          >
-            <source src="videos/website-snip-rdw-lowerbodyik_compressed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <figcaption class="image-caption">
-            Redirected walking and lower body IK demonstration
-          </figcaption>
-        </figure>
+      <div class="project-gallery has-video">
+        <div class="gallery-images" id="vwra-gallery">
+          <figure>
+            <video muted loop playsinline controls preload="metadata">
+              <source src="videos/tangletown-stabilized-clip-compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="image-caption">VR pedestrian navigation in South Lake Union, Seattle.</figcaption>
+          </figure>
+          <figure>
+            <video muted loop playsinline controls preload="metadata">
+              <source src="videos/website-snip-rdw-lowerbodyik_compressed.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="image-caption">Redirected walking with lower-body IK, so a room-scale space maps onto a city block.</figcaption>
+          </figure>
+          <figure>
+            <video muted loop playsinline controls preload="metadata">
+              <source src="videos/vwra-isovist.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="image-caption">Per-step isovist geometry: the visible field a walker actually has, sampled along the path.</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Eyes Up! -->
+  <div class="two-column-layout" style="margin-top: 50px;">
+    <div class="content-column">
+      <section class="project-section">
+        <h3 id="eyes-up">
+          <em>Eyes Up!</em> Egocentric Collections of Pedestrian Decision-Making
+        </h3>
+        <p><strong>Dissertation research</strong> &middot; C2SMART &middot; <a href="https://docs.google.com/forms/d/e/1FAIpQLSet-XjfG9CZ6ECmrmsxIMPx5PgeQJKgTvcCgjdiL8_6G3gENA/viewform" target="_blank" rel="noopener">now recruiting &rarr;</a></p>
+
+        <p>One idea runs through this work: pedestrians steer their path and their attention by what they can actually see &mdash; the open, visible space around them &mdash; and risk climbs where that visibility is cut off. The VR study supported it, but VR could only track head direction, and VR is not the street.</p>
+
+        <p>So this is the outdoor arm, with real eye tracking. New Yorkers walk two familiar routes wearing Meta Project Aria (Gen 1) glasses, which capture gaze, SLAM, IMU, and GPS at once, plus a heart-rate band and think-aloud narration into the glasses' microphone. Real-world SLAM is rebuilt into per-step isovist geometry, and the same models from the VR study are run on it &mdash; so the virtual and the real finally compare directly.</p>
+
+        <p><strong>What it asks:</strong></p>
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
+          <li>Does gaze go toward open space, and does walking slow inside enclosed space?</li>
+          <li>Does the chance of having traffic in view drop as occlusion rises?</li>
+          <li>Do goal-directed and exploratory walks sample the environment differently?</li>
+          <li>Do narrated moments of uncertainty cluster where the visible field fragments?</li>
+        </ul>
+
+        <p style="font-size: 0.9em;"><em>Within-subjects, ~20 participants, two ~0.5&nbsp;mi walks on routes they already know.</em></p>
+      </section>
+    </div>
+
+    <div class="image-column">
+      <figure style="margin: 0;">
+        <video class="autoloop" muted loop playsinline controls preload="metadata"
+               style="width: 100%; height: auto; max-height: 480px; object-fit: contain;">
+          <source src="videos/eyesup-aria-egocentric.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="image-caption">
+          Egocentric capture from the Aria glasses: gaze overlaid on the scene camera as a participant walks.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- So Pedestrian -->
+  <div style="margin-top: 50px;">
+    <section class="project-section">
+      <h3 id="so-pedestrian">
+        <em>So Pedestrian</em>: Detection Displays in Automated Vehicles
+        <a href="https://github.com/grackith/NYU-UT-PDS" target="_blank" class="project-github">
+          <i class="fab fa-github"></i>
+        </a>
+      </h3>
+      <p><strong>Funded by: National Science Foundation (NSF)</strong> &middot; with UT&nbsp;Austin's Mobility Systems Laboratory</p>
+
+      <p>If an automated vehicle shows you every pedestrian it sees, do you notice more &mdash; or do you stop looking? We built a Unity SAE Level 4 simulator with a 138&deg; tri-view display and five levels of detection detail (LOD0 through LOD4), then measured awareness on ambient pedestrians the display never flagged.</p>
+
+      <p>Across 488 encounters with 27 participants, moving pedestrians were detected 90&ndash;98% of the time &mdash; but only 44% when occluded at 7&nbsp;m. Adding display detail raised trust without raising workload, and never recovered that miss. More information made passengers more confident, not more aware, which is exactly the failure mode these interfaces are supposed to prevent.</p>
+
+      <p style="font-size: 0.9em;"><em>Accepted to AutomotiveUI 2026, Gothenburg, Sweden.</em></p>
+
+      <figure style="margin-top: 30px; margin-bottom: 0;">
+        <video controls muted playsinline preload="metadata"
+               style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+          <source src="videos/lod3-2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="image-caption">
+          Pedestrian detection display at LOD3: position and orientation rendered for detected pedestrians.
+        </figcaption>
+      </figure>
+    </section>
   </div>
 </section>
 ```
@@ -133,8 +163,12 @@ output:
           </a>
         </h3>
         <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
-        
-        <p><strong>Abstract:</strong> Pedestrian safety in urban environments remains a critical challenge, with U.S. cities experiencing a dramatic 60% increase in pedestrian fatalities over the past decade. To address this crisis, we're developing more sophisticated crash prediction models that incorporate detailed measures of pedestrian exposure to environmental risk. Our approach focuses on tracking pedestrian path-planning behaviors within microenvironments and analyzing their relationship to vehicle crash incidents at intersections. By incorporating granular data about pedestrian activity levels and environmental factors, we aim to create more accurate predictions of collision risk. The rarity of pedestrian-vehicle crashes, while fortunate, presents a significant challenge for developing preventative measures. Our research addresses this by establishing robust geospatial estimates of pedestrian activity as a proxy measure for crash likelihood—acknowledging that areas with higher pedestrian activity naturally face increased crash potential. Through this work, we're advancing both the performance of intersection-level crash predictions and developing a systematic framework for analyzing prediction model misclassifications, ultimately contributing to the design of safer urban spaces.</p>
+
+        <p>Crash models are usually judged by how often they are right. This project asks a more useful question: when a model is wrong, is it wrong at random, or is it wrong in the same places for the same reasons?</p>
+
+        <p>Working across 13,706 Seattle intersections, we built crash-risk models from standardized physical-activity exposure measures, then developed a misclassification framework to separate systematic model failure from random error. It concentrated 6.6% of total error into just 1.03% of locations &mdash; and street-view audits of those locations recovered three feature classes the model had omitted entirely. Systematic error, it turns out, is a map of what your data is missing.</p>
+
+        <p style="font-size: 0.9em;"><em>Published in Accident Analysis &amp; Prevention, 235, 108633 (2026).</em></p>
       </section>
     </div>
     
@@ -149,10 +183,6 @@ output:
             <img src="images/mcc-crash-risk.png" alt="Comparing model performance to predict intersection crash state (whether or not a pedestina-vehicle crash incident occurred during an 8-year collection period).">
             <figcaption class="image-caption">Comparing model performance to predict intersection crash state (whether or not a pedestina-vehicle crash incident occurred during an 8-year collection period).</figcaption>
           </figure>
-        </div>
-        <div class="gallery-nav" id="ped-exposure-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
         </div>
       </div>
     </div>
@@ -172,7 +202,9 @@ output:
             <i class="fab fa-github"></i>
           </a>
         </h3>
-          <p><strong>Abstract:</strong> Reinforcement learning methods are useful for training agency in unknown state spaces and previously unseen environments. Model-free adaptivity produces trained agents that can perform in real-world environments not exactly mimicking previous training environments. However, deploying these algorithms on-line in real-world traffic environments is still relatively nonexistant due to potential safety implications for both the in-vehicle driver and other road users (ORUs). Therefore, this project proposes a sim-to-sim transfer: previously trained human regularized RL agents (HR-PPO) are deployed into an multiplayer experimentation setting (Strangeland) to interact with driving and walking participants. This approach can validate and fine-tune RL agent training in a context-rich setting.</p>
+          <p>Reinforcement learning produces agents that adapt to state spaces they were never trained on &mdash; which is exactly why nobody wants to test one on a real street. The safety cost of being wrong falls on the driver and on every other road user around them.</p>
+
+          <p>This project proposes a sim-to-sim transfer instead. Human-regularized RL agents (HR-PPO), already trained offline, are dropped into <em>Strangeland</em>, a multiplayer environment where real people are simultaneously driving and walking. The agents get a context-rich setting to be validated and fine-tuned in, and the humans get to respond to them without anyone leaving the lab.</p>
       </section>
     </div>
 
@@ -223,7 +255,9 @@ output:
         </h3>
         <p><strong>Funded by: National Science Foundation (NSF) - GermanXUS research exchange</strong></p>
         
-        <p><strong>Abstract:</strong> With pedestrians constituting 23% of global road traffic fatalities in 2021, understanding cross-cultural behavioral patterns is critical for developing adaptive safety systems. Predicting pedestrian behavior remains challenging due to their dynamic movement patterns and variable adherence to traffic regulations.In addition, the development of autonomous vehicle systems face significant limitations in replicating human communication protocols that typically resolve ambiguous traffic situations. This is evidenced by incident data showing autonomous vehicle accidents predominantly occur during automated operation involving unexpected pedestrian actions. Through systematic analysis of pedestrian behavior at signalized intersections, this research aims to inform both the development of culturally-adaptive autonomous systems and the implementation of more effective urban infrastructure across diverse societal contexts.</p>
+        <p>Pedestrians accounted for 23% of global road traffic deaths in 2021, and they are hard to predict precisely because they treat traffic rules as negotiable &mdash; differently in different places. Automated vehicles struggle here: crash data shows AV incidents cluster in automated operation around unexpected pedestrian actions, where a human driver would have resolved the ambiguity with a glance or a wave.</p>
+
+        <p>This project studies pedestrian behavior at signalized intersections across cultural contexts, to inform both culturally-adaptive automated systems and the infrastructure that shapes what pedestrians do in the first place.</p>
 
         <!-- Moved image here, under the text -->
         <figure style="margin-top: 30px;">
@@ -242,8 +276,8 @@ output:
     <div class="image-column">
       <!-- Gallery for remaining images -->
       <div class="project-gallery">
-        <div class="gallery-images" id="unreg-ped-gallery" style="width: 100%; display: flex; overflow: hidden;">
-          <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
+        <div class="gallery-images" id="unreg-ped-gallery">
+          <figure>
             <img 
               src="images/linestrings-to-pts.png"
               alt="Graph-based RL environment"
@@ -253,7 +287,7 @@ output:
               Graph-based RL environment for pedestrian preference learning at Greenlake, Seattle, WA.
             </figcaption>
           </figure>
-          <figure style="flex: 0 0 100%; min-width: 100%; display: none; margin: 0; transition: opacity 0.3s ease;">
+          <figure>
             <img 
               src="images/gl-osmnx-afterbouts.png"
               alt="Graph-based state space"
@@ -263,11 +297,6 @@ output:
               Weighting a step-size within a graph-based state space with historical collections of pedestrian walking activity.
             </figcaption>
           </figure>
-        </div>
-          <div class="gallery-nav" id="unreg-ped-nav">
-            <span class="gallery-dot"></span>
-            <span class="gallery-dot"></span>
-          </div>
         </div>
       </div>
     </div>
@@ -290,8 +319,11 @@ output:
         </h3>
         <p><strong>Funded by: Federal Highway Administration (FHWA)</strong></p>
 
-        <p><strong>Abstract</strong>: With over 42,000 roadway fatalities in 2022 and research showing that drivers spend roughly 50% of their time engaged in non-driving tasks, understanding driver behavior in complex environments is crucial. Our project leverages the largest naturalistic driving study to date (SHRP2 NDS) to examine how drivers multitask in multimodal urban environments. By analyzing 19 urban locations with pedestrian and cyclist infrastructure, we investigate driver engagement in secondary tasks while interacting with vulnerable road users.
-Our analysis integrates three key data sources: video recordings of driver behavior and urban environments, vehicle kinematics (speed, acceleration), and anonymized demographic information. Using mixed-effect binary logistic regression and Bayesian network models, we identified significant patterns in driver behavior around crosswalks and bike treatments. The Bayesian networks, particularly valuable for modeling complex systems with uncertain relationships, reveal conditional dependencies between variables that could inform both infrastructure design and Advanced Driver Assist System (ADAS) development to enhance road safety for all users.</p>
+        <p>Drivers spend roughly half their time behind the wheel doing something other than driving. Using SHRP2 &mdash; the largest naturalistic driving study to date &mdash; this project examines how that plays out at 19 urban locations built for pedestrians and cyclists, combining cabin video, vehicle kinematics, and anonymized demographics.</p>
+
+        <p>From 39,271 one-second observations of naturalistic crosswalk traversals, a Hidden Markov Model and Gaussian Mixture Model pipeline produced a typology of distracted driver behavior. The headline is a reframe: what separates safe from unsafe drivers is not <em>how often</em> they engage in a secondary task, but how responsively they disengage when the road demands it. Dynamic Bayesian networks map the conditional dependencies behind that, pointing at both infrastructure design and ADAS timing.</p>
+
+        <p style="font-size: 0.9em;"><em>Accepted to Accident Analysis &amp; Prevention (2026).</em></p>
       </section>
     </div>
     
@@ -310,11 +342,6 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <img src="images/ndrt-dur-prop.png" alt="Average proportion of a driving traversal drivers spent engagemet in NDRTs. The bimodal distribution across VRU facilities suggest two driver distraction profiles: isolated engagement and serial engagement. The highest percentage of driving traversal a serial engagement spanned was 78% of the driver's trip.">
             <figcaption class="image-caption">Average proportion of driving traversal driver spent engaged in NDRTs. The bimodal distribution across VRU facilities suggest two driver distraction profiles: isolated engagement and serial engagement. The longest serial engagement observed spanned was 78% of the driver's trip.</figcaption>
           </figure>
-        </div>
-        <div class="gallery-nav" id="multimodal-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
         </div>
       </div>
     </div>
@@ -335,7 +362,9 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <i class="fab fa-github"></i>
           </a>
         </h3>
-        <p><strong>Abstract</strong>: In response to rising VRU deaths in dense urban settings, and increased support for complete street designs, this project examines the relationship between mode choice and the surrounding built environment. This projects uses New York City as a living lab: mode choice data and trip purpose are from the <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Travel-Surveys/Regional-Establishment-Survey">Regional Establishment Survey (RES)</a>, and GIS-linked built environment features (i.e, high-visibility crosswalks, average roadway width, slow-speed zone) are provided by the <a href="https://opendata.cityofnewyork.us/">NYC Open Data Portal</a>. A mixed logit model is developed to compare individual heterogeneity in soft, mass, and personal (vehicle) mode choices with local built environment support for observed choices. Sociodemographics such as age, income, and mobility status are also considered. An alternative-specific travel time variable is considered, and a more thorough discussion of mode choice elasticity to changes in the local microenvironment is provided.</p>
+        <p>How much does the street itself decide how you travel? Using New York City as a living lab, this project pairs trip and mode-choice data from the <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Travel-Surveys/Regional-Establishment-Survey">Regional Establishment Survey</a> with GIS-linked built environment features &mdash; high-visibility crosswalks, roadway width, slow-speed zones &mdash; from the <a href="https://opendata.cityofnewyork.us/">NYC Open Data Portal</a>.</p>
+
+        <p>A mixed logit model compares individual heterogeneity across soft, mass, and personal-vehicle modes against how well the local environment actually supports the choice made, controlling for age, income, mobility status, and alternative-specific travel time. The interesting output is elasticity: how much mode share moves when the microenvironment changes.</p>
       </section>
     </div>
     
@@ -350,10 +379,6 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <img src="images/socio-fin-final.png" alt="Socio-fin image">
             <figcaption class="image-caption">Demographic profiles reveal mode choice differences among income, age and trip purpose.</figcaption>
           </figure>
-        </div>
-        <div class="gallery-nav" id="mode-choice-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
         </div>
       </div>
     </div>
@@ -374,7 +399,9 @@ Our analysis integrates three key data sources: video recordings of driver behav
           </a>
         </h3>
         <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
-        <p><strong>Abstract</strong>: This research project explores the intersection of Advanced Driver Assistance Systems (ADAS) and mobile work environments. Participants are asked to manually control the vehicle in a simulated two-lane rural road environment, and then engage a Level 3 ADAS and join a pre-recorded virtual meeting discussing and revising presentation slides. The participant is queued engaging questions about the meeting task, but are presented with a take-over scenario (participant must regain control of the vehcile). The research aims to understand how meeting participation and engagement impact a driver's takeover timing in autonomous vehicles, while also examining the reciprocal effects of takeover scenarios on meeting performance, with participants completing a pre- and post-drive survey to capture their overall trust in the automation. This study utilizes the NADS miniSim vehicle simulator to create a controlled environment for investigating the complex dynamics between virtual work engagement and autonomous system safety protocols.</p>
+        <p>The promise of conditional automation is that you get your commute back as working time. This study tests what that costs. On the NADS miniSim, participants drive a two-lane rural road manually, then engage a Level 3 system and join a pre-recorded virtual meeting &mdash; discussing and revising slides, and fielding questions designed to pull them in.</p>
+
+        <p>Then the car hands control back. Takeovers are assigned as either emergency or planned, and we measure the exchange in both directions: how deep meeting engagement delays takeover, and how a takeover wrecks meeting performance. Pre- and post-drive surveys track trust in the automation across the whole thing.</p>
       </section>
     </div>
     
@@ -389,10 +416,6 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <img src="images/data-collection-drive.png" alt="A level 3 Automated Driving System (ADS) can conditionally take full control over the dynamic driving task. Participants are asked to begin the drive in manual operation, then join engage their ADS and join virtual meeting at their convenience.">
             <figcaption class="image-caption">A level 3 Automated Driving System (ADS) can conditionally take full control over the dynamic driving task. Participants are asked to begin the drive in manual operation, then join engage their ADS and join virtual meeting at their convenience.</figcaption>
           </figure>
-        </div>
-        <div class="gallery-nav" id="mobile-office-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
         </div>
       </div>
     </div>
@@ -413,7 +436,9 @@ Our analysis integrates three key data sources: video recordings of driver behav
           </a>
         </h3>
         <p><strong>Funded by: National Science Foundation (NSF)</strong></p>
-        <p><strong>Abstract</strong>: Older drivers face unique challenges that can contribute to age-related accidents, prompting our research into developing sociodemographic profiles to enhance in-vehicle support systems. Building comprehensive naturalistic driving databases is both time-intensive and costly, which led us to explore an innovative approach: mapping driving profiles across different databases that share similar sociodemographic features but represent distinct populations. By bridging the <a href="https://insight.shrp2nds.us/">Strategic Highway Research Program (SHRP2) naturalistic driving database</a> with the <a href="https://share-eric.eu/">Survey of Health, Aging, and Retirement in Europe (SHARE)</a>, we identify personal characteristics that allow us to examine how the choice to continue driving becomes a deeply contextual decision, shaped by one's cultural and geographic environment.</p>
+        <p>Naturalistic driving databases are slow and expensive to build, which makes cross-cultural comparison nearly impossible &mdash; nobody funds the same study twice on two continents. So instead of collecting a new one, we bridged two that already exist: the <a href="https://insight.shrp2nds.us/">SHRP2 naturalistic driving database</a> and the <a href="https://share-eric.eu/">Survey of Health, Aging, and Retirement in Europe</a>, matched on shared lifestyle, health, and personality characteristics.</p>
+
+        <p>The resulting profiles show that an older driver's decision to keep driving is far less a medical threshold than a contextual one, shaped by where they live and what that place expects of them.</p>
       </section>
     </div>
     
@@ -428,10 +453,6 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <img src="images/clustering-share-shrp2-v2.jpeg" alt="SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.">
             <figcaption class="image-caption"> SHARE-SHRP2 mapping. Preliminary findings: Cluster 1: higher rates of other road user involved incidents. Cluster 2: highest rates of turning incidents. Cluster 3: highest rates of 'near-crashes'.</figcaption>
           </figure>
-        </div>
-        <div class="gallery-nav" id="cross-cultural-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
         </div>
       </div>
     </div>
@@ -452,7 +473,9 @@ Our analysis integrates three key data sources: video recordings of driver behav
           </a>
         </h3>
         <p><strong>Funded by: National Highway Traffic Safety Administration (NHTSA)</strong></p>
-        <p><strong>Abstract</strong>: Crashes involving pedestrians continue to be a serious problem in the United States and represent 15% of all traffic collisions. Pedestrians are among the most vulnerable road users. In 2020, pedestrians accounted for 6,516 fatalities and an estimated 54,769 injuries in motor vehicle crashes. Over the last decade, the U.S. has seen a 46% increase in pedestrian fatalities, now representing 17% of all motor vehicle related crash fatalities (NHTSA, 2022). In response to the increased number of fatalities and the increased emphasis on vulnerable road modes (walking, cycling) as healthy transportation options, many localities are looking for ways to make walking safer. One of the challenges to developing and implementing effective pedestrian safety countermeasures is establishing a consistent and reliable estimate of the number of pedestrians at risk in a given <em>spatiotemporal slice</em>. This project operationalizes a pedestrian exposure measure from personal electronic device data (GSP, accelerometer) collected at a weeks time from over 700 participants throughout a 4-year period.</p>
+        <p>You cannot tell whether a corner is dangerous without knowing how many people walk it. That denominator &mdash; pedestrian exposure in a given <em>spatiotemporal slice</em> &mdash; is the missing term in most pedestrian safety work, and it is the reason a quiet street with one crash can look worse than a busy one with five.</p>
+
+        <p>This project builds an exposure measure directly out of personal device data: GPS and accelerometer traces from more than 700 participants, each recorded for a week, collected over four years. The result is a framework for estimating who is actually at risk, at the scale countermeasures are designed for.</p>
       </section>
     </div>
     
@@ -468,95 +491,10 @@ Our analysis integrates three key data sources: video recordings of driver behav
             <figcaption class="image-caption">Environmental buffer analysis to define levels of risk in micro-, meso-, and macro- pedestrian environments.</figcaption>
           </figure>
         </div>
-        <div class="gallery-nav" id="ped-devices-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-        </div>
       </div>
     </div>
   </div>
 </section>
 </div>
 </div>
-```
-
-```{=html}
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', () => {
-  // Animation initialization
-  if (!sessionStorage.getItem('animationPlayed')) {
-    const introBox = document.querySelector('.intro-box');
-    introBox.classList.add('animate');
-    sessionStorage.setItem('animationPlayed', 'true');
-  }
-
-  // Image Gallery class
-  class ImageGallery {
-    constructor(container) {
-      // Your existing ImageGallery code
-      this.gallery = container;
-      this.figures = this.gallery.querySelectorAll('figure');
-      this.nav = this.gallery.nextElementSibling;
-      this.dots = this.nav.querySelectorAll('.gallery-dot');
-      this.currentIndex = 0;
-      
-      this.showImage(0);
-      this.setupEventListeners();
-    }
-    
-    // Rest of your ImageGallery class methods
-    showImage(index) {
-      if (index < 0 || index >= this.figures.length) return;
-      
-      this.figures.forEach(fig => {
-        fig.style.display = 'none';
-        fig.classList.remove('active');
-      });
-      
-      this.figures[index].style.display = 'block';
-      this.figures[index].classList.add('active');
-      
-      this.dots.forEach(dot => dot.classList.remove('active'));
-      if (this.dots[index]) {
-        this.dots[index].classList.add('active');
-      }
-      
-      this.currentIndex = index;
-    }
-    
-    setupEventListeners() {
-      this.dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => this.showImage(index));
-      });
-      
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      this.gallery.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      }, { passive: true });
-      
-      this.gallery.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
-        
-        if (Math.abs(swipeDistance) > swipeThreshold) {
-          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
-            this.showImage(this.currentIndex + 1);
-          } else if (swipeDistance < 0 && this.currentIndex > 0) {
-            this.showImage(this.currentIndex - 1);
-          }
-        }
-      }, { passive: true });
-    }
-  }
-
-  // Initialize galleries
-  const galleries = document.querySelectorAll('.gallery-images');
-  galleries.forEach(gallery => {
-    new ImageGallery(gallery);
-  });
-});
-</script>
 ```

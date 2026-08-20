@@ -83,6 +83,9 @@
   });
 </script>
 
+<!-- shared gallery / video behavior for every page -->
+<script src="scripts/site.js" defer></script>
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -222,6 +225,38 @@ if (window.hljs) {
       </div>
     </section>
 
+    <!-- Eye Tracking Section -->
+    <section class="lab-section">
+      <div class="two-column-layout">
+        <div class="content-column">
+          <h3 id="eye-tracking">Eye tracking</h3>
+          <p>Where someone looks is the closest thing we have to a direct readout of what they are attending to &mdash; and for a pedestrian deciding whether to step off a curb, that readout is the whole story. Head direction is a decent proxy indoors; on a street it is not.</p>
+
+          <h4>Meta Project Aria (Gen 1)</h4>
+          <p>The <a href="https://www.projectaria.com/" target="_blank" rel="noopener">Meta Project Aria</a> glasses carry the sensor suite for all of my outdoor pedestrian work. They look like ordinary glasses, which matters: participants walk their own neighborhoods without being read as an experiment. Running the all-sensor profile, a single pair captures eye tracking, SLAM and mono cameras, an RGB scene camera, microphone, IMU, GPS, magnetometer, and barometer &mdash; all time-aligned, at 10&nbsp;fps.</p>
+          <p>That combination is the reason we use them. The SLAM stream reconstructs the walker's path and the geometry around it, so gaze can be scored against the <em>visible field the person actually had</em> &mdash; per-step isovists built from the real world rather than from a model of it. The microphone picks up think-aloud narration in the same clock, so a spoken moment of hesitation lands on the same timeline as the fixation that preceded it.</p>
+
+          <h4>In the lab</h4>
+          <p>For fixed-base work the miniSim's integrated eye tracking and the Quest Pro's built-in gaze and face tracking cover the same questions under controlled conditions, where the scene geometry is already known because we built it.</p>
+        </div>
+
+        <div class="image-column">
+          <figure style="margin: 0;">
+            <video class="autoloop" muted loop playsinline controls preload="metadata"
+                   style="width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+              <source src="videos/aria-eyetracking.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="image-caption">
+              Gaze tracked from the Aria glasses during an outdoor walk.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="fun-note">︎💡<em> Fun fact: the Aria profiles with faster eye tracking drop either SLAM or GPS. Since the whole analysis depends on reconstructing where the walker was and what they could see, 10&nbsp;fps with everything on beats a higher gaze rate with a hole in it.</em>
+      </div>
+    </section>
+
     <!-- Networking Section -->
     <section class="lab-section">
       <div class="two-column-layout">
@@ -251,85 +286,6 @@ if (window.hljs) {
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', () => {
-  // Animation initialization
-  if (!sessionStorage.getItem('animationPlayed')) {
-    const introBox = document.querySelector('.intro-box');
-    introBox.classList.add('animate');
-    sessionStorage.setItem('animationPlayed', 'true');
-  }
-
-  // Image Gallery class
-  class ImageGallery {
-    constructor(container) {
-      // Your existing ImageGallery code
-      this.gallery = container;
-      this.figures = this.gallery.querySelectorAll('figure');
-      this.nav = this.gallery.nextElementSibling;
-      this.dots = this.nav.querySelectorAll('.gallery-dot');
-      this.currentIndex = 0;
-      
-      this.showImage(0);
-      this.setupEventListeners();
-    }
-    
-    // Rest of your ImageGallery class methods
-    showImage(index) {
-      if (index < 0 || index >= this.figures.length) return;
-      
-      this.figures.forEach(fig => {
-        fig.style.display = 'none';
-        fig.classList.remove('active');
-      });
-      
-      this.figures[index].style.display = 'block';
-      this.figures[index].classList.add('active');
-      
-      this.dots.forEach(dot => dot.classList.remove('active'));
-      if (this.dots[index]) {
-        this.dots[index].classList.add('active');
-      }
-      
-      this.currentIndex = index;
-    }
-    
-    setupEventListeners() {
-      this.dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => this.showImage(index));
-      });
-      
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      this.gallery.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      }, { passive: true });
-      
-      this.gallery.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
-        
-        if (Math.abs(swipeDistance) > swipeThreshold) {
-          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
-            this.showImage(this.currentIndex + 1);
-          } else if (swipeDistance < 0 && this.currentIndex > 0) {
-            this.showImage(this.currentIndex - 1);
-          }
-        }
-      }, { passive: true });
-    }
-  }
-
-  // Initialize galleries
-  const galleries = document.querySelectorAll('.gallery-images');
-  galleries.forEach(gallery => {
-    new ImageGallery(gallery);
-  });
-});
-</script>
 
 
 

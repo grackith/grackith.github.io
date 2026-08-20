@@ -83,6 +83,9 @@
   });
 </script>
 
+<!-- shared gallery / video behavior for every page -->
+<script src="scripts/site.js" defer></script>
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -137,7 +140,13 @@ Experiences and environments we are exposed to is fundamental to who we become a
       </div>
     <!-- Timeline Section -->
     <section class="timeline-section">
-      <img src="images/timeline.png" alt="Research Timeline" class="timeline-image">
+      <div class="timeline-scroll">
+        <a href="images/timeline.png" target="_blank" rel="noopener">
+          <img src="images/timeline.png" alt="Timeline of degrees, research appointments, industry roles, and publications from 2016 to 2027" class="timeline-image">
+        </a>
+      </div>
+      <p class="timeline-hint">Swipe to pan &middot; tap the timeline to open it full size</p>
+    </section>
     </section>
 <!-- Current Lab Section: HumanFUEL -->
 <section class="lab-section">
@@ -152,9 +161,12 @@ Experiences and environments we are exposed to is fundamental to who we become a
         <p><em>September 2023 - Present</em></p>
         
         <ul>
+          <li><a href="projects.html#virtual-worlds">Virtual Worlds for Real Agents: Validating VR Pedestrian Behavior</a> <em>(dissertation)</em></li>
+          <li><a href="projects.html#eyes-up">Eyes Up! Egocentric Collections of Pedestrian Decision-Making</a> <em>(dissertation)</em></li>
+          <li><a href="projects.html#so-pedestrian">So Pedestrian: Detection Displays in Automated Vehicles</a></li>
+          <li><a href="projects.html#ped-study">Pedestrian Exposure for Crash Prediction</a></li>
           <li><a href="projects.html#sim2real">SIM-2-SIM: Virtualized mixed-traffic driving environments with human regulated RL agents</a></li>
           <li><a href="projects.html#unregulated-ped">JAYWALK: Unregulated pedestrian behavior in mixed-traffic driving environments</a></li>
-          <li><a href="projects.html#ped-study">Pedestrian Exposure for Crash Prediction</a></li>
           <li><a href="projects.html#mode-choice">The Mode Choice Should be my Choice!</a></li>
         </ul>
       </div>
@@ -179,6 +191,32 @@ Experiences and environments we are exposed to is fundamental to who we become a
         <li>Coordinating with building managers, administration, technology manufacturers and equipment suppliers.</li>
         <li>Interviewing potential undergraduate and graduate candidates for research lab positions.</li>
       </ul>
+    </div>
+  </div>
+</section>
+<!-- Lakdawala Lab, Emory -->
+<section class="lab-section">
+  <div class="two-column-layout">
+    <div class="content-column">
+      <h4>Emory University School of Medicine: Lakdawala Lab</h4>
+      <p><strong>Research Scientist, Computer Vision | PI: <a href="https://med.emory.edu/departments/microbiology-immunology/research/lakdawala-lab/index.html" target="_blank" rel="noopener">Dr. Seema Lakdawala</a></strong></p>
+      <p><em>January 2026 - Present</em></p>
+      <ul>
+        <li>Pose estimation and identity tracking for dye-marked ferrets under dense occlusion in influenza-transmission studies (<a href="FUN.html">more here</a>).</li>
+        <li>Decoupled identity from pose with SLEAP creator Dr. Talmo Pereira: Random Forest HSV classifier with Hungarian matching.</li>
+        <li>Confidence- and margin-gated assignment abstains rather than guessing, so occlusion swaps cannot propagate.</li>
+        <li>Architected the AWS GPU pipeline (EC2/S3, sleap-nn/PyTorch/CUDA): ~1.5 h per 2 h video, streaming at flat memory.</li>
+      </ul>
+    </div>
+    <div class="image-column">
+      <figure style="margin: 0;">
+        <video class="autoloop" muted loop playsinline controls preload="metadata"
+               style="width: 100%; height: auto; max-height: 380px; object-fit: contain;">
+          <source src="videos/sleap-ferret-tracking.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="image-caption">Multi-animal pose and identity tracking.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -217,12 +255,6 @@ Experiences and environments we are exposed to is fundamental to who we become a
             <figcaption class="image-caption">Adventurous RAs take 2-wk trip to Virginia Tech Transportation Institute (VTTI) to hand-label sensitive driving video!</figcaption>
           </figure>
         </div>
-        <div class="gallery-nav" id="hfsm-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-        </div>
       </div>
     </div>
   </div>
@@ -258,10 +290,6 @@ Experiences and environments we are exposed to is fundamental to who we become a
             </figcaption>
           </figure>
         </div>
-        <div class="gallery-nav" id="csl-nav">
-          <span class="gallery-dot"></span>
-          <span class="gallery-dot"></span>
-        </div>
       </div>
     </div>
   </div>
@@ -271,84 +299,6 @@ Experiences and environments we are exposed to is fundamental to who we become a
       <p><sup>1</sup>Bandura, A., Ross, D., & Ross, S. A. (1963). Imitation of film-mediated aggressive models. The Journal of Abnormal and Social Psychology, 66(1), 3–11. https://psycnet.apa.org/record/1963-00856-001</p>
 </div>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', () => {
-  // Animation initialization
-  if (!sessionStorage.getItem('animationPlayed')) {
-    const introBox = document.querySelector('.intro-box');
-    introBox.classList.add('animate');
-    sessionStorage.setItem('animationPlayed', 'true');
-  }
-
-  // Image Gallery class
-  class ImageGallery {
-    constructor(container) {
-      // Your existing ImageGallery code
-      this.gallery = container;
-      this.figures = this.gallery.querySelectorAll('figure');
-      this.nav = this.gallery.nextElementSibling;
-      this.dots = this.nav.querySelectorAll('.gallery-dot');
-      this.currentIndex = 0;
-      
-      this.showImage(0);
-      this.setupEventListeners();
-    }
-    
-    // Rest of your ImageGallery class methods
-    showImage(index) {
-      if (index < 0 || index >= this.figures.length) return;
-      
-      this.figures.forEach(fig => {
-        fig.style.display = 'none';
-        fig.classList.remove('active');
-      });
-      
-      this.figures[index].style.display = 'block';
-      this.figures[index].classList.add('active');
-      
-      this.dots.forEach(dot => dot.classList.remove('active'));
-      if (this.dots[index]) {
-        this.dots[index].classList.add('active');
-      }
-      
-      this.currentIndex = index;
-    }
-    
-    setupEventListeners() {
-      this.dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => this.showImage(index));
-      });
-      
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      this.gallery.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      }, { passive: true });
-      
-      this.gallery.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
-        
-        if (Math.abs(swipeDistance) > swipeThreshold) {
-          if (swipeDistance > 0 && this.currentIndex < this.figures.length - 1) {
-            this.showImage(this.currentIndex + 1);
-          } else if (swipeDistance < 0 && this.currentIndex > 0) {
-            this.showImage(this.currentIndex - 1);
-          }
-        }
-      }, { passive: true });
-    }
-  }
-
-  // Initialize galleries
-  const galleries = document.querySelectorAll('.gallery-images');
-  galleries.forEach(gallery => {
-    new ImageGallery(gallery);
-  });
-});
-</script>
 
 
 
