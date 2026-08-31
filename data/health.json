@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30T15:21:03+00:00",
+  "updated": "2026-08-31T18:00:28+00:00",
   "source": "garmin",
   "stepGoal": 10000,
   "today": {
@@ -12,13 +12,6 @@
     "intensityMinutes": 0
   },
   "week": [
-    {
-      "date": "2026-08-24",
-      "steps": null,
-      "restingHeartRate": null,
-      "bodyBattery": null,
-      "sleepHours": null
-    },
     {
       "date": "2026-08-25",
       "steps": null,
@@ -56,6 +49,13 @@
     },
     {
       "date": "2026-08-30",
+      "steps": null,
+      "restingHeartRate": null,
+      "bodyBattery": null,
+      "sleepHours": null
+    },
+    {
+      "date": "2026-08-31",
       "steps": null,
       "restingHeartRate": null,
       "bodyBattery": null,
