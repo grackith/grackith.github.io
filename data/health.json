@@ -1,31 +1,17 @@
 {
-  "updated": "2026-10-04T15:48:44+00:00",
+  "updated": "2026-10-06T17:12:03+00:00",
   "source": "garmin",
-  "stepGoal": 10000,
+  "stepGoal": 15220,
   "today": {
-    "steps": null,
-    "restingHeartRate": null,
+    "steps": 6296,
+    "restingHeartRate": 38,
     "bodyBattery": null,
-    "sleepHours": null,
-    "stress": null,
-    "activeCalories": null,
-    "intensityMinutes": 0
+    "sleepHours": 9.2,
+    "stress": 6,
+    "activeCalories": 302.0,
+    "intensityMinutes": 33
   },
   "week": [
-    {
-      "date": "2026-09-28",
-      "steps": 9318,
-      "restingHeartRate": 43,
-      "bodyBattery": null,
-      "sleepHours": 8.1
-    },
-    {
-      "date": "2026-09-29",
-      "steps": 18138,
-      "restingHeartRate": 44,
-      "bodyBattery": null,
-      "sleepHours": 6.4
-    },
     {
       "date": "2026-09-30",
       "steps": 16559,
@@ -35,31 +21,45 @@
     },
     {
       "date": "2026-10-01",
-      "steps": 8160,
+      "steps": 18119,
       "restingHeartRate": 46,
       "bodyBattery": null,
       "sleepHours": 6.5
     },
     {
       "date": "2026-10-02",
-      "steps": null,
-      "restingHeartRate": null,
+      "steps": 8564,
+      "restingHeartRate": 45,
       "bodyBattery": null,
-      "sleepHours": null
+      "sleepHours": 6.7
     },
     {
       "date": "2026-10-03",
-      "steps": null,
-      "restingHeartRate": null,
+      "steps": 21720,
+      "restingHeartRate": 42,
       "bodyBattery": null,
-      "sleepHours": null
+      "sleepHours": 7.6
     },
     {
       "date": "2026-10-04",
-      "steps": null,
-      "restingHeartRate": null,
+      "steps": 14190,
+      "restingHeartRate": 47,
       "bodyBattery": null,
-      "sleepHours": null
+      "sleepHours": 8.0
+    },
+    {
+      "date": "2026-10-05",
+      "steps": 17378,
+      "restingHeartRate": 39,
+      "bodyBattery": null,
+      "sleepHours": 8.1
+    },
+    {
+      "date": "2026-10-06",
+      "steps": 6296,
+      "restingHeartRate": 38,
+      "bodyBattery": null,
+      "sleepHours": 9.2
     }
   ]
 }
