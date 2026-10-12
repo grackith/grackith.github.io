@@ -1,24 +1,17 @@
 {
-  "updated": "2026-10-11T16:39:12+00:00",
+  "updated": "2026-10-12T20:18:06+00:00",
   "source": "garmin",
-  "stepGoal": 14000,
+  "stepGoal": 14030,
   "today": {
-    "steps": 9865,
-    "restingHeartRate": 41,
+    "steps": 8659,
+    "restingHeartRate": 38,
     "bodyBattery": null,
-    "sleepHours": 8.7,
-    "stress": 15,
-    "activeCalories": 496.0,
-    "intensityMinutes": 54
+    "sleepHours": 9.7,
+    "stress": 5,
+    "activeCalories": 444.0,
+    "intensityMinutes": 49
   },
   "week": [
-    {
-      "date": "2026-10-05",
-      "steps": 17378,
-      "restingHeartRate": 39,
-      "bodyBattery": null,
-      "sleepHours": 8.1
-    },
     {
       "date": "2026-10-06",
       "steps": 9720,
@@ -49,17 +42,24 @@
     },
     {
       "date": "2026-10-10",
-      "steps": 9865,
+      "steps": 23544,
       "restingHeartRate": 41,
       "bodyBattery": null,
       "sleepHours": 8.7
     },
     {
       "date": "2026-10-11",
-      "steps": null,
-      "restingHeartRate": null,
+      "steps": 5573,
+      "restingHeartRate": 40,
       "bodyBattery": null,
       "sleepHours": null
+    },
+    {
+      "date": "2026-10-12",
+      "steps": 8659,
+      "restingHeartRate": 38,
+      "bodyBattery": null,
+      "sleepHours": 9.7
     }
   ]
 }
