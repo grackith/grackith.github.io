@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T17:58:12+00:00",
+  "updated": "2026-11-22T18:30:57+00:00",
   "source": "garmin",
   "stepGoal": 10000,
   "today": {
@@ -12,13 +12,6 @@
     "intensityMinutes": 0
   },
   "week": [
-    {
-      "date": "2026-11-15",
-      "steps": 16139,
-      "restingHeartRate": 45,
-      "bodyBattery": null,
-      "sleepHours": 6.6
-    },
     {
       "date": "2026-11-16",
       "steps": 14674,
@@ -56,6 +49,13 @@
     },
     {
       "date": "2026-11-21",
+      "steps": null,
+      "restingHeartRate": null,
+      "bodyBattery": null,
+      "sleepHours": null
+    },
+    {
+      "date": "2026-11-22",
       "steps": null,
       "restingHeartRate": null,
       "bodyBattery": null,
